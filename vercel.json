@@ -8,18 +8,6 @@
   ],
   "rewrites": [
     {
-      "source": "/gallerij/:path*",
-      "destination": "/site/gallerij/:path*"
-    },
-    {
-      "source": "/barcony-modellen/:path*",
-      "destination": "/site/barcony-modellen/:path*"
-    },
-    {
-      "source": "/contact/:path*",
-      "destination": "/site/contact/:path*"
-    },
-    {
       "source": "/robots.txt",
       "destination": "/site/robots.txt"
     },
