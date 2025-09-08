@@ -103,6 +103,9 @@
     img { max-width: 100%; height: auto }
     video { width: 100% !important; height: auto !important; display: block }
     .MobileHeader_logoImage__BZwGs { max-height: 60px; width: auto }
+
+    /* Hide legacy mobile header/menu (no JS) to avoid duplicate nav */
+    #wsb-mobile-header, #mm, #mm-overlay { display: none !important }
     </style>
 </head>
 <body class="bodyBackground" style="overflow-y:scroll;overflow-x:hidden">
@@ -110,12 +113,12 @@
     <div data-mobile-pin="1" id="wsb-mobile-header" class="mm mm-mobile-preview">
         <header id="MobileHeader_container" class="MobileHeader_container__1XW3y MobileHeader_withLogo__boWI9" style="background-color:rgba(255,255,255,1)">
             <div class="MobileHeader_logo__VBlNX">
-                <a class="MobileHeader_logoAnchor__3VO33" href="/">
+                <a class="MobileHeader_logoAnchor__3VO33" href="#home">
                     <img class="MobileHeader_logoImage__BZwGs" src="/media/logo.png" srcset="/media/logo.png 1x, /media/logo.png 2x">
                 </a>
             </div>
             <div class="MobileHeader_title__1avp4 mobile-title undefined">
-                <a class="MobileHeader_logoAnchor__3VO33" href="/">
+                <a class="MobileHeader_logoAnchor__3VO33" href="#home">
                     <span class="MobileHeader_titleText__1M62s" style="color:rgba(77,107,129,1);font-family:Hind Guntur;font-weight:normal;font-style:normal">Barcony</span>
                 </a>
             </div>
@@ -325,7 +328,7 @@
                                 <div data-in-template="false" data-id="0F1603DD-9986-4A96-B972-51D4C5C24A4E" data-kind="Component" data-specific-kind="BUTTON" class=" Preview_component__SbiKo align-center">
                                     <div class="ButtonPreview_container__22hQi ButtonPreview_buttonTransition__CKIAx button1">
                                         <div class="ButtonPreview_buttonComponent__17NP0">
-                                            <a href="#modellen" target="" class="ButtonPreview_textContainer__t8q7_"><span>Modellen &amp; Prijzen</span></a>
+                                            <a href="#modellen" class="ButtonPreview_textContainer__t8q7_"><span>Modellen &amp; Prijzen</span></a>
                                         </div>
                                     </div>
                                 </div>
