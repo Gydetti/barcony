@@ -121,13 +121,13 @@
     /* Modern sticky header */
     .site-header { position: sticky; top: 0; z-index: 1000; background: #ffffffcc; backdrop-filter: saturate(180%) blur(6px); border-bottom: 1px solid #eaeaea }
     .nav-container { max-width: 1050px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 10px 16px }
-    .brand { display: inline-flex; align-items: center; gap: 10px; font-family: 'Cormorant', Georgia, serif; font-weight: 700; color: #4d6b81; font-size: 22px }
+    .brand { display: inline-flex; align-items: center; gap: 10px }
     .brand-logo { height: 36px; width: auto }
-    .nav { display: flex; align-items: center; gap: 20px }
-    .nav a { font-weight: 600; color: #4d6b81 }
+    .nav { display: flex; align-items: center; gap: 6px }
+    .nav a { font-weight: 600; color: #4d6b81; padding: 8px 12px; border-radius: 8px }
+    .nav a:hover { background: rgba(77,107,129,0.08) }
     @media (max-width: 640px) {
-      .nav { gap: 14px; font-size: 14px; overflow-x: auto }
-      .brand-name { display: none }
+      .nav { gap: 4px; font-size: 14px; overflow-x: auto }
       .brand-logo { height: 28px }
     }
 
@@ -141,11 +141,10 @@
         <div class="nav-container">
             <a href="#home" class="brand">
                 <img src="/media/logo.png" alt="Barcony" class="brand-logo">
-                <span class="brand-name">Barcony</span>
             </a>
             <nav class="nav" aria-label="Primary">
                 <a href="#home">Home</a>
-                <a href="#gallerij">Gallerij</a>
+                <a href="/gallerij">Gallerij</a>
                 <a href="#modellen">Barcony modellen</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -169,7 +168,7 @@
         <div id="mm" class="MobileHeaderMenu_mobileMenu__21p7v" style="background-color:rgba(255,255,255,1)">
             <ul>
                 <li><a href="#home" class="MobileHeaderMenu_current__2Nelz" style="background-color:rgba(255,255,255,1);color:rgba(77,107,129,1);font-size:16px;line-height:3;font-family:Hind Guntur;font-weight:bold" title="Home">Home</a></li>
-                <li><a href="#gallerij" class="" style="background-color:rgba(255,255,255,1);color:rgba(77,107,129,1);font-size:16px;line-height:3;font-family:Hind Guntur" title="Gallerij">Gallerij</a></li>
+                <li><a href="/gallerij" class="" style="background-color:rgba(255,255,255,1);color:rgba(77,107,129,1);font-size:16px;line-height:3;font-family:Hind Guntur" title="Gallerij">Gallerij</a></li>
                 <li><a href="#modellen" class="" style="background-color:rgba(255,255,255,1);color:rgba(77,107,129,1);font-size:16px;line-height:3;font-family:Hind Guntur" title="Barcony modellen">Barcony modellen</a></li>
                 <li><a href="#contact" class="" style="background-color:rgba(255,255,255,1);color:rgba(77,107,129,1);font-size:16px;line-height:3;font-family:Hind Guntur" title="Contact">Contact</a></li>
             </ul>
@@ -207,7 +206,7 @@
                                         <div class="menu menuself menuhorizontal dropdown menuhorizontalcenter menuverticalmiddle White" style="width:736px;height:42px">
                                             <ul class="menu1">
                                                 <li class=""><a class="selected level-0" href="#home"><span>Home</span></a><div class="divider"></div></li>
-                                                <li class=""><a class="level-0" href="#gallerij"><span>Gallerij</span></a><div class="divider"></div></li>
+                                                <li class=""><a class="level-0" href="/gallerij"><span>Gallerij</span></a><div class="divider"></div></li>
                                                 <li class=""><a class="level-0" href="#modellen"><span>Barcony modellen</span></a><div class="divider"></div></li>
                                                 <li class=""><a class="level-0" href="#contact"><span>Contact</span></a></li>
                                             </ul>
@@ -265,81 +264,6 @@
         </div>
     </div>
 
-    <!-- Gallery Section -->
-    <div id="gallerij" class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:725px;width:100%">
-        <div data-id="E8B0C773-9886-438B-A4E5-09D800459E11" data-kind="SECTION" style="width:100%;min-height:725px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section1" data-in-template="false" data-id="E8B0C773-9886-438B-A4E5-09D800459E11" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:725px;padding-bottom:15px" data-width="100" data-height="725">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:710px;width:1050px">
-                            <div data-id="F61DF224-F166-41B5-8D71-F1EC1BA0B7E1" data-kind="GALLERY" style="width:1050px;min-height:695px;margin-top:15px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="F61DF224-F166-41B5-8D71-F1EC1BA0B7E1" data-kind="Component" data-specific-kind="GALLERY" data-stretch="false" class=" Preview_component__SbiKo ">
-                                    <div class="gallery Gallery_gallery__2AhdO textnormal" data-captionenabled="false" data-mobile-column="2" data-columns="3" data-spacing="14" data-image-ratio="SQUARE" data-original-width="1050" data-compact-view="false">
-                                        <div data-index="0" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:0;margin-top:0;text-align:center">
-                                            <a href="/media/gallery-1.jpeg" title="P 1 1" alt="P 1 1" rel="lightbox[oneweb] F61DF224-F166-41B5-8D71-F1EC1BA0B7E1" class="shinybox" data-dom-index="0">
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="width:100%;height:100%;display:flex">
-                                                        <img src="/media/gallery-1.jpeg" style="width:100%;height:100%;object-fit:cover" title="P 1 1" alt="P 1 1" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div data-index="1" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:14px;margin-top:0;text-align:center">
-                                            <a href="/media/gallery-2.jpeg" title="P 1 2" alt="P 1 2" rel="lightbox[oneweb] F61DF224-F166-41B5-8D71-F1EC1BA0B7E1" class="shinybox" data-dom-index="1">
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="width:100%;height:100%;display:flex">
-                                                        <img src="/media/gallery-2.jpeg" style="width:100%;height:100%;object-fit:cover" title="P 1 2" alt="P 1 2" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div data-index="2" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:14px;margin-top:0;text-align:center">
-                                            <a href="/media/gallery-3.jpeg" title="P 1 3" alt="P 1 3" rel="lightbox[oneweb] F61DF224-F166-41B5-8D71-F1EC1BA0B7E1" class="shinybox" data-dom-index="2">
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="width:100%;height:100%;display:flex">
-                                                        <img src="/media/gallery-3.jpeg" style="width:100%;height:100%;object-fit:cover" title="P 1 3" alt="P 1 3" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div data-index="3" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:0;margin-top:14px;text-align:center">
-                                            <a href="/media/gallery-4.jpeg" title="P 1 4" alt="P 1 4" rel="lightbox[oneweb] F61DF224-F166-41B5-8D71-F1EC1BA0B7E1" class="shinybox" data-dom-index="3">
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="width:100%;height:100%;display:flex">
-                                                        <img src="/media/gallery-4.jpeg" style="width:100%;height:100%;object-fit:cover" title="P 1 4" alt="P 1 4" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div data-index="4" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:14px;margin-top:14px;text-align:center">
-                                            <a href="/media/gallery-5.jpeg" title="P 1 5" alt="P 1 5" rel="lightbox[oneweb] F61DF224-F166-41B5-8D71-F1EC1BA0B7E1" class="shinybox" data-dom-index="4">
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="width:100%;height:100%;display:flex">
-                                                        <img src="/media/gallery-5.jpeg" style="width:100%;height:100%;object-fit:cover" title="P 1 5" alt="P 1 5" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div data-index="5" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:14px;margin-top:14px;text-align:center">
-                                            <a href="/media/gallery-6.jpeg" title="P 1 6" alt="P 1 6" rel="lightbox[oneweb] F61DF224-F166-41B5-8D71-F1EC1BA0B7E1" class="shinybox" data-dom-index="5">
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="width:100%;height:100%;display:flex">
-                                                        <img src="/media/gallery-6.jpeg" style="width:100%;height:100%;object-fit:cover" title="P 1 6" alt="P 1 6" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="clear:both"></div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Call to Action Section -->
     <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:293px;width:100%">
