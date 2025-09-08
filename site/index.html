@@ -118,17 +118,21 @@
     /* Hide legacy desktop header block */
     #Header { display: none !important }
 
-    /* Modern sticky header */
-    .site-header { position: sticky; top: 0; z-index: 1000; background: #ffffffcc; backdrop-filter: saturate(180%) blur(6px); border-bottom: 1px solid #eaeaea }
-    .nav-container { max-width: 1050px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 10px 16px }
-    .brand { display: inline-flex; align-items: center; gap: 10px }
-    .brand-logo { height: 36px; width: auto }
-    .nav { display: flex; align-items: center; gap: 6px }
-    .nav a { font-weight: 600; color: #4d6b81; padding: 8px 12px; border-radius: 8px }
-    .nav a:hover { background: rgba(77,107,129,0.08) }
-    @media (max-width: 640px) {
-      .nav { gap: 4px; font-size: 14px; overflow-x: auto }
-      .brand-logo { height: 28px }
+    /* Navigation Styles */
+    .nav-container { width: 100%; min-height: 72px; background-color: rgba(255,255,255,1); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.1) }
+    .nav-inner { width: 1050px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px }
+    .nav-logo { flex-shrink: 0 }
+    .nav-logo img { height: 36px; width: auto }
+    .nav-menu { display: flex; gap: 24px }
+    .nav-menu a { color: #4d6b81; font-weight: 600; padding: 8px 0; transition: color 0.2s ease }
+    .nav-menu a:hover, .nav-menu a.active { color: #ffa24d }
+
+    /* Mobile Navigation */
+    @media (max-width: 900px) {
+        .nav-inner { width: 100%; padding: 10px 16px }
+        .nav-menu { display: none }
+        .mobile-menu-toggle { display: block; background: none; border: none; cursor: pointer; padding: 10px }
+        .mobile-menu-toggle span { display: block; width: 25px; height: 3px; background: #4d6b81; margin: 5px 0; transition: 0.3s }
     }
 
     /* Smooth anchor scrolling and offset */
@@ -137,19 +141,26 @@
     </style>
 </head>
 <body class="bodyBackground" style="overflow-y:scroll;overflow-x:hidden">
-    <header class="site-header">
-        <div class="nav-container">
-            <a href="#home" class="brand">
-                <img src="/media/logo.png" alt="Barcony" class="brand-logo">
-            </a>
-            <nav class="nav" aria-label="Primary">
-                <a href="#home">Home</a>
+    <nav class="nav-container">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <a href="#home">
+                    <img src="/media/logo.png" alt="Barcony" loading="lazy">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="active">Home</a>
                 <a href="/gallerij">Gallerij</a>
-                <a href="#modellen">Barcony modellen</a>
+                <a href="#modellen">Modellen</a>
                 <a href="#contact">Contact</a>
-            </nav>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </header>
+    </nav>
     <!-- Mobile Header -->
     <div data-mobile-pin="1" id="wsb-mobile-header" class="mm mm-mobile-preview">
         <header id="MobileHeader_container" class="MobileHeader_container__1XW3y MobileHeader_withLogo__boWI9" style="background-color:rgba(255,255,255,1)">
@@ -742,3 +753,25 @@
 
 </body>
 </html>
+
+<script>
+  // Mobile menu toggle (shared with gallerij)
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  if (mobileMenuToggle && navMenu) {
+    mobileMenuToggle.addEventListener('click', function() {
+      navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+      if (navMenu.style.display === 'flex') {
+        navMenu.style.flexDirection = 'column';
+        navMenu.style.position = 'absolute';
+        navMenu.style.top = '72px';
+        navMenu.style.left = '0';
+        navMenu.style.right = '0';
+        navMenu.style.background = 'white';
+        navMenu.style.padding = '20px';
+        navMenu.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+        navMenu.style.gap = '12px';
+      }
+    });
+  }
+</script>
