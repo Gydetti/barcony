@@ -80,15 +80,24 @@
     .View_select__2DXGf,
     .View_textArea__2s1mo { font-family: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial !important }
 
-    /* Gallery styles */
-    .gallery { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center }
-    .gallery-cell { margin: 0; flex: 1 1 calc(33.333% - 14px); max-width: calc(33.333% - 14px) }
-    @media (max-width: 900px) { .gallery-cell { flex-basis: calc(50% - 12px); max-width: calc(50% - 12px) } }
+    /* Gallery styles (Gallerij) */
+    .gallery { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center }
+    .gallery-cell { margin: 0; flex: 0 1 calc(33.333% - 16px); max-width: calc(33.333% - 16px) }
+    @media (max-width: 900px) { .gallery-cell { flex-basis: calc(50% - 16px); max-width: calc(50% - 16px) } }
     @media (max-width: 600px) { .gallery-cell { flex-basis: 100%; max-width: 100% } }
 
-    .gallery .img-container { aspect-ratio: 1 / 1; width: 100% !important; height: auto !important; display: block !important }
+    .gallery .img-container { aspect-ratio: 1 / 1; width: 100% !important; height: auto !important; display: block !important; overflow: hidden }
     .gallery .img-wrapper { width: 100% !important; height: 100% !important }
     .gallery img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block }
+
+    /* Models grid: circular cards with consistent size */
+    #modellen .gallery { gap: 28px; justify-content: center }
+    #modellen .gallery-cell { flex: 0 1 clamp(220px, 30vw, 320px); max-width: clamp(220px, 30vw, 320px) }
+    #modellen .img-container { aspect-ratio: 1 / 1; border-radius: 9999px; overflow: hidden; width: 100% !important }
+    #modellen .img-wrapper { width: 100% !important; height: 100% !important; border-radius: 9999px !important }
+    #modellen img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block }
+    #modellen .gallery-caption { margin-top: 10px }
+    #modellen .gallery-caption p { text-align: center; font-weight: 700 }
 
     /* Form styles */
     .contactFormContainer { max-width: 600px; margin: 0 auto; }
