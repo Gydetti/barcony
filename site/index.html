@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Barcony</title>
     <meta name="description" content="De inklapbare bartafel voor uw balkon">
-    <meta name="robots" content="all">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes">
     <meta name="MobileOptimized" content="320">
     <meta name="HandheldFriendly" content="True">
@@ -49,6 +49,8 @@
     :root { --text-color: #0f172a; --heading-color: #4d6b81; }
     html, body { font-family: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial !important; line-height: 1.6; color: var(--text-color); }
     h1, h2, h3, .textheading1, .textheading2, .textheading3 { font-family: 'Cormorant', Georgia, 'Times New Roman', serif !important; font-weight: 700; color: var(--heading-color); line-height: 1.25; }
+    /* Ensure nested spans inside headings keep the heading font */
+    h1 span.textheading1, h2 span.textheading2, h3 span.textheading3 { font-family: inherit !important; }
     a { color: #4d6b81; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
@@ -88,27 +90,6 @@
     .gallery .img-container { aspect-ratio: 1 / 1; width: 100% !important; height: auto !important; display: block !important; overflow: hidden }
     .gallery .img-wrapper { width: 100% !important; height: 100% !important }
     .gallery img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block }
-
-    /* Hero gallery: responsive 6-photo grid */
-    .hero-gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 1050px; margin: 0 auto }
-    .hero-gallery-cell { flex: 0 1 calc(16.666% - 8.33px); max-width: calc(16.666% - 8.33px); min-width: 150px }
-    .hero-img-container { aspect-ratio: 1 / 1; width: 100% !important; height: auto !important; display: block !important; overflow: hidden; border-radius: 8px }
-    .hero-gallery img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block; border-radius: 8px; transition: transform 0.3s ease }
-
-    /* Responsive hero gallery */
-    @media (max-width: 900px) {
-        .hero-gallery-cell { flex-basis: calc(25% - 7.5px); max-width: calc(25% - 7.5px) }
-    }
-    @media (max-width: 600px) {
-        .hero-gallery-cell { flex-basis: calc(33.333% - 6.67px); max-width: calc(33.333% - 6.67px) }
-    }
-    @media (max-width: 480px) {
-        .hero-gallery-cell { flex-basis: calc(50% - 5px); max-width: calc(50% - 5px) }
-    }
-
-    /* Hero CTA button styling */
-    .hero-cta-button { display: inline-block; background-color: #ffa24d !important; color: #ffffff !important; padding: 15px 30px !important; border-radius: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 162, 77, 0.3) }
-    .hero-cta-button:hover { background-color: #ff8c3d !important; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 162, 77, 0.4) }
 
     /* Models grid: circular cards with consistent size */
     #modellen .gallery { gap: 28px; justify-content: center }
@@ -213,6 +194,34 @@
     /* Smooth anchor scrolling and offset */
     html { scroll-behavior: smooth }
     [id] { scroll-margin-top: 80px }
+
+    /* Layout fixes to mirror original spacing */
+    #Section7 .Background_backgroundComponent__3_1Ea { min-height: 60vh !important; } /* Modern, responsive height */
+    [data-id="531B6C99-C657-40F2-8538-FC816883338E"] { margin-top: 48px !important; }
+    #Section1 .Background_backgroundComponent__3_1Ea { min-height: auto !important; padding-bottom: 0 !important; }
+
+    /* Ensure consistent font family everywhere (including form) */
+    body, .textnormal, label, input, select, textarea, button { 
+        font-family: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial !important; 
+    }
+
+    /* Video container to enforce aspect ratio */
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        margin: 23px auto 0;
+        aspect-ratio: 9 / 16; /* Portrait aspect ratio for the video */
+        overflow: hidden;
+    }
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures poster covers the area */
+    }
     </style>
 </head>
 <body class="bodyBackground" style="overflow-y:scroll;overflow-x:hidden">
@@ -267,6 +276,8 @@
         </div>
     </div>
 
+    
+
     <!-- Desktop Header -->
     <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:102px;width:100%">
         <div data-id="C4B136DE-417D-456B-93AF-932322915542" data-kind="SECTION" style="width:100%;min-height:102px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
@@ -311,81 +322,31 @@
     </div>
 
     <!-- Hero Section -->
-    <div id="home" class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:520px;width:100%">
-        <div data-id="858C021E-334B-47FA-9E8E-1DD7FD6E7CFD" data-kind="SECTION" style="width:100%;min-height:520px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
+    <div id="home" class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="width:100%">
+        <div data-id="858C021E-334B-47FA-9E8E-1DD7FD6E7CFD" data-kind="SECTION" style="width:100%;min-height:auto;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
             <div id="Section7" data-in-template="false" data-id="858C021E-334B-47FA-9E8E-1DD7FD6E7CFD" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea" style="background-color:rgba(255,255,255,1);min-height:520px;padding-bottom:0;background-image:url('/media/background.png');background-repeat:no-repeat;background-position:50% 50%;background-size:cover" data-width="100" data-height="520"></div>
+                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea" style="background-color:rgba(255,255,255,1);padding-bottom:0;background-image:url('/media/background.png');background-repeat:no-repeat;background-position:50% 50%;background-size:cover" data-width="100" data-height="520"></div>
             </div>
         </div>
     </div>
 
     <!-- Main Content -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:400px;width:100%">
-        <div data-id="F88FC3E8-C1F2-4193-B229-EA3546C4B455" data-kind="SECTION" style="width:100%;min-height:400px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
+    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="width:100%">
+        <div data-id="F88FC3E8-C1F2-4193-B229-EA3546C4B455" data-kind="SECTION" style="width:100%;min-height:auto;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
             <div id="Section8" data-in-template="false" data-id="F88FC3E8-C1F2-4193-B229-EA3546C4B455" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:400px;padding-bottom:32px" data-width="100" data-height="400">
+                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:auto;padding-bottom:32px" data-width="100" data-height="400">
                     <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:349px;width:1050px">
-                            <div data-id="531B6C99-C657-40F2-8538-FC816883338E" data-kind="TEXT" style="width:954px;min-height:80px;margin-top:269px;margin-left:48px" class="Preview_componentWrapper__2i4QI">
+                        <div class="Preview_row__3Fkye row" style="min-height:auto;width:1050px">
+                            <div data-id="531B6C99-C657-40F2-8538-FC816883338E" data-kind="TEXT" style="width:954px;min-height:auto;margin-top:24px;margin-left:48px" class="Preview_componentWrapper__2i4QI">
                                 <div data-in-template="false" data-id="531B6C99-C657-40F2-8538-FC816883338E" data-kind="Component" data-specific-kind="TEXT" class=" Preview_component__SbiKo text-align-null">
                                     <div data-mve-font-change="0" class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu">
-                                        <h1 class="textheading1 mobile-oversized" style="font-size: 50px; text-align: center;"><span class="textheading1 mobile-oversized" style="font-weight: bold; font-size: 50px; color: #ffa24d;">De inklapbare bartafel voor uw balkon</span></h1>
+                                        <h2 class="textheading2 mobile-oversized" style="font-size: 50px; text-align: center;"><span class="textheading2 mobile-oversized" style="font-weight: bold; font-size: 50px; color: #ffa24d;">De inklapbare bartafel voor uw balkon</span></h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Hero Photo Grid -->
-                        <div class="Preview_row__3Fkye row" style="min-height:200px;width:1050px">
-                            <div data-id="hero-gallery" data-kind="GALLERY" style="width:1050px;min-height:200px;margin-top:20px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div class="hero-gallery textnormal" data-captionenabled="false" data-mobile-column="3" data-columns="6" data-spacing="10" data-image-ratio="SQUARE" data-original-width="1050" data-compact-view="false">
-                                    <div data-index="0" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:0;margin-top:0;text-align:center">
-                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
-                                            <img src="/media/gallery-1.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Barcony bartafel in gebruik op balkon" fetchpriority="high" decoding="async" loading="eager" width="200" height="200">
-                                        </div>
-                                    </div>
-                                    <div data-index="1" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:10px;margin-top:0;text-align:center">
-                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
-                                            <img src="/media/gallery-2.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Inklapbare bartafel design" decoding="async" loading="lazy" width="200" height="200">
-                                        </div>
-                                    </div>
-                                    <div data-index="2" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:10px;margin-top:0;text-align:center">
-                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
-                                            <img src="/media/gallery-3.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Duurzaam Douglas hout" decoding="async" loading="lazy" width="200" height="200">
-                                        </div>
-                                    </div>
-                                    <div data-index="3" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:10px;margin-top:0;text-align:center">
-                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
-                                            <img src="/media/gallery-4.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Compact opklapbaar systeem" decoding="async" loading="lazy" width="200" height="200">
-                                        </div>
-                                    </div>
-                                    <div data-index="4" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:10px;margin-top:0;text-align:center">
-                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
-                                            <img src="/media/gallery-5.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Moderne balkon oplossing" decoding="async" loading="lazy" width="200" height="200">
-                                        </div>
-                                    </div>
-                                    <div data-index="5" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:10px;margin-top:0;text-align:center">
-                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
-                                            <img src="/media/gallery-6.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Barcony op maat gemaakt" decoding="async" loading="lazy" width="200" height="200">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Primary CTA -->
-                        <div class="Preview_row__3Fkye row" style="min-height:80px;width:1050px">
-                            <div data-id="hero-cta" data-kind="BUTTON" style="width:250px;height:60px;margin-top:30px;margin-left:400px" class="Preview_componentWrapper__2i4QI">
-                                <div class="ButtonPreview_container__22hQi ButtonPreview_buttonTransition__CKIAx button1">
-                                    <div class="ButtonPreview_buttonComponent__17NP0">
-                                        <a href="#modellen" class="ButtonPreview_textContainer__t8q7_ hero-cta-button" style="background-color:#ffa24d;color:#ffffff;padding:15px 30px;border-radius:8px;font-weight:600;text-transform:uppercase;letter-spacing:1px;"><span>Modellen bekijken</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="Preview_row__3Fkye row" style="min-height:19px;width:1050px">
-                            <div data-id="8B12DF6D-EF16-493B-BFA6-67C3AE0E4F99" data-kind="IMAGE" style="width:1050px;min-height:19px;margin-top:20px;margin-left:0" class="Preview_componentWrapper__2i4QI">
+                            <div data-id="8B12DF6D-EF16-493B-BFA6-67C3AE0E4F99" data-kind="IMAGE" style="width:1050px;min-height:19px;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
                                 <div data-in-template="false" data-id="8B12DF6D-EF16-493B-BFA6-67C3AE0E4F99" data-kind="Component" data-specific-kind="IMAGE" class=" Preview_component__SbiKo ">
                                     <div class="Mobile_imageComponent__QXWk1" style="width:1050px;height:19px;overflow:hidden" data-width="1050" data-height="19">
                                         <img loading="lazy" role="presentation" data-scalestrategy="fit" style="display:block;margin:0" src="/media/decorative-line.png" height="19" width="1050" data-width="1050" data-height="19">
@@ -407,9 +368,26 @@
             <div id="Section9" data-in-template="false" data-id="4E0AC88C-E315-43A7-B5CE-7DFF26CA0EC0" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
                 <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:293px;padding-bottom:29px" data-width="100" data-height="293">
                     <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
+                        
+                        <!-- Intro six-image gallery placed here under heading section -->
+                        <div class="Preview_row__3Fkye row" style="min-height:710px;width:1050px">
+                            <div data-id="intro-gallery" data-kind="GALLERY" style="width:1050px;min-height:695px;margin-top:15px;margin-left:0" class="Preview_componentWrapper__2i4QI">
+                                <div data-in-template="false" data-id="intro-gallery" data-kind="Component" data-specific-kind="GALLERY" data-stretch="false" class=" Preview_component__SbiKo ">
+                                    <div class="gallery Gallery_gallery__2AhdO textnormal" data-captionenabled="false" data-mobile-column="2" data-columns="3" data-spacing="14" data-image-ratio="SQUARE" data-original-width="1050" data-compact-view="false">
+                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-1.jpeg" loading="lazy" alt="Barcony 1"></div></div></a></div>
+                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-2.jpeg" loading="lazy" alt="Barcony 2"></div></div></a></div>
+                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-3.jpeg" loading="lazy" alt="Barcony 3"></div></div></a></div>
+                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-4.jpeg" loading="lazy" alt="Barcony 4"></div></div></a></div>
+                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-5.jpeg" loading="lazy" alt="Barcony 5"></div></div></a></div>
+                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-6.jpeg" loading="lazy" alt="Barcony 6"></div></div></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Decorative line AFTER the six-image gallery -->
                         <div class="Preview_row__3Fkye row" style="min-height:43px;width:1050px">
-                            <div data-id="D98892DE-7C8F-4367-82A7-7E97A7D112C9" data-kind="IMAGE" style="width:1050px;min-height:19px;margin-top:24px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="D98892DE-7C8F-4367-82A7-7E97A7D112C9" data-kind="Component" data-specific-kind="IMAGE" class=" Preview_component__SbiKo ">
+                            <div data-id="LINE-AFTER-INTRO-GALLERY" data-kind="IMAGE" style="width:1050px;min-height:19px;margin-top:24px;margin-left:0" class="Preview_componentWrapper__2i4QI">
+                                <div data-in-template="false" data-id="LINE-AFTER-INTRO-GALLERY" data-kind="Component" data-specific-kind="IMAGE" class=" Preview_component__SbiKo ">
                                     <div class="Mobile_imageComponent__QXWk1" style="width:1050px;height:19px;overflow:hidden" data-width="1050" data-height="19">
                                         <img loading="lazy" role="presentation" data-scalestrategy="fit" style="display:block;margin:0" src="/media/decorative-line.png" height="19" width="1050" data-width="1050" data-height="19">
                                     </div>
@@ -430,7 +408,7 @@
                                 <div data-in-template="false" data-id="0F1603DD-9986-4A96-B972-51D4C5C24A4E" data-kind="Component" data-specific-kind="BUTTON" class=" Preview_component__SbiKo align-center">
                                     <div class="ButtonPreview_container__22hQi ButtonPreview_buttonTransition__CKIAx button1">
                                         <div class="ButtonPreview_buttonComponent__17NP0">
-                                            <a href="#modellen" class="ButtonPreview_textContainer__t8q7_"><span>Modellen &amp; Prijzen</span></a>
+                                            <a href="/modellen-prijzen/" class="ButtonPreview_textContainer__t8q7_"><span>Modellen &amp; Prijzen</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -506,7 +484,7 @@
                                             <a>
                                                 <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
                                                     <div class="Image_imageComponent__2bb7A img-wrapper" style="border-width:1px 1px 1px 1px;border-top-left-radius:999px;border-top-right-radius:999px;border-bottom-right-radius:999px;border-bottom-left-radius:999px;width:100%;height:100%;display:flex">
-                                                        <img src="/media/P 1 9.jpeg" style="width:100%;height:100%;object-fit:cover" title="Mini" alt="Mini" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
+                                                        <img src="/media/p-1-9.jpg" style="width:100%;height:100%;object-fit:cover" title="Mini" alt="Mini" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
                                                     </div>
                                                 </div>
                                                 <div style="position:relative" class="gallery-caption">
@@ -529,30 +507,12 @@
                         <div class="Preview_row__3Fkye row" style="min-height:399px;width:1050px">
                             <div data-id="4C55A77D-0479-4463-88B9-B6F9B96C1B33" data-kind="GALLERY" style="width:1050px;min-height:399px;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
                                 <div data-in-template="false" data-id="4C55A77D-0479-4463-88B9-B6F9B96C1B33" data-kind="Component" data-specific-kind="GALLERY" data-stretch="false" class=" Preview_component__SbiKo ">
-                                    <div class="gallery Gallery_gallery__2AhdO textnormal" data-captionenabled="true" data-mobile-column="2" data-columns="3" data-spacing="14" data-image-ratio="SQUARE" data-original-width="1050" data-compact-view="false">
-                                        <div data-index="0" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:0;margin-top:0;text-align:center">
+                                    <div class="gallery Gallery_gallery__2AhdO textnormal" data-captionenabled="true" data-mobile-column="1" data-columns="1" data-spacing="14" data-image-ratio="SQUARE" data-original-width="1050" data-compact-view="false" style="justify-content:center">
+                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;text-align:center">
                                             <a>
                                                 <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
                                                     <div class="Image_imageComponent__2bb7A img-wrapper" style="border-width:1px 1px 1px 1px;border-top-left-radius:999px;border-top-right-radius:999px;border-bottom-right-radius:999px;border-bottom-left-radius:999px;width:100%;height:100%;display:flex">
-                                                        <img src="/media/gallery-placeholder.jpg" style="width:100%;height:100%;object-fit:cover" title="" alt="" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
-                                                    </div>
-                                                </div>
-                                                <div style="position:relative" class="gallery-caption">
-                                                    <div class="textnormal">
-                                                        <div class="Gallery_galleryCaptionContainer__1UMvN">
-                                                            <div>
-                                                                <div style="width:340.6px;background-image:none;padding-left:15px;padding-right:15px;padding-top:20px;padding-bottom:20px" class="Gallery_galleryCaption__2CuUb gallery-title-description-wrapper Gallery_emptyCaption__1hX7z"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div data-index="1" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:14px;margin-top:0;text-align:center">
-                                            <a>
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="border-width:1px 1px 1px 1px;border-top-left-radius:999px;border-top-right-radius:999px;border-bottom-right-radius:999px;border-bottom-left-radius:999px;width:100%;height:100%;display:flex">
-                                                        <img src="/media/P 1 10.jpeg" style="width:100%;height:100%;object-fit:cover" title="Op Maat" alt="Op Maat" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
+                                                        <img src="/media/p-1-10.jpg" style="width:100%;height:100%;object-fit:cover" title="Op Maat" alt="Op Maat" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
                                                     </div>
                                                 </div>
                                                 <div style="position:relative" class="gallery-caption">
@@ -628,16 +588,14 @@
     </div>
 
     <!-- Video Section -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:503px;width:100%">
-        <div data-id="8962D2A2-0304-41BD-9613-CF01648AEE46" data-kind="SECTION" style="width:100%;min-height:503px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
+    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="width:100%">
+        <div data-id="8962D2A2-0304-41BD-9613-CF01648AEE46" data-kind="SECTION" style="width:100%;min-height:auto;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
             <div id="Section4" data-in-template="false" data-id="8962D2A2-0304-41BD-9613-CF01648AEE46" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:503px;padding-bottom:22px" data-width="100" data-height="503">
+                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:auto;padding-bottom:22px" data-width="100">
                     <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:481px;width:1050px">
-                            <div data-id="F8B532DD-6DEE-40E8-9628-E3620AC91BDC" data-kind="VIDEO_FILE" style="width:465px;height:458px;margin-top:23px;margin-left:292px" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="F8B532DD-6DEE-40E8-9628-E3620AC91BDC" data-kind="Component" data-specific-kind="VIDEO_FILE" class=" Preview_component__SbiKo ">
-                                    <video preload="none" controls="" playsinline="" src="/media/video.mp4" width="465" height="458" controlslist="nodownload"></video>
-                                </div>
+                        <div class="Preview_row__3Fkye row" style="min-height:auto;width:1050px">
+                            <div class="video-container">
+                                <video preload="metadata" controls playsinline src="/media/video.mp4" controlslist="nodownload"></video>
                             </div>
                         </div>
                         <div style="clear:both"></div>

@@ -13,6 +13,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://barcony.nl/modellen-prijzen/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://barcony.nl/barcony-modellen</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
