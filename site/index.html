@@ -32,9 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
 
     <style>
     html { word-wrap: break-word; }
@@ -48,25 +46,49 @@
     img { border: 0; }
     body { -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
 
+    /* Base Typography */
+    :root { --text-color: #0f172a; --heading-color: #4d6b81; }
+    html, body { font-family: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial !important; line-height: 1.6; color: var(--text-color); }
+    h1, h2, h3, .textheading1, .textheading2, .textheading3 { font-family: 'Cormorant', Georgia, 'Times New Roman', serif !important; font-weight: 700; color: var(--heading-color); line-height: 1.25; }
+    a { color: #4d6b81; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
     .bodyBackground { background-color: rgba(255,255,255,1); }
 
     @media (max-width: 650px) {
-        body { min-width: 'initial' }
+        body { min-width: 0 }
         body.desktopV { min-width: 1050px }
     }
     @media (min-width: 651px) {
-        body { min-width: 1050px }
+        body { min-width: 0 }
         body.mobileV { min-width: initial }
     }
 
     .template { visibility: hidden }
-    body { overflow-x: hidden }
+    body { overflow-x: hidden; min-width: 0 !important }
+
+    /* Layout responsiveness */
+    .Preview_row__3Fkye.row { width: 100% !important }
+    .Preview_column__1KeVx.col { width: min(100%, 1050px) !important; margin: 0 auto !important }
+
+    /* Enforce font on components that had inline font-family */
+    .MobileHeader_titleText__1M62s,
+    .menu .menu1 a,
+    .ButtonPreview_textContainer__t8q7_,
+    .FieldContainerStyles_label__38Z4h,
+    .View_input__1iF1T,
+    .View_select__2DXGf,
+    .View_textArea__2s1mo { font-family: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial !important }
 
     /* Gallery styles */
-    .gallery { display: flex; flex-wrap: wrap; justify-content: space-between; }
-    .gallery-cell { margin-bottom: 14px; }
-    .gallery-cell:nth-child(3n+1) { margin-left: 0; }
-    .gallery-cell:nth-child(3n+3) { margin-right: 0; }
+    .gallery { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center }
+    .gallery-cell { margin: 0; flex: 1 1 calc(33.333% - 14px); max-width: calc(33.333% - 14px) }
+    @media (max-width: 900px) { .gallery-cell { flex-basis: calc(50% - 12px); max-width: calc(50% - 12px) } }
+    @media (max-width: 600px) { .gallery-cell { flex-basis: 100%; max-width: 100% } }
+
+    .gallery .img-container { aspect-ratio: 1 / 1; width: 100% !important; height: auto !important; display: block !important }
+    .gallery .img-wrapper { width: 100% !important; height: 100% !important }
+    .gallery img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block }
 
     /* Form styles */
     .contactFormContainer { max-width: 600px; margin: 0 auto; }
@@ -76,6 +98,11 @@
     .contact-form-field-container textarea,
     .contact-form-field-container select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
     .contact-form-field-container textarea { min-height: 100px; }
+
+    /* Responsive media */
+    img { max-width: 100%; height: auto }
+    video { width: 100% !important; height: auto !important; display: block }
+    .MobileHeader_logoImage__BZwGs { max-height: 60px; width: auto }
     </style>
 </head>
 <body class="bodyBackground" style="overflow-y:scroll;overflow-x:hidden">
