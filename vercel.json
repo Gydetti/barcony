@@ -6,39 +6,39 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/gallerij/?(.*)",
-      "dest": "/site/gallerij/$1"
+      "source": "/gallerij/:path*",
+      "destination": "/site/gallerij/:path*"
     },
     {
-      "src": "/barcony-modellen/?(.*)",
-      "dest": "/site/barcony-modellen/$1"
+      "source": "/barcony-modellen/:path*",
+      "destination": "/site/barcony-modellen/:path*"
     },
     {
-      "src": "/contact/?(.*)",
-      "dest": "/site/contact/$1"
+      "source": "/contact/:path*",
+      "destination": "/site/contact/:path*"
     },
     {
-      "src": "/robots.txt",
-      "dest": "/site/robots.txt"
+      "source": "/robots.txt",
+      "destination": "/site/robots.txt"
     },
     {
-      "src": "/sitemap.xml",
-      "dest": "/site/sitemap.xml"
+      "source": "/sitemap.xml",
+      "destination": "/site/sitemap.xml"
     },
     {
-      "src": "/media/(.*)",
-      "dest": "/site/media/$1"
+      "source": "/media/:path*",
+      "destination": "/site/media/:path*"
     },
     {
-      "src": "/(.*)",
-      "dest": "/site/$1"
+      "source": "/:path*",
+      "destination": "/site/:path*"
     }
   ],
   "headers": [
     {
-      "source": "/media/(.*)",
+      "source": "/media/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "source": "/(.*\\.html)",
+      "source": "/:path*\\.html",
       "headers": [
         {
           "key": "Cache-Control",
