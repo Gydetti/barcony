@@ -1,76 +1,26 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "**",
-      "use": "@vercel/static"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/gallerij/:path*",
-      "destination": "/site/gallerij/:path*"
-    },
-    {
-      "source": "/barcony-modellen/:path*",
-      "destination": "/site/barcony-modellen/:path*"
-    },
-    {
-      "source": "/contact/:path*",
-      "destination": "/site/contact/:path*"
-    },
-    {
-      "source": "/robots.txt",
-      "destination": "/site/robots.txt"
-    },
-    {
-      "source": "/sitemap.xml",
-      "destination": "/site/sitemap.xml"
-    },
-    {
-      "source": "/media/:path*",
-      "destination": "/site/media/:path*"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/site/:path*"
-    }
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true }
   ],
   "headers": [
     {
-      "source": "/media/:path*",
+      "source": "/media/(.*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/:path*\\.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     },
     {
       "source": "/sitemap.xml",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     }
   ]
