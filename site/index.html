@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -90,6 +89,27 @@
     .gallery .img-wrapper { width: 100% !important; height: 100% !important }
     .gallery img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block }
 
+    /* Hero gallery: responsive 6-photo grid */
+    .hero-gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 1050px; margin: 0 auto }
+    .hero-gallery-cell { flex: 0 1 calc(16.666% - 8.33px); max-width: calc(16.666% - 8.33px); min-width: 150px }
+    .hero-img-container { aspect-ratio: 1 / 1; width: 100% !important; height: auto !important; display: block !important; overflow: hidden; border-radius: 8px }
+    .hero-gallery img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block; border-radius: 8px; transition: transform 0.3s ease }
+
+    /* Responsive hero gallery */
+    @media (max-width: 900px) {
+        .hero-gallery-cell { flex-basis: calc(25% - 7.5px); max-width: calc(25% - 7.5px) }
+    }
+    @media (max-width: 600px) {
+        .hero-gallery-cell { flex-basis: calc(33.333% - 6.67px); max-width: calc(33.333% - 6.67px) }
+    }
+    @media (max-width: 480px) {
+        .hero-gallery-cell { flex-basis: calc(50% - 5px); max-width: calc(50% - 5px) }
+    }
+
+    /* Hero CTA button styling */
+    .hero-cta-button { display: inline-block; background-color: #ffa24d !important; color: #ffffff !important; padding: 15px 30px !important; border-radius: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 162, 77, 0.3) }
+    .hero-cta-button:hover { background-color: #ff8c3d !important; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 162, 77, 0.4) }
+
     /* Models grid: circular cards with consistent size */
     #modellen .gallery { gap: 28px; justify-content: center }
     #modellen .gallery-cell { flex: 0 1 clamp(220px, 30vw, 320px); max-width: clamp(220px, 30vw, 320px) }
@@ -119,18 +139,75 @@
     #Header { display: none !important }
 
     /* Navigation Styles */
-    .nav-container { width: 100%; min-height: 72px; background-color: rgba(255,255,255,1); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.1) }
-    .nav-inner { width: 1050px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px }
-    .nav-logo { flex-shrink: 0 }
-    .nav-logo img { height: 36px; width: auto }
-    .nav-menu { display: flex; gap: 24px }
-    .nav-menu a { color: #4d6b81; font-weight: 600; padding: 8px 0; transition: color 0.2s ease }
-    .nav-menu a:hover, .nav-menu a.active { color: #ffa24d }
+    .nav-container { 
+        width: 100%; 
+        min-height: 102px; 
+        background-color: rgba(255,255,255,1); 
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+    }
+    .nav-container.nav--shrunken {
+        min-height: 70px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .nav-container.nav--hidden {
+        transform: translateY(-100%);
+        box-shadow: none;
+    }
+
+    .nav-inner { width: 1050px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 20px 0; transition: padding 0.3s ease-in-out; }
+    .nav-container.nav--shrunken .nav-inner {
+        padding: 10px 0;
+    }
+
+    .nav-logo { flex-shrink: 0; }
+    .nav-logo img { height: 60px; width: auto; transition: height 0.3s ease-in-out; }
+    .nav-container.nav--shrunken .nav-logo img {
+        height: 50px;
+    }
+
+    .nav-menu { display: flex; gap: 40px; }
+    .nav-menu a { color: #4d6b81; font-weight: 500; padding: 10px 0; transition: color 0.3s ease; }
+    .nav-menu a:hover, .nav-menu a.active { color: #ffa24d; }
+
+    .nav-toggle { display: none; cursor: pointer; }
+    .nav-toggle span { display: block; width: 25px; height: 3px; background-color: #4d6b81; margin: 5px 0; transition: all 0.3s ease; }
 
     /* Mobile Navigation */
     @media (max-width: 900px) {
-        .nav-inner { width: 100%; padding: 10px 16px }
-        .nav-menu { display: flex; gap: 12px; overflow-x: auto }
+        .nav-inner { width: 100%; padding: 15px 20px; }
+        .nav-container.nav--shrunken .nav-inner {
+            padding: 10px 20px;
+        }
+
+        .nav-toggle { display: block; }
+        
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            flex-direction: column;
+            gap: 0;
+            padding: 10px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .nav-menu.nav-menu--active {
+            display: flex;
+        }
+        .nav-menu a {
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
     }
 
     /* Smooth anchor scrolling and offset */
@@ -152,7 +229,11 @@
                 <a href="/#modellen">Modellen</a>
                 <a href="/#contact">Contact</a>
             </div>
-            
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
     <!-- Mobile Header -->
@@ -248,13 +329,63 @@
                             <div data-id="531B6C99-C657-40F2-8538-FC816883338E" data-kind="TEXT" style="width:954px;min-height:80px;margin-top:269px;margin-left:48px" class="Preview_componentWrapper__2i4QI">
                                 <div data-in-template="false" data-id="531B6C99-C657-40F2-8538-FC816883338E" data-kind="Component" data-specific-kind="TEXT" class=" Preview_component__SbiKo text-align-null">
                                     <div data-mve-font-change="0" class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu">
-                                        <h2 class="textheading2 mobile-oversized" style="font-size: 50px; text-align: center;"><span class="textheading2 mobile-oversized" style="font-weight: bold; font-size: 50px; color: #ffa24d;">De inklapbare bartafel voor uw balkon</span></h2>
+                                        <h1 class="textheading1 mobile-oversized" style="font-size: 50px; text-align: center;"><span class="textheading1 mobile-oversized" style="font-weight: bold; font-size: 50px; color: #ffa24d;">De inklapbare bartafel voor uw balkon</span></h1>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Hero Photo Grid -->
+                        <div class="Preview_row__3Fkye row" style="min-height:200px;width:1050px">
+                            <div data-id="hero-gallery" data-kind="GALLERY" style="width:1050px;min-height:200px;margin-top:20px;margin-left:0" class="Preview_componentWrapper__2i4QI">
+                                <div class="hero-gallery textnormal" data-captionenabled="false" data-mobile-column="3" data-columns="6" data-spacing="10" data-image-ratio="SQUARE" data-original-width="1050" data-compact-view="false">
+                                    <div data-index="0" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:0;margin-top:0;text-align:center">
+                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
+                                            <img src="/media/gallery-1.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Barcony bartafel in gebruik op balkon" fetchpriority="high" decoding="async" loading="eager" width="200" height="200">
+                                        </div>
+                                    </div>
+                                    <div data-index="1" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:10px;margin-top:0;text-align:center">
+                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
+                                            <img src="/media/gallery-2.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Inklapbare bartafel design" decoding="async" loading="lazy" width="200" height="200">
+                                        </div>
+                                    </div>
+                                    <div data-index="2" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:10px;margin-top:0;text-align:center">
+                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
+                                            <img src="/media/gallery-3.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Duurzaam Douglas hout" decoding="async" loading="lazy" width="200" height="200">
+                                        </div>
+                                    </div>
+                                    <div data-index="3" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:10px;margin-top:0;text-align:center">
+                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
+                                            <img src="/media/gallery-4.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Compact opklapbaar systeem" decoding="async" loading="lazy" width="200" height="200">
+                                        </div>
+                                    </div>
+                                    <div data-index="4" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:10px;margin-top:0;text-align:center">
+                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
+                                            <img src="/media/gallery-5.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Moderne balkon oplossing" decoding="async" loading="lazy" width="200" height="200">
+                                        </div>
+                                    </div>
+                                    <div data-index="5" class="hero-gallery-cell" style="width:calc(16.666% - 8.33px);margin-left:10px;margin-top:0;text-align:center">
+                                        <div class="hero-img-container" style="height:200px;width:100%;display:flex">
+                                            <img src="/media/gallery-6.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:8px" alt="Barcony op maat gemaakt" decoding="async" loading="lazy" width="200" height="200">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Primary CTA -->
+                        <div class="Preview_row__3Fkye row" style="min-height:80px;width:1050px">
+                            <div data-id="hero-cta" data-kind="BUTTON" style="width:250px;height:60px;margin-top:30px;margin-left:400px" class="Preview_componentWrapper__2i4QI">
+                                <div class="ButtonPreview_container__22hQi ButtonPreview_buttonTransition__CKIAx button1">
+                                    <div class="ButtonPreview_buttonComponent__17NP0">
+                                        <a href="#modellen" class="ButtonPreview_textContainer__t8q7_ hero-cta-button" style="background-color:#ffa24d;color:#ffffff;padding:15px 30px;border-radius:8px;font-weight:600;text-transform:uppercase;letter-spacing:1px;"><span>Modellen bekijken</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="Preview_row__3Fkye row" style="min-height:19px;width:1050px">
-                            <div data-id="8B12DF6D-EF16-493B-BFA6-67C3AE0E4F99" data-kind="IMAGE" style="width:1050px;min-height:19px;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
+                            <div data-id="8B12DF6D-EF16-493B-BFA6-67C3AE0E4F99" data-kind="IMAGE" style="width:1050px;min-height:19px;margin-top:20px;margin-left:0" class="Preview_componentWrapper__2i4QI">
                                 <div data-in-template="false" data-id="8B12DF6D-EF16-493B-BFA6-67C3AE0E4F99" data-kind="Component" data-specific-kind="IMAGE" class=" Preview_component__SbiKo ">
                                     <div class="Mobile_imageComponent__QXWk1" style="width:1050px;height:19px;overflow:hidden" data-width="1050" data-height="19">
                                         <img loading="lazy" role="presentation" data-scalestrategy="fit" style="display:block;margin:0" src="/media/decorative-line.png" height="19" width="1050" data-width="1050" data-height="19">
@@ -749,5 +880,31 @@
 </html>
 
 <script>
-  // no mobile toggle needed
+  // Navigation scroll behavior
+  const nav = document.querySelector('.nav-container');
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      nav.classList.add('nav--shrunken');
+    } else {
+      nav.classList.remove('nav--shrunken');
+    }
+
+    if (window.scrollY > lastScrollY && window.scrollY > 200) {
+      nav.classList.add('nav--hidden');
+    } else {
+      nav.classList.remove('nav--hidden');
+    }
+    
+    lastScrollY = window.scrollY;
+  });
+
+  // Mobile menu toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('nav-menu--active');
+  });
 </script>

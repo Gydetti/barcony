@@ -54,18 +54,75 @@
     .bodyBackground { background-color: rgba(255,255,255,1); }
 
     /* Navigation Styles */
-    .nav-container { width: 100%; min-height: 102px; background-color: rgba(255,255,255,1); border-bottom: 1px solid rgba(0,0,0,0.1); }
-    .nav-inner { width: 1050px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+    .nav-container { 
+        width: 100%; 
+        min-height: 102px; 
+        background-color: rgba(255,255,255,1); 
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+    }
+    .nav-container.nav--shrunken {
+        min-height: 70px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .nav-container.nav--hidden {
+        transform: translateY(-100%);
+        box-shadow: none;
+    }
+
+    .nav-inner { width: 1050px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 20px 0; transition: padding 0.3s ease-in-out; }
+    .nav-container.nav--shrunken .nav-inner {
+        padding: 10px 0;
+    }
+
     .nav-logo { flex-shrink: 0; }
-    .nav-logo img { height: 60px; width: auto; }
+    .nav-logo img { height: 60px; width: auto; transition: height 0.3s ease-in-out; }
+    .nav-container.nav--shrunken .nav-logo img {
+        height: 50px;
+    }
+
     .nav-menu { display: flex; gap: 40px; }
     .nav-menu a { color: #4d6b81; font-weight: 500; padding: 10px 0; transition: color 0.3s ease; }
     .nav-menu a:hover, .nav-menu a.active { color: #ffa24d; }
 
+    .nav-toggle { display: none; cursor: pointer; }
+    .nav-toggle span { display: block; width: 25px; height: 3px; background-color: #4d6b81; margin: 5px 0; transition: all 0.3s ease; }
+
     /* Mobile Navigation */
     @media (max-width: 900px) {
         .nav-inner { width: 100%; padding: 15px 20px; }
-        .nav-menu { display: flex; gap: 14px; overflow-x: auto; }
+        .nav-container.nav--shrunken .nav-inner {
+            padding: 10px 20px;
+        }
+
+        .nav-toggle { display: block; }
+        
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            flex-direction: column;
+            gap: 0;
+            padding: 10px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .nav-menu.nav-menu--active {
+            display: flex;
+        }
+        .nav-menu a {
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
     }
 
     /* Hero Section */
@@ -196,7 +253,11 @@
                 <a href="/#modellen">Modellen</a>
                 <a href="/#contact">Contact</a>
             </div>
-            
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
@@ -296,6 +357,34 @@
         });
 
         // no mobile toggle needed
+
+        // Navigation scroll behavior
+        const nav = document.querySelector('.nav-container');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+            nav.classList.add('nav--shrunken');
+            } else {
+            nav.classList.remove('nav--shrunken');
+            }
+
+            if (window.scrollY > lastScrollY && window.scrollY > 200) {
+            nav.classList.add('nav--hidden');
+            } else {
+            nav.classList.remove('nav--hidden');
+            }
+            
+            lastScrollY = window.scrollY;
+        });
+
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-menu--active');
+        });
     </script>
 </body>
 </html>
