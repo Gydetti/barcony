@@ -106,9 +106,42 @@
 
     /* Hide legacy mobile header/menu (no JS) to avoid duplicate nav */
     #wsb-mobile-header, #mm, #mm-overlay { display: none !important }
+    /* Hide legacy desktop header block */
+    #Header { display: none !important }
+
+    /* Modern sticky header */
+    .site-header { position: sticky; top: 0; z-index: 1000; background: #ffffffcc; backdrop-filter: saturate(180%) blur(6px); border-bottom: 1px solid #eaeaea }
+    .nav-container { max-width: 1050px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 10px 16px }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-family: 'Cormorant', Georgia, serif; font-weight: 700; color: #4d6b81; font-size: 22px }
+    .brand-logo { height: 36px; width: auto }
+    .nav { display: flex; align-items: center; gap: 20px }
+    .nav a { font-weight: 600; color: #4d6b81 }
+    @media (max-width: 640px) {
+      .nav { gap: 14px; font-size: 14px; overflow-x: auto }
+      .brand-name { display: none }
+      .brand-logo { height: 28px }
+    }
+
+    /* Smooth anchor scrolling and offset */
+    html { scroll-behavior: smooth }
+    [id] { scroll-margin-top: 80px }
     </style>
 </head>
 <body class="bodyBackground" style="overflow-y:scroll;overflow-x:hidden">
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#home" class="brand">
+                <img src="/media/logo.png" alt="Barcony" class="brand-logo">
+                <span class="brand-name">Barcony</span>
+            </a>
+            <nav class="nav" aria-label="Primary">
+                <a href="#home">Home</a>
+                <a href="#gallerij">Gallerij</a>
+                <a href="#modellen">Barcony modellen</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
     <!-- Mobile Header -->
     <div data-mobile-pin="1" id="wsb-mobile-header" class="mm mm-mobile-preview">
         <header id="MobileHeader_container" class="MobileHeader_container__1XW3y MobileHeader_withLogo__boWI9" style="background-color:rgba(255,255,255,1)">
