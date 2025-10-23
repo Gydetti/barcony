@@ -70,16 +70,23 @@ Het build systeem injecteert automatisch:
 - **Consistent spacing** met 8px grid systeem
 
 ### Components
-- **Navigation**: Fixed header met backdrop blur
+- **Navigation**: Fixed header met backdrop blur en smart highlighting
+- **Hero Sections**: Consistent heights (60vh/50vh/40vh) met moderne padding
 - **Buttons**: Primary en secondary variants met hover effects
-- **Cards**: Consistent styling met subtle shadows
+- **Cards**: Consistent styling met subtle shadows en flexbox layouts
 - **Grid**: Responsive layouts met CSS Grid en Flexbox
 
 ## 📱 Responsive Design
 
-- **Desktop**: Multi-column layouts met hover effects
-- **Tablet**: Adapted grid layouts (768px breakpoint)
-- **Mobile**: Single column met touch-friendly interactions (480px breakpoint)
+- **Desktop**: Multi-column layouts met hover effects, hero height 60vh
+- **Tablet**: Adapted grid layouts (768px breakpoint), hero height 50vh
+- **Mobile**: Single column met touch-friendly interactions (480px breakpoint), hero height 40vh
+
+**Hero Section Features:**
+- Perfect vertical centering with flexbox
+- Responsive padding that scales with screen size
+- Consistent visual impact across all devices
+- Modern typography with fluid scaling
 
 ## ♿ Accessibility
 
