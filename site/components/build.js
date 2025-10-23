@@ -62,9 +62,10 @@ class BarconyBuild {
         // Remove existing style blocks (including multi-line ones)
         content = content.replace(/<style>[\s\S]*?<\/style>/g, '');
 
-        // Add universal CSS
+        // Add universal CSS and JavaScript
         const css = `<style>\n${variables}\n${components}\n</style>`;
-        return content.replace('</head>', `${css}\n</head>`);
+        const js = this.getActiveNavScript();
+        return content.replace('</head>', `${css}\n${js}\n</head>`);
     }
 
     replaceComponents(content, header, footer) {
@@ -84,24 +85,66 @@ class BarconyBuild {
     }
 
     updateActiveNav(content, pagePath) {
+        // Simple and robust active navigation detection
         if (pagePath === 'index.html') {
+            // Home page - first link should be active
             content = content.replace(
-                'class="navbar__link"',
-                'class="navbar__link navbar__link--active"'
+                '<a href="/" class="navbar__link">Home</a>',
+                '<a href="/" class="navbar__link navbar__link--active">Home</a>'
             );
         } else if (pagePath === 'gallerij/index.html') {
+            // Gallery page
             content = content.replace(
-                '<a href="/gallerij" class="navbar__link">',
-                '<a href="/gallerij" class="navbar__link navbar__link--active">'
+                '<a href="/gallerij" class="navbar__link">Gallerij</a>',
+                '<a href="/gallerij" class="navbar__link navbar__link--active">Gallerij</a>'
             );
         } else if (pagePath === 'modellen-prijzen/index.html') {
+            // Models page - use page link
             content = content.replace(
-                '<a href="/modellen-prijzen" class="navbar__link">',
-                '<a href="/modellen-prijzen" class="navbar__link navbar__link--active">'
+                '<a href="/modellen-prijzen" class="navbar__link">Modellen</a>',
+                '<a href="/modellen-prijzen" class="navbar__link navbar__link--active">Modellen</a>'
             );
         }
 
         return content;
+    }
+
+    getActiveNavScript() {
+        return `<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Set active navigation link based on current URL
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar__link');
+
+    navLinks.forEach(link => {
+        // Remove existing active class
+        link.classList.remove('navbar__link--active');
+
+        // Check if this link matches current path
+        const href = link.getAttribute('href');
+
+        if (currentPath === '/' && href === '/') {
+            link.classList.add('navbar__link--active');
+        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
+            if (href === '/gallerij') {
+                link.classList.add('navbar__link--active');
+            }
+        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
+            if (href === '/modellen-prijzen') {
+                link.classList.add('navbar__link--active');
+            }
+        }
+
+        // Also handle hash links for homepage sections
+        if (currentPath === '/' && href.startsWith('#')) {
+            const hash = window.location.hash;
+            if (href === hash) {
+                link.classList.add('navbar__link--active');
+            }
+        }
+    });
+});
+</script>`;
     }
 }
 

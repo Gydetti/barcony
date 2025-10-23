@@ -45,6 +45,43 @@
 
 
 
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Set active navigation link based on current URL
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar__link');
+
+    navLinks.forEach(link => {
+        // Remove existing active class
+        link.classList.remove('navbar__link--active');
+
+        // Check if this link matches current path
+        const href = link.getAttribute('href');
+
+        if (currentPath === '/' && href === '/') {
+            link.classList.add('navbar__link--active');
+        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
+            if (href === '/gallerij') {
+                link.classList.add('navbar__link--active');
+            }
+        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
+            if (href === '/modellen-prijzen') {
+                link.classList.add('navbar__link--active');
+            }
+        }
+
+        // Also handle hash links for homepage sections
+        if (currentPath === '/' && href.startsWith('#')) {
+            const hash = window.location.hash;
+            if (href === hash) {
+                link.classList.add('navbar__link--active');
+            }
+        }
+    });
+});
+</script>
 <style>
 /* Barcony Brand Variables - Industry Standard */
 :root {
@@ -818,6 +855,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Active Navigation JavaScript */
+@media (max-width: 9999px) {
+    /* JavaScript for active navigation will be added via inline script */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -911,7 +953,44 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Active Navigation Detection - JavaScript will be added via build script */
+
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Set active navigation link based on current URL
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar__link');
+
+    navLinks.forEach(link => {
+        // Remove existing active class
+        link.classList.remove('navbar__link--active');
+
+        // Check if this link matches current path
+        const href = link.getAttribute('href');
+
+        if (currentPath === '/' && href === '/') {
+            link.classList.add('navbar__link--active');
+        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
+            if (href === '/gallerij') {
+                link.classList.add('navbar__link--active');
+            }
+        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
+            if (href === '/modellen-prijzen') {
+                link.classList.add('navbar__link--active');
+            }
+        }
+
+        // Also handle hash links for homepage sections
+        if (currentPath === '/' && href.startsWith('#')) {
+            const hash = window.location.hash;
+            if (href === hash) {
+                link.classList.add('navbar__link--active');
+            }
+        }
+    });
+});
+</script>
 </head>
 <body>
     <!-- Universal Header Component -->
@@ -925,7 +1004,7 @@ h1, h2, h3, h4, h5, h6 {
             <div class="navbar__links">
                 <a href="/" class="navbar__link navbar__link--active">Home</a>
                 <a href="/gallerij" class="navbar__link">Gallerij</a>
-                <a href="#modellen" class="navbar__link">Modellen</a>
+                <a href="/modellen-prijzen" class="navbar__link">Modellen</a>
                 <a href="#contact" class="navbar__link">Contact</a>
             </div>
             <a href="#contact" class="navbar__cta btn">Bestel Nu</a>
@@ -938,6 +1017,10 @@ h1, h2, h3, h4, h5, h6 {
         </button>
     </div>
 </nav>
+
+    
+
+    
 
     
 
@@ -1251,6 +1334,10 @@ h1, h2, h3, h4, h5, h6 {
         </section>
 
     </main>
+
+    
+
+    
 
     
 

@@ -711,6 +711,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Active Navigation JavaScript */
+@media (max-width: 9999px) {
+    /* JavaScript for active navigation will be added via inline script */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -803,3 +808,5 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
 }
+
+/* Active Navigation Detection - JavaScript will be added via build script */
