@@ -62,6 +62,12 @@ class BarconyBuild {
         // Remove existing style blocks (including multi-line ones)
         content = content.replace(/<style>[\s\S]*?<\/style>/g, '');
 
+        // Remove any duplicate hero styles that might exist
+        content = content.replace(/\.hero\s*\{[^}]*background[^}]*\}/g, '');
+        content = content.replace(/\.hero__title\s*\{[^}]*\}/g, '');
+        content = content.replace(/\.hero__subtitle\s*\{[^}]*\}/g, '');
+        content = content.replace(/\.hero__cta\s*\{[^}]*\}/g, '');
+
         // Add universal CSS and JavaScript
         const css = `<style>\n${variables}\n${components}\n</style>`;
         const js = this.getActiveNavScript();
