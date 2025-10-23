@@ -5,8 +5,8 @@
  * Industry standard component-based build process
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 class BarconyBuild {
     constructor() {

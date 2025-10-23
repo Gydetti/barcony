@@ -80,6 +80,114 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Set active navigation link based on current URL
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar__link');
+
+    navLinks.forEach(link => {
+        // Remove existing active class
+        link.classList.remove('navbar__link--active');
+
+        // Check if this link matches current path
+        const href = link.getAttribute('href');
+
+        if (currentPath === '/' && href === '/') {
+            link.classList.add('navbar__link--active');
+        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
+            if (href === '/gallerij') {
+                link.classList.add('navbar__link--active');
+            }
+        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
+            if (href === '/modellen-prijzen') {
+                link.classList.add('navbar__link--active');
+            }
+        }
+
+        // Also handle hash links for homepage sections
+        if (currentPath === '/' && href.startsWith('#')) {
+            const hash = window.location.hash;
+            if (href === hash) {
+                link.classList.add('navbar__link--active');
+            }
+        }
+    });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Set active navigation link based on current URL
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar__link');
+
+    navLinks.forEach(link => {
+        // Remove existing active class
+        link.classList.remove('navbar__link--active');
+
+        // Check if this link matches current path
+        const href = link.getAttribute('href');
+
+        if (currentPath === '/' && href === '/') {
+            link.classList.add('navbar__link--active');
+        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
+            if (href === '/gallerij') {
+                link.classList.add('navbar__link--active');
+            }
+        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
+            if (href === '/modellen-prijzen') {
+                link.classList.add('navbar__link--active');
+            }
+        }
+
+        // Also handle hash links for homepage sections
+        if (currentPath === '/' && href.startsWith('#')) {
+            const hash = window.location.hash;
+            if (href === hash) {
+                link.classList.add('navbar__link--active');
+            }
+        }
+    });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Set active navigation link based on current URL
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar__link');
+
+    navLinks.forEach(link => {
+        // Remove existing active class
+        link.classList.remove('navbar__link--active');
+
+        // Check if this link matches current path
+        const href = link.getAttribute('href');
+
+        if (currentPath === '/' && href === '/') {
+            link.classList.add('navbar__link--active');
+        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
+            if (href === '/gallerij') {
+                link.classList.add('navbar__link--active');
+            }
+        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
+            if (href === '/modellen-prijzen') {
+                link.classList.add('navbar__link--active');
+            }
+        }
+
+        // Also handle hash links for homepage sections
+        if (currentPath === '/' && href.startsWith('#')) {
+            const hash = window.location.hash;
+            if (href === hash) {
+                link.classList.add('navbar__link--active');
+            }
+        }
+    });
+});
+</script>
 <style>
 /* Barcony Brand Variables - Industry Standard */
 :root {
@@ -449,14 +557,17 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
-/* Hero Section */
+/* Hero Section - Universal Design */
 .hero {
     background: var(--color-primary);
     color: var(--color-white);
-    padding: calc(var(--navbar-height) + var(--space-3xl)) 0 var(--space-3xl);
+    padding: calc(var(--navbar-height) + var(--space-3xl)) 0 calc(var(--navbar-height) + var(--space-2xl));
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero::before {
@@ -467,50 +578,59 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     bottom: 0;
     background: url('/media/background.png') center/cover no-repeat;
-    opacity: 0.05;
+    opacity: 0.03;
     z-index: 1;
 }
 
 .hero__content {
     position: relative;
     z-index: 2;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 var(--space-lg);
+    padding: var(--space-2xl) var(--space-xl);
 }
 
 .hero__title {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 600;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
     color: var(--color-white);
-    line-height: 1.2;
+    line-height: 1.1;
+    font-family: var(--font-display);
 }
 
 .hero__subtitle {
-    font-size: clamp(1.125rem, 1.8vw, 1.25rem);
+    font-size: clamp(1.125rem, 2.2vw, 1.375rem);
     font-family: var(--font-primary);
     font-weight: 400;
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-2xl);
     opacity: 0.95;
     line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero__cta {
     display: inline-flex;
     align-items: center;
-    gap: var(--space-xs);
+    gap: var(--space-sm);
     color: var(--color-white);
     font-size: 1.125rem;
     font-weight: 500;
     text-decoration: none;
     transition: all var(--transition-fast);
     opacity: 0.9;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--border-radius-sm);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .hero__cta:hover {
     opacity: 1;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Gallery Components */
@@ -914,7 +1034,22 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero {
-        padding: calc(var(--navbar-height) + var(--space-xl)) 0 var(--space-xl);
+        padding: calc(var(--navbar-height) + var(--space-2xl)) 0 calc(var(--navbar-height) + var(--space-xl));
+        min-height: 50vh;
+    }
+
+    .hero__content {
+        padding: var(--space-xl) var(--space-md);
+    }
+
+    .hero__title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: var(--space-lg);
+    }
+
+    .hero__subtitle {
+        font-size: clamp(1rem, 2vw, 1.125rem);
+        margin-bottom: var(--space-xl);
     }
 
     .section {
@@ -944,6 +1079,30 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
     .container {
         padding: 0 var(--space-sm);
+    }
+
+    .hero {
+        padding: calc(var(--navbar-height) + var(--space-lg)) 0 calc(var(--navbar-height) + var(--space-md));
+        min-height: 40vh;
+    }
+
+    .hero__content {
+        padding: var(--space-lg) var(--space-sm);
+    }
+
+    .hero__title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        margin-bottom: var(--space-md);
+    }
+
+    .hero__subtitle {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+        margin-bottom: var(--space-lg);
+    }
+
+    .hero__cta {
+        font-size: 1rem;
+        padding: var(--space-xs) var(--space-md);
     }
 
     .gallery {
@@ -1015,6 +1174,12 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
     </div>
 </nav>
+
+    
+
+    
+
+    
 
     
 
@@ -1236,6 +1401,12 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </section>
     </main>
+
+    
+
+    
+
+    
 
     
 
