@@ -668,11 +668,11 @@ document.addEventListener('DOMContentLoaded', function() {
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-2xl: 4rem;
-  --space-3xl: 6rem;
-  --space-4xl: 8rem;
-  --space-5xl: 12rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 3rem;
+  --space-3xl: 3rem;
+  --space-4xl: 3.5rem;
+  --space-5xl: 4rem;
 
   /* Modern Border Radius */
   --border-radius-sm: 0.5rem;
@@ -704,8 +704,8 @@ document.addEventListener('DOMContentLoaded', function() {
   --container-max-width: 1280px;
   --container-wide: 1440px;
   --navbar-height: 88px;
-  --section-padding: 5rem;
-  --section-padding-mobile: 3rem;
+  --section-padding: 2rem;
+  --section-padding-mobile: 1.5rem;
 
   /* Modern Effects */
   --backdrop-blur: blur(20px);
@@ -1094,7 +1094,7 @@ h6 {
 
 /* Enhanced Section Components */
 .section {
-    padding: var(--section-padding) 0;
+    padding: var(--space-sm) 0;
     position: relative;
 }
 
@@ -1121,7 +1121,7 @@ h6 {
 
 .section__header {
     text-align: center;
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-md);
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
@@ -1142,7 +1142,7 @@ h6 {
 
 .section__title {
     font-size: clamp(2.25rem, 4vw, 3.5rem);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-sm);
     font-weight: 700;
     position: relative;
 }
@@ -1157,13 +1157,13 @@ h6 {
 
 /* Natural Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    background: linear-gradient(135deg, #8b5a3c 0%, #d4a574 50%, #a67c5a 100%);
     color: var(--color-white);
-    padding: calc(var(--navbar-height) + var(--space-4xl)) 0 calc(var(--navbar-height) + var(--space-3xl));
+    padding: calc(var(--navbar-height) + var(--space-3xl)) 0 calc(var(--navbar-height) + var(--space-xl));
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 70vh;
+    min-height: 55vh;
     display: flex;
     align-items: center;
 }
@@ -1176,10 +1176,10 @@ h6 {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 30% 70%, rgba(212, 165, 116, 0.15) 0%, transparent 60%),
-        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
-        url('/media/background.png') center/cover no-repeat;
-    opacity: 0.08;
+        radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+        radial-gradient(circle at 70% 30%, rgba(212, 165, 116, 0.2) 0%, transparent 60%),
+        url('/media/gallery-1.jpeg') center/cover no-repeat;
+    opacity: 0.15;
     z-index: 1;
 }
 
@@ -1190,73 +1190,41 @@ h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(139, 90, 60, 0.85) 0%, rgba(166, 124, 90, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(139, 90, 60, 0.5) 0%, rgba(212, 165, 116, 0.25) 100%);
     z-index: 2;
 }
 
 .hero__content {
     position: relative;
     z-index: 3;
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: var(--space-3xl) var(--space-xl);
+    padding: var(--space-xl) var(--space-md);
     animation: heroSlideUp 1s var(--animation-easing);
 }
 
 .hero__title {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-lg);
     color: var(--color-white);
     line-height: 1.1;
     font-family: var(--font-display);
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
 }
 
 .hero__subtitle {
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
     font-family: var(--font-primary);
     font-weight: 400;
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-md);
     opacity: 0.95;
     line-height: 1.7;
-    max-width: 700px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.hero__cta {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
-    color: var(--color-primary);
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all var(--transition-normal);
-    padding: var(--space-md) var(--space-2xl);
-    border-radius: var(--border-radius-lg);
-    border: 2px solid var(--color-white);
-    background: var(--color-white);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-.hero__cta:hover {
-    transform: translateY(-3px);
-    border-color: var(--color-accent);
-    background: var(--color-accent);
-    color: var(--color-white);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-.hero__cta svg {
-    transition: transform var(--transition-normal);
-}
-
-.hero__cta:hover svg {
-    transform: translateX(4px);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes heroSlideUp {
@@ -1363,7 +1331,7 @@ h6 {
         display: grid;
         grid-template-columns: repeat(2, minmax(400px, 1fr));
         gap: var(--space-xl);
-        margin-bottom: var(--space-3xl);
+        margin-bottom: var(--space-xs);
         justify-items: stretch;
         align-items: start;
         perspective: 1000px;
@@ -1719,14 +1687,14 @@ h6 {
 .footer {
     background: var(--color-gray-900);
     color: var(--color-white);
-    padding: var(--space-3xl) 0 var(--space-xl);
+    padding: var(--space-2xl) 0 var(--space-lg);
 }
 
 .footer__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--space-xl);
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
 }
 
 .footer__section h3 {
@@ -1770,7 +1738,7 @@ h6 {
 
 .footer__bottom {
     text-align: center;
-    padding-top: var(--space-xl);
+    padding-top: var(--space-lg);
     border-top: 1px solid var(--color-gray-800);
     color: var(--color-gray-400);
 }
@@ -2095,32 +2063,32 @@ h6 {
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
     .section {
-        padding: var(--section-padding-mobile) 0;
+        padding: var(--space-xs) 0;
     }
 
     .hero {
-        min-height: 60vh;
-        padding: calc(var(--navbar-height) + var(--space-3xl)) 0 calc(var(--navbar-height) + var(--space-2xl));
+        min-height: 35vh;
+        padding: var(--space-sm) 0;
     }
 
     .products {
         grid-template-columns: repeat(2, minmax(300px, 1fr));
-        gap: var(--space-lg);
+        gap: var(--space-md);
         max-width: 900px;
     }
 
     .features {
         grid-template-columns: 1fr;
-        gap: var(--space-xl);
+        gap: var(--space-md);
     }
 
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: var(--space-lg);
+        gap: var(--space-md);
     }
 
     .story-card {
-        padding: var(--space-xl);
+        padding: var(--space-md);
     }
 
     .video-wrapper {
@@ -2143,11 +2111,11 @@ h6 {
     }
 
     .contact-info > div {
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-sm);
     }
 
     .story-card {
-        padding: var(--space-xl);
+        padding: var(--space-md);
     }
 
     .video-wrapper {
@@ -2220,22 +2188,23 @@ h6 {
     }
 
     .hero {
-        padding: calc(var(--navbar-height) + var(--space-2xl)) 0 calc(var(--navbar-height) + var(--space-xl));
-        min-height: 50vh;
+        padding: var(--space-sm) 0;
+        min-height: 45vh;
     }
 
     .hero__content {
-        padding: var(--space-xl) var(--space-md);
+        padding: var(--space-sm) var(--space-md);
+        max-width: 500px;
     }
 
     .hero__title {
         font-size: clamp(2rem, 4vw, 3rem);
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-sm);
     }
 
     .hero__subtitle {
         font-size: clamp(1rem, 2vw, 1.125rem);
-        margin-bottom: var(--space-xl);
+        margin-bottom: var(--space-sm);
     }
 
     .section {
@@ -2268,12 +2237,13 @@ h6 {
     }
 
     .hero {
-        padding: calc(var(--navbar-height) + var(--space-lg)) 0 calc(var(--navbar-height) + var(--space-md));
+        padding: calc(var(--navbar-height) + var(--space-md)) 0 calc(var(--navbar-height) + var(--space-sm));
         min-height: 40vh;
     }
 
     .hero__content {
-        padding: var(--space-lg) var(--space-sm);
+        padding: var(--space-md) var(--space-sm);
+        max-width: 400px;
     }
 
     .hero__title {
@@ -2411,10 +2381,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Universal Header Component will be injected here -->
 
     <!-- Hero Section -->
-    <section class="hero" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); color: var(--color-white);">
+    <section class="hero">
         <div class="hero__content">
-            <h1 class="hero__title" style="color: var(--color-white);">Modellen & Prijzen</h1>
-            <p class="hero__subtitle" style="color: rgba(255, 255, 255, 0.95);">
+            <h1 class="hero__title">Modellen & Prijzen</h1>
+            <p class="hero__subtitle">
                 Ontdek het perfecte Barcony model voor uw balkon. Van compact tot op maat -
                 al onze modellen zijn handgemaakt in Zweden van duurzaam Douglas hout.
             </p>

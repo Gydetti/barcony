@@ -670,11 +670,11 @@ document.addEventListener('DOMContentLoaded', function() {
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-2xl: 4rem;
-  --space-3xl: 6rem;
-  --space-4xl: 8rem;
-  --space-5xl: 12rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 3rem;
+  --space-3xl: 3rem;
+  --space-4xl: 3.5rem;
+  --space-5xl: 4rem;
 
   /* Modern Border Radius */
   --border-radius-sm: 0.5rem;
@@ -706,8 +706,8 @@ document.addEventListener('DOMContentLoaded', function() {
   --container-max-width: 1280px;
   --container-wide: 1440px;
   --navbar-height: 88px;
-  --section-padding: 5rem;
-  --section-padding-mobile: 3rem;
+  --section-padding: 2rem;
+  --section-padding-mobile: 1.5rem;
 
   /* Modern Effects */
   --backdrop-blur: blur(20px);
@@ -1123,7 +1123,7 @@ h6 {
 
 .section__header {
     text-align: center;
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-md);
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
@@ -1133,7 +1133,7 @@ h6 {
 .section__header::after {
     content: '';
     position: absolute;
-    bottom: -var(--space-lg);
+    bottom: -var(--space-sm);
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
@@ -1144,7 +1144,7 @@ h6 {
 
 .section__title {
     font-size: clamp(2.25rem, 4vw, 3.5rem);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-sm);
     font-weight: 700;
     position: relative;
 }
@@ -1159,13 +1159,13 @@ h6 {
 
 /* Natural Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    background: linear-gradient(135deg, #8b5a3c 0%, #d4a574 50%, #a67c5a 100%);
     color: var(--color-white);
-    padding: calc(var(--navbar-height) + var(--space-4xl)) 0 calc(var(--navbar-height) + var(--space-3xl));
+    padding: var(--space-2xl) 0 var(--space-xl);
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 70vh;
+    min-height: 35vh;
     display: flex;
     align-items: center;
 }
@@ -1178,10 +1178,10 @@ h6 {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 30% 70%, rgba(212, 165, 116, 0.15) 0%, transparent 60%),
-        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
-        url('/media/background.png') center/cover no-repeat;
-    opacity: 0.08;
+        radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+        radial-gradient(circle at 70% 30%, rgba(212, 165, 116, 0.2) 0%, transparent 60%),
+        url('/media/gallery-1.jpeg') center/cover no-repeat;
+    opacity: 0.15;
     z-index: 1;
 }
 
@@ -1192,41 +1192,41 @@ h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(139, 90, 60, 0.85) 0%, rgba(166, 124, 90, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(139, 90, 60, 0.5) 0%, rgba(212, 165, 116, 0.25) 100%);
     z-index: 2;
 }
 
 .hero__content {
     position: relative;
     z-index: 3;
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: var(--space-3xl) var(--space-xl);
+    padding: var(--space-md) var(--space-lg);
     animation: heroSlideUp 1s var(--animation-easing);
 }
 
 .hero__title {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-sm);
     color: var(--color-white);
     line-height: 1.1;
     font-family: var(--font-display);
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
 }
 
 .hero__subtitle {
-    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.25rem);
     font-family: var(--font-primary);
     font-weight: 400;
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-md);
     opacity: 0.95;
     line-height: 1.7;
-    max-width: 700px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero__cta {
@@ -1365,7 +1365,7 @@ h6 {
         display: grid;
         grid-template-columns: repeat(2, minmax(400px, 1fr));
         gap: var(--space-xl);
-        margin-bottom: var(--space-3xl);
+        margin-bottom: var(--space-sm);
         justify-items: stretch;
         align-items: start;
         perspective: 1000px;
@@ -1442,7 +1442,7 @@ h6 {
         height: 250px;
         object-fit: cover;
         border-radius: var(--border-radius-lg);
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-sm);
         flex-shrink: 0;
         transition: all var(--transition-normal);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -1455,7 +1455,7 @@ h6 {
 
     .product-card__title {
         font-size: 2rem;
-        margin-bottom: var(--space-md);
+        margin-bottom: var(--space-xs);
         color: var(--color-primary);
         font-weight: 700;
         font-family: var(--font-display);
@@ -1464,7 +1464,7 @@ h6 {
 
     .product-card__description {
         color: var(--color-gray-600);
-        margin-bottom: var(--space-xl);
+        margin-bottom: var(--space-md);
         line-height: 1.7;
         font-size: 1rem;
         flex-grow: 1;
@@ -1478,7 +1478,7 @@ h6 {
         font-size: 2rem;
         font-weight: 700;
         color: var(--color-accent-dark);
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-sm);
         font-family: var(--font-primary);
         letter-spacing: -0.025em;
     }
@@ -1512,8 +1512,8 @@ h6 {
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-2xl);
-    margin-bottom: var(--space-3xl);
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xs);
 }
 
 .feature {
@@ -1559,7 +1559,7 @@ h6 {
     background: var(--color-primary-gradient);
     color: var(--color-white);
     border-radius: var(--border-radius-lg);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
     font-weight: 600;
     font-size: 1.25rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -1721,14 +1721,14 @@ h6 {
 .footer {
     background: var(--color-gray-900);
     color: var(--color-white);
-    padding: var(--space-3xl) 0 var(--space-xl);
+    padding: var(--space-2xl) 0 var(--space-lg);
 }
 
 .footer__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--space-xl);
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
 }
 
 .footer__section h3 {
@@ -1772,7 +1772,7 @@ h6 {
 
 .footer__bottom {
     text-align: center;
-    padding-top: var(--space-xl);
+    padding-top: var(--space-lg);
     border-top: 1px solid var(--color-gray-800);
     color: var(--color-gray-400);
 }
@@ -2101,8 +2101,8 @@ h6 {
     }
 
     .hero {
-        min-height: 60vh;
-        padding: calc(var(--navbar-height) + var(--space-3xl)) 0 calc(var(--navbar-height) + var(--space-2xl));
+        min-height: 50vh;
+        padding: calc(var(--navbar-height) + var(--space-2xl)) 0 calc(var(--navbar-height) + var(--space-lg));
     }
 
     .products {
@@ -2136,7 +2136,7 @@ h6 {
     .contact-form {
         padding: var(--space-xl);
         grid-column: 1 / -1;
-        margin-top: var(--space-2xl);
+        margin-top: var(--space-xs);
     }
 
     .contact-info {
@@ -2222,12 +2222,13 @@ h6 {
     }
 
     .hero {
-        padding: calc(var(--navbar-height) + var(--space-2xl)) 0 calc(var(--navbar-height) + var(--space-xl));
-        min-height: 50vh;
+        padding: calc(var(--navbar-height) + var(--space-lg)) 0 calc(var(--navbar-height) + var(--space-md));
+        min-height: 45vh;
     }
 
     .hero__content {
-        padding: var(--space-xl) var(--space-md);
+        padding: var(--space-lg) var(--space-md);
+        max-width: 500px;
     }
 
     .hero__title {
@@ -2270,12 +2271,13 @@ h6 {
     }
 
     .hero {
-        padding: calc(var(--navbar-height) + var(--space-lg)) 0 calc(var(--navbar-height) + var(--space-md));
+        padding: calc(var(--navbar-height) + var(--space-md)) 0 calc(var(--navbar-height) + var(--space-sm));
         min-height: 40vh;
     }
 
     .hero__content {
-        padding: var(--space-lg) var(--space-sm);
+        padding: var(--space-md) var(--space-sm);
+        max-width: 400px;
     }
 
     .hero__title {
@@ -2486,7 +2488,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 
-                <div class="text-center" style="margin-top: var(--space-3xl);">
+                <div class="text-center" style="margin-top: var(--space-sm);">
                     <a href="/gallerij" class="btn btn--secondary">
                         Bekijk meer inspiratie
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2543,9 +2545,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                                         </div>
                                                     </div>
 
-                <div class="text-center" style="margin-top: var(--space-3xl);">
+                <div class="text-center" style="margin-top: var(--space-sm);">
                     <div class="animate-on-scroll">
-                        <p style="color: var(--color-gray-600); margin-bottom: var(--space-lg); font-size: 1.125rem;">
+                        <p style="color: var(--color-gray-600); margin-bottom: var(--space-sm); font-size: 1.125rem;">
                             <strong>Twijfel je nog?</strong> We helpen je graag bij het kiezen van het perfecte model voor jouw balkon.
                         </p>
                         <a href="/modellen-prijzen" class="btn btn--secondary btn--large">
@@ -2646,7 +2648,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
 
-                <div class="text-center" style="margin-top: var(--space-2xl);">
+                <div class="text-center" style="margin-top: var(--space-xs);">
                     <p style="color: var(--color-gray-300); font-size: 1.125rem;">
                         <strong>Zo eenvoudig kan perfectie zijn</strong><br>
                         Van idee tot realiteit in één beweging
@@ -2665,7 +2667,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </p>
                     </div>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-2xl); margin-bottom: var(--space-3xl);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-2xl);">
                     <div class="story-card animate-on-scroll">
                         <div class="story-number">01</div>
                         <h3 class="story-title">De Vonken</h3>
@@ -2695,9 +2697,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
 
                 <div class="text-center animate-on-scroll">
-                    <div style="background: var(--color-primary-gradient); padding: var(--space-2xl); border-radius: var(--border-radius-2xl); color: var(--color-white);">
-                        <h3 style="color: var(--color-white); margin-bottom: var(--space-md); font-size: 2rem;">Join the Movement</h3>
-                        <p style="font-size: 1.125rem; margin-bottom: var(--space-lg); opacity: 0.9;">
+                    <div style="background: var(--color-primary-gradient); padding: var(--space-xl); border-radius: var(--border-radius-2xl); color: var(--color-white);">
+                        <h3 style="color: var(--color-white); margin-bottom: var(--space-sm); font-size: 2rem;">Join the Movement</h3>
+                        <p style="font-size: 1.125rem; margin-bottom: var(--space-md); opacity: 0.9;">
                             Word deel van een gemeenschap die gelooft in kwaliteit, duurzaamheid en de eenvoudige vreugde van buiten leven.
                         </p>
                         <a href="#contact" class="btn" style="background: var(--color-white); color: var(--color-primary); border: 2px solid var(--color-white);">
@@ -2719,16 +2721,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     </p>
                 </div>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3xl); align-items: start;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl); align-items: start;">
                     <div class="contact-info animate-on-scroll">
                         <h3 style="font-size: 1.75rem; margin-bottom: var(--space-lg); color: var(--color-primary);">We horen graag van je</h3>
-                        <p style="font-size: 1.125rem; color: var(--color-gray-600); margin-bottom: var(--space-2xl); line-height: 1.7;">
+                        <p style="font-size: 1.125rem; color: var(--color-gray-600); margin-bottom: var(--space-lg); line-height: 1.7;">
                             Elk balkon is uniek, net als elke Barcony die we maken. Of je nu een specifiek model op het oog hebt
                             of persoonlijk advies wilt - we're here to help.
                         </p>
 
-                        <div style="background: var(--color-white); padding: var(--space-xl); border-radius: var(--border-radius-xl); box-shadow: var(--shadow-sm); margin-bottom: var(--space-lg);">
-                            <h4 style="font-size: 1.25rem; margin-bottom: var(--space-md); color: var(--color-primary);">Direct contact</h4>
+                        <div style="background: var(--color-white); padding: var(--space-lg); border-radius: var(--border-radius-xl); box-shadow: var(--shadow-sm); margin-bottom: var(--space-md);">
+                            <h4 style="font-size: 1.25rem; margin-bottom: var(--space-sm); color: var(--color-primary);">Direct contact</h4>
                             <p style="margin-bottom: var(--space-sm);">
                                 <strong>Email:</strong> <a href="mailto:barconyamsterdam@gmail.com" style="color: var(--color-accent); text-decoration: none;">barconyamsterdam@gmail.com</a>
                             </p>
@@ -2740,9 +2742,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             </p>
                         </div>
 
-                        <div style="background: var(--color-primary-gradient); padding: var(--space-xl); border-radius: var(--border-radius-xl); color: var(--color-white);">
-                            <h4 style="font-size: 1.25rem; margin-bottom: var(--space-md); color: var(--color-white);">Gratis consult</h4>
-                            <p style="margin-bottom: var(--space-lg); opacity: 0.9;">
+                        <div style="background: var(--color-primary-gradient); padding: var(--space-lg); border-radius: var(--border-radius-xl); color: var(--color-white);">
+                            <h4 style="font-size: 1.25rem; margin-bottom: var(--space-sm); color: var(--color-white);">Gratis consult</h4>
+                            <p style="margin-bottom: var(--space-md); opacity: 0.9;">
                                 Twijfel je nog? Plan een vrijblijvend gesprek in en we komen bij je langs om de mogelijkheden te bespreken.
                             </p>
                             <a href="#contact-form" class="btn" style="background: var(--color-white); color: var(--color-primary); border: 2px solid var(--color-white);">
@@ -2816,7 +2818,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div id="form-response" class="form-response" style="display: none;"></div>
                                         </form>
 
-                <div class="text-center" style="margin-top: var(--space-xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-gray-200);">
+                <div class="text-center" style="margin-top: var(--space-xs); padding-top: var(--space-xs); border-top: 1px solid var(--color-gray-200);">
                     <p style="color: var(--color-gray-600);">
                         * verplichte velden<br>
                         <strong>Contact informatie:</strong><br>
