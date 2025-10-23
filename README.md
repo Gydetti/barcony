@@ -48,7 +48,14 @@ Het build systeem injecteert automatisch:
 - **Universal CSS** styling in alle pagina's
 - **Header component** met actieve navigatie links
 - **Footer component** met consistente branding
+- **JavaScript** voor runtime actieve navigatie detectie
 - **Responsive breakpoints** voor alle devices
+
+**Navigation Features:**
+- Build-time active link detection via URL matching
+- Runtime JavaScript fallback voor dynamische highlighting
+- Support voor trailing slashes (`/gallerij/`)
+- Hash fragment support voor homepage secties (`#contact`)
 
 ## 🎨 Design System
 
@@ -87,7 +94,8 @@ Het build systeem injecteert automatisch:
 
 ### Header Component
 - Logo en navigatie links
-- Active page indication
+- **Smart active page highlighting** met oranje indicator dot
+- **URL-based detection** die werkt op alle pagina's
 - Mobile hamburger menu
 - Consistent across all pages
 
