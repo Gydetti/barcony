@@ -57,24 +57,28 @@ Het build systeem injecteert automatisch:
 - Support voor trailing slashes (`/gallerij/`)
 - Hash fragment support voor homepage secties (`#contact`)
 
-## 🎨 Design System
+## 🌲 Natural Wood Design System
 
 ### Brand Colors
-- **Primary**: `#4d6b81` (Barcony Blue)
-- **Accent**: `#fd7057` (Warm Orange)
-- **Neutrals**: Gray scale van `#f8fafc` tot `#0f172a`
+- **Primary**: `#8b5a3c` (Warm Wood Brown) - inspired by natural Douglas wood
+- **Accent**: `#d4a574` (Soft Golden Wood) - reminiscent of aged timber
+- **Forest**: `#4a5d3a` (Deep Forest Green) - connecting to sustainable forestry
+- **Natural Neutrals**: Warm cream and soft beige tones van `#fefcf9` tot `#2a1f15`
 
 ### Typography
 - **Primary Font**: Inter (clean, modern sans-serif)
-- **Display Font**: Playfair Display (elegant serif voor headings)
-- **Consistent spacing** met 8px grid systeem
+- **Display Font**: Playfair Display (elegant serif for headings)
+- **Natural hierarchy** with warm colors and excellent readability
 
-### Components
-- **Navigation**: Fixed header met backdrop blur en smart highlighting
-- **Hero Sections**: Consistent heights (60vh/50vh/40vh) met moderne padding
-- **Buttons**: Primary en secondary variants met hover effects
-- **Cards**: Consistent styling met subtle shadows en flexbox layouts
-- **Grid**: Responsive layouts met CSS Grid en Flexbox
+### Natural Components
+- **Navigation**: Clean header with subtle wood-toned accents and smooth interactions
+- **Hero Sections**: Warm gradient backgrounds with natural lighting effects
+- **Buttons**: Natural color scheme with gentle hover effects and wood-inspired styling
+- **Cards**: Clean, consistent styling with soft shadows and natural color accents
+- **Gallery**: Gentle hover effects with warm overlay gradients
+- **Forms**: Natural input styling with wood-toned focus states
+- **Story Cards**: Clean narrative sections with subtle accent indicators
+- **Video Section**: Forest-themed dark section with natural accent colors
 
 ## 📱 Responsive Design
 
@@ -167,9 +171,18 @@ Upload de `site/` directory naar elke static hosting provider:
 
 Barcony is een Nederlands bedrijf dat handgemaakte, inklapbare bartafels produceert voor balkons. De website toont het vakmanschap, duurzaamheid en de unieke inklapfunctie die Barcony producten zo bijzonder maken.
 
+### 🌲 Recent Transformation
+
+Deze website heeft een complete natuurlijke make-over gekregen met:
+- **Natuurlijke kleuren** geïnspireerd op Douglas hout en bos thema
+- **Zachte, organische styling** die de handgemaakte kwaliteit weerspiegelt
+- **Verbeterde leesbaarheid** met natuurlijke contrasten en zachte effecten
+- **Authentieke storytelling** die de Barcony beleving op een warme manier presenteert
+- **Clean responsive design** dat werkt op alle apparaten
+
 **Belangrijkste kenmerken:**
-- ✨ **Moderne architectuur** - HTML5, CSS3, ES6+ JavaScript
-- 🎨 **Professioneel design** - Clean, warm en uitnodigend
+- 🌲 **Natuurlijke kleuren** - Geïnspireerd op Douglas hout en bos
+- 🎨 **Authentiek design** - Warm, handgemaakt en uitnodigend
 - 📱 **Responsive design** - Perfect op alle apparaten
 - ⚡ **Performance geoptimaliseerd** - Snelle laadtijden
 - ♿ **Toegankelijk** - WCAG 2.1 compliant
@@ -284,39 +297,42 @@ npm start
 - **Desktop**: > 1024px
 - **Large Desktop**: > 1400px
 
-## 🔧 Features
+## 🌿 Natural Design Features
 
-### Navigation
-- ✅ Sticky header met blur effect
-- ✅ Smooth scroll naar secties
-- ✅ Mobile hamburger menu
-- ✅ Active state indicators
+### Clean Animations & Interactions
+- ✅ Intersection Observer scroll animations with gentle staggered effects
+- ✅ Subtle hover transformations and smooth micro-interactions
+- ✅ Natural scroll behavior with offset calculations
+- ✅ Loading animations for images and content
+- ✅ Clean form interactions with natural focus states
 
-### Gallery
-- ✅ Masonry grid layout
-- ✅ Filter functionaliteit
-- ✅ Advanced lightbox met navigatie
-- ✅ Keyboard shortcuts (ESC, arrows)
+### Natural Visual Design
+- ✅ Wood-inspired gradient backgrounds with soft lighting effects
+- ✅ Natural shadow system with warm undertones
+- ✅ Clean typography with improved readability
+- ✅ Gentle gallery hover effects with natural color overlays
+- ✅ Consistent card designs with soft, organic styling
 
-### Contact Form
-- ✅ Real-time validatie
-- ✅ Loading states
-- ✅ Error handling
-- ✅ Success feedback
+### User Experience
+- ✅ Clean navigation with natural color accents
+- ✅ Smooth scroll with proper offset calculations
+- ✅ Responsive mobile menu with touch-friendly interactions
+- ✅ Excellent accessibility with natural contrast ratios
+- ✅ Clean form styling with natural validation feedback
 
-### Performance
-- ✅ Lazy loading images
-- ✅ Optimized fonts
-- ✅ Efficient CSS
-- ✅ Minimal JavaScript
+### Performance & Technical
+- ✅ Natural CSS custom properties system
+- ✅ Optimized font loading with clean fallbacks
+- ✅ Responsive breakpoints for all devices
+- ✅ Modern JavaScript with ES6+ features
+- ✅ Optimized loading performance
 
-### SEO
-- ✅ Meta descriptions
-- ✅ Open Graph tags
-- ✅ Twitter Cards
-- ✅ Structured data
-- ✅ XML sitemap
-- ✅ robots.txt
+### SEO & Accessibility
+- ✅ Enhanced meta tags and Open Graph
+- ✅ Clean semantic HTML structure
+- ✅ Natural color contrast and excellent readability
+- ✅ Proper keyboard navigation
+- ✅ Screen reader optimizations
 
 ## 🎯 Browser Support
 
