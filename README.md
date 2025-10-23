@@ -1,6 +1,152 @@
-# Barcony - Modern Website
+# Barcony Website - Component-Based Architecture
 
-Een moderne, professionele website voor Barcony - de inklapbare bartafel voor uw balkon. Gebouwd met de nieuwste web technologieën en geoptimaliseerd voor performance en gebruikerservaring.
+Een moderne, responsive website voor Barcony balkontafels gebouwd met een **professionele component-based architectuur** en industry-standard best practices.
+
+## 🚀 Features
+
+- **Component-Based Architecture** - Herbruikbare header, footer en styling componenten
+- **Modern CSS** - CSS custom properties, flexbox en grid layouts
+- **Responsive Design** - Mobile-first approach met breakpoints
+- **Build System** - Automated component injection en styling
+- **Performance Optimized** - Clean code structure en minimal dependencies
+- **Accessibility** - WCAG compliant met proper semantic HTML
+
+## 🏗️ Architecture
+
+```
+site/
+├── components/           # 🔧 Reusable Components
+│   ├── variables.css     # 🎨 Brand variables & design tokens
+│   ├── components.css    # 🧩 Universal component styles
+│   ├── header.html       # 🧭 Navigation component
+│   ├── footer.html       # 🦶 Footer component
+│   ├── build.js          # 🔄 Build automation script
+│   └── README.md         # 📚 Component documentation
+├── index.html           # 🏠 Homepage
+├── gallerij/            # 🖼️ Gallery page
+│   └── index.html
+└── modellen-prijzen/   # 💰 Models & prices page
+    └── index.html
+```
+
+## 🛠️ Development
+
+### Prerequisites
+- Node.js (v12+)
+- npm
+
+### Setup
+```bash
+npm install
+npm run build    # Build all components
+npm start        # Start development server
+npm run dev      # Live development server
+```
+
+### Build Process
+Het build systeem injecteert automatisch:
+- **Universal CSS** styling in alle pagina's
+- **Header component** met actieve navigatie links
+- **Footer component** met consistente branding
+- **Responsive breakpoints** voor alle devices
+
+## 🎨 Design System
+
+### Brand Colors
+- **Primary**: `#4d6b81` (Barcony Blue)
+- **Accent**: `#fd7057` (Warm Orange)
+- **Neutrals**: Gray scale van `#f8fafc` tot `#0f172a`
+
+### Typography
+- **Primary Font**: Inter (clean, modern sans-serif)
+- **Display Font**: Playfair Display (elegant serif voor headings)
+- **Consistent spacing** met 8px grid systeem
+
+### Components
+- **Navigation**: Fixed header met backdrop blur
+- **Buttons**: Primary en secondary variants met hover effects
+- **Cards**: Consistent styling met subtle shadows
+- **Grid**: Responsive layouts met CSS Grid en Flexbox
+
+## 📱 Responsive Design
+
+- **Desktop**: Multi-column layouts met hover effects
+- **Tablet**: Adapted grid layouts (768px breakpoint)
+- **Mobile**: Single column met touch-friendly interactions (480px breakpoint)
+
+## ♿ Accessibility
+
+- Semantic HTML5 elementen
+- Proper heading hierarchy
+- Focus management voor keyboard navigation
+- Screen reader friendly content
+- High contrast color ratios
+- Skip links voor assistive technology
+
+## 🔧 Component System
+
+### Header Component
+- Logo en navigatie links
+- Active page indication
+- Mobile hamburger menu
+- Consistent across all pages
+
+### Footer Component
+- Company information
+- Social media links
+- Contact details
+- Legal information
+
+### CSS Variables System
+- Brand colors en typography
+- Consistent spacing scale
+- Shadow en border radius tokens
+- Easy customization zonder code wijzigingen
+
+## 🚀 Deployment
+
+### Local Development
+```bash
+npm start        # Build en serve met live reload
+npm run dev      # Development server met auto-refresh
+```
+
+### Production Build
+```bash
+npm run build    # Generate production-ready files
+```
+
+### Static Hosting
+Upload de `site/` directory naar elke static hosting provider:
+- Vercel
+- Netlify
+- GitHub Pages
+- AWS S3 + CloudFront
+
+## 📈 Performance
+
+- **Minimal Dependencies** - Pure HTML, CSS, JavaScript
+- **Optimized CSS** - Single stylesheet per page
+- **Efficient Images** - Proper sizing en formats
+- **Fast Loading** - Component-based architecture reduces redundancy
+
+## 🔄 Updates & Maintenance
+
+### Adding New Pages
+1. Create HTML file in appropriate directory
+2. Add component placeholder comments
+3. Run `npm run build`
+4. Navigation wordt automatisch bijgewerkt
+
+### Styling Changes
+1. Update `components.css` of `variables.css`
+2. Run `npm run build`
+3. Changes worden toegepast op alle pagina's
+
+### Content Updates
+1. Edit component HTML files in `components/`
+2. Run `npm run build`
+3. Content wordt bijgewerkt site-wide
 
 ## 🎯 Over het Project
 

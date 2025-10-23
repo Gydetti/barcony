@@ -40,6 +40,9 @@
     
 
 
+
+
+
 <style>
 /* Barcony Brand Variables - Industry Standard */
 :root {
@@ -534,59 +537,81 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-/* Product Card Components */
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-lg);
-    margin-bottom: var(--space-2xl);
-}
+    /* Product Card Components */
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-xl);
+        margin-bottom: var(--space-2xl);
+        justify-items: center;
+        align-items: start;
+    }
 
-.product-card {
-    background: var(--color-white);
-    border-radius: var(--border-radius-md);
-    padding: var(--space-xl);
-    border: 1px solid var(--color-gray-200);
-    transition: all var(--transition-normal);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+    .product-card {
+        background: var(--color-white);
+        border-radius: var(--border-radius-lg);
+        padding: var(--space-xl);
+        border: 1px solid var(--color-gray-200);
+        box-shadow: var(--shadow-sm);
+        transition: all var(--transition-normal);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 320px;
+        min-height: 420px;
+        display: flex;
+        flex-direction: column;
+    }
 
-.product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--color-primary);
-}
+    .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--color-primary);
+    }
 
-.product-card__image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: var(--border-radius-sm);
-    margin-bottom: var(--space-md);
-}
+    .product-card__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: var(--border-radius-md);
+        margin-bottom: var(--space-md);
+        flex-shrink: 0;
+    }
 
-.product-card__title {
-    font-size: 1.25rem;
-    margin-bottom: var(--space-xs);
-    color: var(--color-primary);
-    font-weight: 600;
-}
+    .product-card__title {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-sm);
+        color: var(--color-primary);
+        font-weight: 700;
+        font-family: var(--font-display);
+    }
 
-.product-card__description {
-    color: var(--color-gray-600);
-    margin-bottom: var(--space-md);
-    line-height: 1.5;
-    font-size: 0.9rem;
-}
+    .product-card__description {
+        color: var(--color-gray-600);
+        margin-bottom: var(--space-lg);
+        line-height: 1.6;
+        font-size: 1rem;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 0 var(--space-xs);
+    }
 
-.product-card__price {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: var(--space-lg);
-}
+    .product-card__price {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--color-accent);
+        margin-bottom: var(--space-lg);
+        font-family: var(--font-primary);
+    }
+
+    .product-card .btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: auto;
+    }
 
 /* Feature Components */
 .features {
@@ -854,9 +879,15 @@ h1, h2, h3, h4, h5, h6 {
         padding: var(--space-2xl) 0;
     }
 
-    .products {
-        grid-template-columns: 1fr;
-    }
+        .products {
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+
+        .product-card {
+            max-width: 400px;
+            margin: 0 auto;
+        }
 
     .features {
         grid-template-columns: 1fr;
@@ -906,55 +937,15 @@ h1, h2, h3, h4, h5, h6 {
     </div>
 </nav>
 
-    <!-- Universal Header Component -->
-<nav class="navbar" id="navbar">
-    <div class="container navbar__container">
-        <a href="/" class="navbar__logo" aria-label="Barcony homepagina">
-            <img src="/media/logo.png" alt="Barcony Logo" width="120" height="47">
-        </a>
+    
 
-        <div class="navbar__menu" id="navbar-menu">
-            <div class="navbar__links">
-                <a href="/" class="navbar__link">Home</a>
-                <a href="/gallerij" class="navbar__link">Gallerij</a>
-                <a href="#modellen" class="navbar__link">Modellen</a>
-                <a href="#contact" class="navbar__link">Contact</a>
-            </div>
-            <a href="#contact" class="navbar__cta btn">Bestel Nu</a>
-        </div>
+    
 
-        <button class="navbar__toggle" id="navbar-toggle" aria-label="Menu openen">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</nav>
+    
 
-    <!-- Universal Header Component -->
-<nav class="navbar" id="navbar">
-    <div class="container navbar__container">
-        <a href="/" class="navbar__logo" aria-label="Barcony homepagina">
-            <img src="/media/logo.png" alt="Barcony Logo" width="120" height="47">
-        </a>
+    
 
-        <div class="navbar__menu" id="navbar-menu">
-            <div class="navbar__links">
-                <a href="/" class="navbar__link">Home</a>
-                <a href="/gallerij" class="navbar__link">Gallerij</a>
-                <a href="#modellen" class="navbar__link">Modellen</a>
-                <a href="#contact" class="navbar__link">Contact</a>
-            </div>
-            <a href="#contact" class="navbar__cta btn">Bestel Nu</a>
-        </div>
-
-        <button class="navbar__toggle" id="navbar-toggle" aria-label="Menu openen">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</nav>
+    
 
     <!-- Skip to main content for accessibility -->
     <a href="#main" class="skip-link">Ga naar hoofdinhoud</a>
@@ -1163,235 +1154,15 @@ h1, h2, h3, h4, h5, h6 {
         </section>
     </main>
 
-    <!-- Universal Footer Component will be injected here -->
+    
 
-    <!-- JavaScript -->
-    <script>
-        // Modern JavaScript for enhanced functionality
+    
 
-        // Mobile Navigation Toggle
-        const navbarToggle = document.getElementById('navbar-toggle');
-        const navbarMenu = document.getElementById('navbar-menu');
-        const navbar = document.getElementById('navbar');
+    
 
-        navbarToggle.addEventListener('click', () => {
-            navbarToggle.classList.toggle('navbar__toggle--active');
-            navbarMenu.classList.toggle('navbar__menu--active');
-        });
+    
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navbar.contains(e.target)) {
-                navbarToggle.classList.remove('navbar__toggle--active');
-                navbarMenu.classList.remove('navbar__menu--active');
-            }
-        });
-
-        // Navbar scroll behavior
-        let lastScrollY = window.scrollY;
-
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-
-            if (currentScrollY > 100) {
-                navbar.classList.add('navbar--scrolled');
-            } else {
-                navbar.classList.remove('navbar--scrolled');
-            }
-
-            // Hide navbar when scrolling down, show when scrolling up
-            if (currentScrollY > lastScrollY && currentScrollY > 200) {
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                navbar.style.transform = 'translateY(0)';
-            }
-
-            lastScrollY = currentScrollY;
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-
-                    // Close mobile menu if open
-                    navbarToggle.classList.remove('navbar__toggle--active');
-                    navbarMenu.classList.remove('navbar__menu--active');
-                }
-            });
-        });
-
-        // Animation on scroll observer
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements with animate-on-scroll class
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Enhanced pricing card interactions
-        document.querySelectorAll('.pricing-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                // Add subtle animation on hover
-                card.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-
-            card.addEventListener('mouseleave', () => {
-                // Reset if not popular card
-                if (!card.classList.contains('pricing-card--popular')) {
-                    card.style.transform = 'translateY(0) scale(1)';
-                }
-            });
-        });
-
-        // Set active nav link based on current page
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('.navbar__link');
-
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('navbar__link--active');
-            } else {
-                link.classList.remove('navbar__link--active');
-            }
-        });
-
-        // Add keyboard navigation for pricing cards
-        document.querySelectorAll('.pricing-card__cta').forEach(button => {
-            button.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    button.click();
-                }
-            });
-        });
-    </script>
-    <!-- Universal Footer Component -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer__content">
-            <div class="footer__section">
-                <h3>Barcony</h3>
-                <p>
-                    De inklapbare bartafel voor uw balkon. Met liefde gemaakt in Zweden van duurzaam Douglas hout.
-                    Perfect voor zomerse avonden!
-                </p>
-                <div class="footer__social">
-                    <a href="https://facebook.com/barcony_bartafel/" target="_blank" rel="noopener" aria-label="Facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                    </a>
-                    <a href="https://instagram.com/barcony_bartafel/" target="_blank" rel="noopener" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer__section">
-                <h3>Modellen</h3>
-                <p><a href="#modellen">Barcony Grande</a></p>
-                <p><a href="#modellen">Barcony Compact</a></p>
-                <p><a href="#modellen">Barcony Mini</a></p>
-                <p><a href="#modellen">Op Maat</a></p>
-            </div>
-
-            <div class="footer__section">
-                <h3>Contact</h3>
-                <p><a href="mailto:barconyamsterdam@gmail.com">barconyamsterdam@gmail.com</a></p>
-                <p><a href="tel:+31657377873">+31 6 57 37 78 73</a></p>
-                <p>Maandag - Zondag</p>
-                <p>09:00 - 17:00</p>
-            </div>
-
-            <div class="footer__section">
-                <h3>Informatie</h3>
-                <p><a href="/algemene-voorwaarden">Algemene voorwaarden</a></p>
-                <p><a href="https://treesforall.nl/en/plant-a-tree/" target="_blank" rel="noopener">Trees for All</a></p>
-                <p>PEFC-gecertificeerd hout</p>
-                <p>Gratis bezorging vanaf €175</p>
-            </div>
-        </div>
-
-        <div class="footer__bottom">
-            <p>&copy; 2024 Barcony. Alle rechten voorbehouden. | Geproduceerd in Zweden met ❤️</p>
-        </div>
-    </div>
-</footer>
-
-    <!-- Universal Footer Component -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer__content">
-            <div class="footer__section">
-                <h3>Barcony</h3>
-                <p>
-                    De inklapbare bartafel voor uw balkon. Met liefde gemaakt in Zweden van duurzaam Douglas hout.
-                    Perfect voor zomerse avonden!
-                </p>
-                <div class="footer__social">
-                    <a href="https://facebook.com/barcony_bartafel/" target="_blank" rel="noopener" aria-label="Facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                    </a>
-                    <a href="https://instagram.com/barcony_bartafel/" target="_blank" rel="noopener" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer__section">
-                <h3>Modellen</h3>
-                <p><a href="#modellen">Barcony Grande</a></p>
-                <p><a href="#modellen">Barcony Compact</a></p>
-                <p><a href="#modellen">Barcony Mini</a></p>
-                <p><a href="#modellen">Op Maat</a></p>
-            </div>
-
-            <div class="footer__section">
-                <h3>Contact</h3>
-                <p><a href="mailto:barconyamsterdam@gmail.com">barconyamsterdam@gmail.com</a></p>
-                <p><a href="tel:+31657377873">+31 6 57 37 78 73</a></p>
-                <p>Maandag - Zondag</p>
-                <p>09:00 - 17:00</p>
-            </div>
-
-            <div class="footer__section">
-                <h3>Informatie</h3>
-                <p><a href="/algemene-voorwaarden">Algemene voorwaarden</a></p>
-                <p><a href="https://treesforall.nl/en/plant-a-tree/" target="_blank" rel="noopener">Trees for All</a></p>
-                <p>PEFC-gecertificeerd hout</p>
-                <p>Gratis bezorging vanaf €175</p>
-            </div>
-        </div>
-
-        <div class="footer__bottom">
-            <p>&copy; 2024 Barcony. Alle rechten voorbehouden. | Geproduceerd in Zweden met ❤️</p>
-        </div>
-    </div>
-</footer>
+    
 
     <!-- Universal Footer Component -->
 <footer class="footer">

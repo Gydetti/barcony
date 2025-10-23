@@ -68,13 +68,15 @@ class BarconyBuild {
     }
 
     replaceComponents(content, header, footer) {
-        // Remove existing header and footer
-        content = content.replace(/<!-- Modern Navigation -->[\s\S]*?<\/nav>/, '');
-        content = content.replace(/<!-- Mobile Header -->[\s\S]*?<\/div>/, '');
-        content = content.replace(/<!-- Desktop Header -->[\s\S]*?<\/div>/, '');
-        content = content.replace(/<!-- Footer -->[\s\S]*?<\/footer>/, '');
+        // Remove existing header and footer (more comprehensive regex)
+        content = content.replace(/<!-- Universal Header Component[^>]*-->[\s\S]*?<\/nav>/g, '');
+        content = content.replace(/<!-- Universal Footer Component[^>]*-->[\s\S]*?<\/footer>/g, '');
+        content = content.replace(/<!-- Modern Navigation -->[\s\S]*?<\/nav>/g, '');
+        content = content.replace(/<!-- Mobile Header -->[\s\S]*?<\/div>/g, '');
+        content = content.replace(/<!-- Desktop Header -->[\s\S]*?<\/div>/g, '');
+        content = content.replace(/<!-- Footer -->[\s\S]*?<\/footer>/g, '');
 
-        // Add universal components
+        // Add universal components (only once)
         content = content.replace('<body>', `<body>\n    ${header}`);
         content = content.replace('</body>', `    ${footer}\n</body>`);
 
