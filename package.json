@@ -1,0 +1,24 @@
+{
+  "name": "barcony-website",
+  "version": "1.0.0",
+  "description": "Barcony - De inklapbare bartafel voor uw balkon",
+  "scripts": {
+    "build": "node site/components/build.js",
+    "start": "npm run build && npx http-server site -p 8000 -c-1",
+    "dev": "npx live-server site --port=8000 --open=/",
+    "serve": "npx http-server site -p 8000 -c-1",
+    "prebuild": "echo '🔧 Preparing build...'"
+  },
+  "keywords": [
+    "barcony",
+    "website",
+    "static",
+    "furniture",
+    "dutch"
+  ],
+  "author": "Barcony Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}

@@ -1,4 +1,18 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+# Disallow access to admin areas and sensitive files
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.xml$?*
+
+# Allow access to CSS and JS files for better SEO
+Allow: /media/
+Allow: /*.css$
+Allow: /*.js$
+
+# Crawl delay to be respectful to servers
+Crawl-delay: 1
 
 Sitemap: https://barcony.nl/sitemap.xml

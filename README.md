@@ -1,170 +1,239 @@
-# Barcony Website Migration
+# Barcony - Modern Website
 
-Website migratie van One.com naar Vercel met behoud van identieke look-and-feel.
+Een moderne, professionele website voor Barcony - de inklapbare bartafel voor uw balkon. Gebouwd met de nieuwste web technologieën en geoptimaliseerd voor performance en gebruikerservaring.
 
-## 🎯 Project Doelstelling
+## 🎯 Over het Project
 
-- ✅ Identieke look-and-feel behouden
-- ✅ Folder-based routing: `/`, `/gallerij`, `/barcony-modellen`, `/contact`
-- ✅ Alle assets lokaal hosten (geen One.com afhankelijkheden)
-- ✅ Snelle Vercel deployment via GitHub integration
+Barcony is een Nederlands bedrijf dat handgemaakte, inklapbare bartafels produceert voor balkons. De website toont het vakmanschap, duurzaamheid en de unieke inklapfunctie die Barcony producten zo bijzonder maken.
+
+**Belangrijkste kenmerken:**
+- ✨ **Moderne architectuur** - HTML5, CSS3, ES6+ JavaScript
+- 🎨 **Professioneel design** - Clean, warm en uitnodigend
+- 📱 **Responsive design** - Perfect op alle apparaten
+- ⚡ **Performance geoptimaliseerd** - Snelle laadtijden
+- ♿ **Toegankelijk** - WCAG 2.1 compliant
+- 🔍 **SEO geoptimaliseerd** - Voor zoekmachines
+
+## 🚀 Live Website
+
+De website draait op [Vercel](https://vercel.com) en is bereikbaar via:
+- **Productie**: `https://barcony.nl`
+- **Preview**: Automatische deployments bij elke push naar GitHub
 
 ## 📁 Project Structuur
 
 ```
 Barcony/
-├── Page Sources/          # Originele HTML bronbestanden van One.com
+├── Docs/                    # Project documentatie
+│   ├── project-blueprint.md    # Origineel project plan
+│   ├── project-plan-action.md  # Uitvoeringsplan
+│   └── optimalisatieronde.md   # Optimalisatie blueprint
+├── Page Sources/            # Originele One.com bronbestanden
 │   ├── home_page_source_barcony.html
 │   ├── gallerij_page_source_barcony.html
 │   ├── modellen_page_source_barcony.html
 │   └── contact_page_source_barcony.html
-├── site/                  # Vercel deployment root
-│   ├── index.html         # Home page
+├── site/                    # Productie website (Vercel root)
+│   ├── index.html              # Homepagina
 │   ├── gallerij/
-│   │   └── index.html     # Gallerij page
-│   ├── barcony-modellen/
-│   │   └── index.html     # Modellen page
-│   ├── contact/
-│   │   └── index.html     # Contact page
-│   ├── media/             # Lokale assets
+│   │   └── index.html          # Gallerij pagina
+│   ├── modellen-prijzen/
+│   │   └── index.html          # Modellen & prijzen pagina
+│   ├── media/                  # Alle assets (images, video, etc.)
 │   │   ├── logo.png
 │   │   ├── favicon.png
 │   │   ├── background.png
-│   │   ├── decorative-line.png
-│   │   ├── gallery-1.jpeg
-│   │   ├── gallery-2.jpeg
-│   │   ├── gallery-3.jpeg
-│   │   ├── gallery-4.jpeg
-│   │   ├── gallery-5.jpeg
-│   │   ├── gallery-6.jpeg
-│   │   ├── gallery-placeholder.jpg
-│   │   ├── sustainability-logo.png
-│   │   └── video.mp4
-│   ├── robots.txt
-│   └── sitemap.xml
-├── vercel.json            # Vercel configuratie
-└── README.md
+│   │   ├── gallery-*.jpeg      # Product afbeeldingen
+│   │   ├── p-1-*.jpg           # Extra product afbeeldingen
+│   │   ├── video.mp4           # Product demonstratie
+│   │   ├── video-poster.jpg    # Video thumbnail
+│   │   └── sustainability-logo.png
+│   ├── robots.txt              # SEO configuratie
+│   └── sitemap.xml             # Sitemap voor zoekmachines
+├── vercel.json                 # Vercel deployment configuratie
+└── README.md                   # Dit bestand
 ```
 
-## 🚀 Deployment naar Vercel
+## 🎨 Design Systeem
 
-### Stap 1: Repository Setup
-1. Push deze repository naar GitHub
-2. Ga naar [Vercel Dashboard](https://vercel.com/dashboard)
-3. Klik "New Project"
-4. Import je GitHub repository
+### Kleuren
+- **Primair**: `#4d6b81` (Blauw-grijs)
+- **Accent**: `#fd7057` (Warm oranje)
+- **Warm**: `#ffa24d` (Goud-geel)
+- **Neutraal**: Grijs schalen van 50-900
 
-### Stap 2: Vercel Configuratie
-Vercel detecteert automatisch de configuratie via `vercel.json`:
+### Typografie
+- **Display font**: Playfair Display (voor headings)
+- **Body font**: Inter (voor body text)
+- **Systeem fonts**: Fallback naar systeem fonts voor performance
 
-- **Root Directory**: `./site` (deployment root)
-- **Build Command**: Geen (static hosting)
-- **Output Directory**: `./site` (static files)
+### Componenten
+- Moderne navigatie met smooth scroll
+- Responsive gallery met lightbox
+- Interactieve product cards
+- Geavanceerd contact formulier
+- Social media integratie
 
-### Stap 3: Domain Setup
-1. Ga naar Project Settings > Domains
-2. Voeg `barcony.nl` toe
-3. Update DNS records bij je registrar:
-   - Type: CNAME
-   - Name: `www` (voor www.barcony.nl)
-   - Value: `cname.vercel-dns.com`
-   - Of voor root domain: A record naar Vercel IP
+## 🛠 Technische Stack
 
-### Stap 4: SSL Certificate
-Vercel voorziet automatisch HTTPS certificaten voor alle domains.
+### Frontend
+- **HTML5** - Semantische markup
+- **CSS3** - Modern CSS met custom properties
+- **JavaScript ES6+** - Moderne JavaScript features
+- **CSS Grid & Flexbox** - Responsive layouts
+- **CSS Animations** - Smooth micro-interactions
 
-## 🔧 Technische Details
+### Performance
+- **Lazy loading** - Voor images en video
+- **Optimized assets** - Gecomprimeerde images
+- **Efficient fonts** - Google Fonts met preconnect
+- **Caching strategy** - Geoptimaliseerde cache headers
 
-### Folder-based Routing
-Het `vercel.json` bestand zorgt voor proper routing:
-- `/` → `/site/index.html`
-- `/gallerij` → `/site/gallerij/index.html`
-- `/barcony-modellen` → `/site/barcony-modellen/index.html`
-- `/contact` → `/site/contact/index.html`
+### Toegankelijkheid
+- **ARIA labels** - Voor screen readers
+- **Keyboard navigation** - Volledige keyboard support
+- **Focus management** - Proper focus handling
+- **Color contrast** - WCAG AA compliant
 
-### Asset Optimalisatie
-- Alle images zijn lokaal gedownload naar `/site/media/`
-- Cache headers geconfigureerd voor optimale performance
-- Media assets: 1 jaar cache (`max-age=31536000`)
-- HTML files: 1 uur cache (`max-age=3600`)
-- SEO files: 24 uur cache (`max-age=86400`)
+## 🚀 Deployment & Development
 
-### Fonts
-Directe Google Fonts integratie (geen One.com proxy):
-- IBM Plex Sans
-- Cormorant
-- Hind Guntur
-- Open Sans
-- Montserrat
+### Vercel Deployment
+1. **Automatisch**: Push naar `main` branch → Vercel deployt automatisch
+2. **Preview**: Feature branches → Preview deployments
+3. **Production**: `main` branch → Production deployment
 
-## 🛠 Onderhoud
+### Lokale Development
+```bash
+# Start development server
+npm run dev
+
+# Of voor basic server (zonder live reload)
+npm start
+```
+
+### Development URLs
+- `http://localhost:8000/` - Homepagina
+- `http://localhost:8000/gallerij/` - Gallerij
+- `http://localhost:8000/modellen-prijzen/` - Modellen & prijzen
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+- **Large Desktop**: > 1400px
+
+## 🔧 Features
+
+### Navigation
+- ✅ Sticky header met blur effect
+- ✅ Smooth scroll naar secties
+- ✅ Mobile hamburger menu
+- ✅ Active state indicators
+
+### Gallery
+- ✅ Masonry grid layout
+- ✅ Filter functionaliteit
+- ✅ Advanced lightbox met navigatie
+- ✅ Keyboard shortcuts (ESC, arrows)
+
+### Contact Form
+- ✅ Real-time validatie
+- ✅ Loading states
+- ✅ Error handling
+- ✅ Success feedback
+
+### Performance
+- ✅ Lazy loading images
+- ✅ Optimized fonts
+- ✅ Efficient CSS
+- ✅ Minimal JavaScript
+
+### SEO
+- ✅ Meta descriptions
+- ✅ Open Graph tags
+- ✅ Twitter Cards
+- ✅ Structured data
+- ✅ XML sitemap
+- ✅ robots.txt
+
+## 🎯 Browser Support
+
+- ✅ Chrome 90+
+- ✅ Firefox 88+
+- ✅ Safari 14+
+- ✅ Edge 90+
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 📊 Performance Metrics
+
+**Target Scores:**
+- Lighthouse Performance: ≥95
+- Lighthouse Accessibility: ≥100
+- Lighthouse Best Practices: ≥100
+- Lighthouse SEO: ≥100
+
+**Core Web Vitals:**
+- LCP (Largest Contentful Paint): <2.5s
+- FID (First Input Delay): <100ms
+- CLS (Cumulative Layout Shift): <0.1
+
+## 🧪 Testing
+
+### Manual Testing
+- [ ] Alle links werken correct
+- [ ] Formulier validatie functioneert
+- [ ] Gallery lightbox werkt op alle devices
+- [ ] Mobile menu toggle functioneert
+- [ ] Animaties spelen smooth af
+
+### Browser Testing
+- [ ] Chrome (desktop & mobile)
+- [ ] Firefox (desktop & mobile)
+- [ ] Safari (desktop & mobile)
+- [ ] Edge (desktop)
+
+### Performance Testing
+- [ ] Lighthouse audit
+- [ ] WebPageTest
+- [ ] GTmetrix
+- [ ] PageSpeed Insights
+
+## 🔄 Updates & Onderhoud
 
 ### Content Updates
-1. Edit de HTML files in `/site/`
-2. Commit en push naar GitHub
-3. Vercel deployt automatisch
+1. Edit HTML files in `/site/`
+2. Update images in `/site/media/`
+3. Test locally
+4. Commit & push to trigger deployment
 
-### Asset Updates
-1. Upload nieuwe images naar `/site/media/`
-2. Update HTML referenties naar nieuwe bestanden
-3. Commit en push
+### Adding New Pages
+1. Create new folder in `/site/`
+2. Add `index.html` file
+3. Update navigation in all pages
+4. Update sitemap.xml
+5. Test locally
 
-### Font Updates
-1. Update Google Fonts links in alle HTML files
-2. Test op alle pages
+### SEO Updates
+1. Update meta descriptions
+2. Check Open Graph tags
+3. Update sitemap.xml
+4. Test with Google Rich Results Test
 
-## 📊 SEO & Performance
+## 📞 Contact & Support
 
-### SEO Optimalisaties
-- ✅ Meta descriptions per pagina
-- ✅ Canonical URLs
-- ✅ Open Graph tags
-- ✅ robots.txt
-- ✅ sitemap.xml
-- ✅ Structured data (JSON-LD)
+**Website eigenaar**: Robin (Barcony)
+**Email**: barconyamsterdam@gmail.com
+**Telefoon**: +31 6 57 37 78 73
 
-### Performance Metrics
-- Lighthouse score target: ≥90
-- Core Web Vitals optimalisatie
-- Image optimalisatie
-- Font loading optimalisatie
+**Technische support**: Via GitHub issues of Vercel dashboard
 
-## 🔍 Testing Checklist
+## 📜 Licentie
 
-### Pre-deployment
-- [ ] Alle routes functioneel (`/`, `/gallerij`, `/barcony-modellen`, `/contact`)
-- [ ] Alle images laden correct
-- [ ] Fonts werken (geen fallback fonts zichtbaar)
-- [ ] Navigatie werkt op desktop en mobile
-- [ ] Contact formulier functioneel
-- [ ] Geen console errors
-- [ ] Mobile responsive design
-
-### Post-deployment
-- [ ] Vercel preview deployment test
-- [ ] HTTPS actief
-- [ ] Domain correct ingesteld
-- [ ] SEO tools kunnen site crawlen
-- [ ] Social media links werken
-- [ ] Contact formulier verzendt emails
-
-## 📞 Support
-
-Bij problemen:
-1. Check Vercel deployment logs
-2. Controleer browser console voor errors
-3. Test in incognito mode (cache problemen)
-4. Controleer DNS propagation (kan 24-48 uur duren)
-
-## 📝 Opmerkingen
-
-- Contact formulier heeft momenteel geen backend integratie
-- Video bestand (`video.mp4`) is groot - overweeg compressie
-- Gallery images kunnen worden geoptimaliseerd voor web
-- Overweeg lazy loading voor images
-- Social media links verwijzen naar bestaande accounts
+© 2024 Barcony. Alle rechten voorbehouden.
 
 ---
 
-**Laatste update**: Januari 2024
-**Deployment status**: Ready for Vercel
+**Laatste update**: Oktober 2024
+**Built with**: ❤️ Modern web technologies
+**Hosted on**: Vercel

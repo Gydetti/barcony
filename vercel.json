@@ -1,14 +1,34 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "trailingSlash": false,
+  "outputDirectory": "site",
+  "framework": null,
+  "installCommand": null,
+  "buildCommand": null,
+  "devCommand": null,
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/gallerij.html", "destination": "/gallerij", "permanent": true },
+    { "source": "/modellen-prijzen.html", "destination": "/modellen-prijzen", "permanent": true },
+    { "source": "/modellen.html", "destination": "/modellen-prijzen", "permanent": true },
+    { "source": "/contact.html", "destination": "/#contact", "permanent": true }
   ],
   "headers": [
     {
       "source": "/media/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "Content-Encoding", "value": "gzip" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
       ]
     },
     {
@@ -22,6 +42,17 @@
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
     }
-  ]
+  ],
+  "functions": {},
+  "regions": ["fra1"],
+  "github": {
+    "silent": true
+  }
 }

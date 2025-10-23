@@ -2,867 +2,1653 @@
 <html lang="nl">
 <head>
     <meta charset="utf-8">
-    <title>Barcony</title>
-    <meta name="description" content="De inklapbare bartafel voor uw balkon">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes">
-    <meta name="MobileOptimized" content="320">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="format-detection" content="telephone=no">
+    <title>Barcony - De inklapbare bartafel voor uw balkon</title>
+    <meta name="description" content="Ontdek de unieke inklapbare bartafel voor uw balkon. Duurzaam Douglas hout, Zweeds vakmanschap. Perfect voor zomeravonden!">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4d6b81">
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:description" content="De inklapbare bartafel voor uw balkon">
-    <meta property="og:title" content="Barcony">
-    <meta property="og:site_name" content="Barcony">
     <meta property="og:url" content="https://barcony.nl/">
+    <meta property="og:title" content="Barcony - De inklapbare bartafel voor uw balkon">
+    <meta property="og:description" content="Ontdek de unieke inklapbare bartafel voor uw balkon. Duurzaam Douglas hout, Zweeds vakmanschap. Perfect voor zomeravonden!">
     <meta property="og:image" content="https://barcony.nl/media/logo.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1201">
-    <meta property="og:image:height" content="469">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Barcony">
-    <meta name="twitter:image:alt" content="Barcony">
-    <meta name="twitter:description" content="De inklapbare bartafel voor uw balkon">
-    <meta name="twitter:image" content="https://barcony.nl/media/logo.png">
+    <meta property="og:site_name" content="Barcony">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://barcony.nl/">
+    <meta property="twitter:title" content="Barcony - De inklapbare bartafel voor uw balkon">
+    <meta property="twitter:description" content="Ontdek de unieke inklapbare bartafel voor uw balkon. Duurzaam Douglas hout, Zweeds vakmanschap. Perfect voor zomeravonden!">
+    <meta property="twitter:image" content="https://barcony.nl/media/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon.png">
+    <link rel="apple-touch-icon" href="/media/favicon.png">
     <link rel="canonical" href="https://barcony.nl/">
-    <link rel="shortcut icon" href="/media/favicon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Performance hints -->
+    <link rel="preload" href="/media/logo.png" as="image">
+    <link rel="preload" href="/media/background.png" as="image">
     
 
-    <style>
-    html { word-wrap: break-word; }
-    *, ::before, ::after { word-wrap: inherit; }
-    html { box-sizing: border-box; }
-    *, ::before, ::after { box-sizing: inherit; }
-    body, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, p, td, textarea { margin: 0; padding: 0; }
-    h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
-    ol, ul { list-style: none; }
-    table { border-collapse: collapse; border-spacing: 0; }
-    img { border: 0; }
-    body { -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
+    
 
-    /* Base Typography */
-    :root { --text-color: #0f172a; --heading-color: #4d6b81; }
-    html, body { font-family: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial !important; line-height: 1.6; color: var(--text-color); }
-    h1, h2, h3, .textheading1, .textheading2, .textheading3 { font-family: 'Cormorant', Georgia, 'Times New Roman', serif !important; font-weight: 700; color: var(--heading-color); line-height: 1.25; }
-    /* Ensure nested spans inside headings keep the heading font */
-    h1 span.textheading1, h2 span.textheading2, h3 span.textheading3 { font-family: inherit !important; }
-    a { color: #4d6b81; text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    .bodyBackground { background-color: rgba(255,255,255,1); }
+<style>
+/* Barcony Brand Variables - Industry Standard */
+:root {
+  /* Brand Colors */
+  --color-primary: #4d6b81;
+  --color-primary-light: #6b8ba1;
+  --color-primary-dark: #3a5266;
+  --color-accent: #fd7057;
+  --color-accent-light: #ff8a73;
+  --color-accent-dark: #e55a44;
 
-    @media (max-width: 650px) {
-        body { min-width: 0 }
-        body.desktopV { min-width: 1050px }
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* Border Radius */
+  --border-radius-sm: 0.375rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* Layout */
+  --container-max-width: 1200px;
+  --navbar-height: 80px;
+}
+
+/* Universal Components - Industry Standard */
+
+/* Modern CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-gray-800);
+    background-color: var(--color-white);
+    overflow-x: hidden;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-primary);
+}
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: var(--border-radius-sm);
+    z-index: 1001;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Button Components */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: var(--border-radius-sm);
+    border: 2px solid var(--color-primary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn--secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn--secondary:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-1px);
+}
+
+/* Navigation Components */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-gray-200);
+    z-index: 1000;
+    transition: all var(--transition-normal);
+}
+
+.navbar--scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+.navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.navbar__logo:hover {
+    color: var(--color-accent);
+}
+
+.navbar__logo img {
+    height: 50px;
+    width: auto;
+    margin-right: var(--space-xs);
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.navbar__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.navbar__link {
+    font-weight: 500;
+    color: var(--color-gray-700);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.navbar__link:hover {
+    color: var(--color-primary);
+    background-color: var(--color-gray-50);
+}
+
+.navbar__link--active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.navbar__link--active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+}
+
+.navbar__cta {
+    background: var(--color-accent);
+    color: var(--color-white);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    border: 2px solid var(--color-accent);
+}
+
+.navbar__cta:hover {
+    background: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+    transform: translateY(-1px);
+}
+
+.navbar__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    padding: var(--space-xs);
+}
+
+.navbar__toggle span {
+    width: 24px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+}
+
+.navbar__toggle--active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbar__toggle--active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar__toggle--active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Section Components */
+.section {
+    padding: var(--space-3xl) 0;
+}
+
+.section--light {
+    background: var(--color-white);
+}
+
+.section--gray {
+    background: var(--color-gray-50);
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section__title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-bottom: var(--space-md);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.section__subtitle {
+    font-size: 1rem;
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Hero Section */
+.hero {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: calc(var(--navbar-height) + var(--space-3xl)) 0 var(--space-3xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/media/background.png') center/cover no-repeat;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+.hero__title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    color: var(--color-white);
+    line-height: 1.2;
+}
+
+.hero__subtitle {
+    font-size: clamp(1.125rem, 1.8vw, 1.25rem);
+    font-family: var(--font-primary);
+    font-weight: 400;
+    margin-bottom: var(--space-xl);
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-white);
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    opacity: 0.9;
+}
+
+.hero__cta:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Gallery Components */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.gallery__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-gray-200);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    background: var(--color-white);
+}
+
+.gallery__item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.gallery__image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-normal);
+}
+
+.gallery__item:hover .gallery__image {
+    transform: scale(1.05);
+}
+
+.gallery__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(77, 107, 129, 0.1);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery__item:hover .gallery__overlay {
+    opacity: 1;
+}
+
+.gallery__title {
+    color: var(--color-white);
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Product Card Components */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.product-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius-md);
+    padding: var(--space-xl);
+    border: 1px solid var(--color-gray-200);
+    transition: all var(--transition-normal);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.product-card__image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--space-md);
+}
+
+.product-card__title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.product-card__description {
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-md);
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.product-card__price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+}
+
+/* Feature Components */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.feature {
+    text-align: left;
+    padding: var(--space-xl);
+    background: var(--color-white);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-gray-200);
+    transition: all var(--transition-normal);
+}
+
+.feature:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--color-primary);
+}
+
+.feature__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.feature__title {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.feature__description {
+    color: var(--color-gray-600);
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Form Components */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: 600;
+    color: var(--color-gray-700);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--border-radius-md);
+    font-size: 1rem;
+    transition: border-color var(--transition-fast);
+    background: var(--color-white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(77, 107, 129, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-xs);
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-top: 2px;
+}
+
+.checkbox-group label {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.error-message {
+    display: none;
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-response {
+    animation: slideInUp 0.3s ease-out;
+}
+
+/* Footer Components */
+.footer {
+    background: var(--color-gray-900);
+    color: var(--color-white);
+    padding: var(--space-3xl) 0 var(--space-xl);
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.footer__section h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+    color: var(--color-white);
+}
+
+.footer__section p,
+.footer__section a {
+    color: var(--color-gray-300);
+    line-height: 1.6;
+    transition: color var(--transition-fast);
+}
+
+.footer__section a:hover {
+    color: var(--color-accent);
+}
+
+.footer__social {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.footer__social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--color-gray-800);
+    border-radius: 50%;
+    transition: all var(--transition-fast);
+}
+
+.footer__social a:hover {
+    background: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.footer__bottom {
+    text-align: center;
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-gray-800);
+    color: var(--color-gray-400);
+}
+
+/* Animation for scroll effects */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    @media (min-width: 651px) {
-        body { min-width: 0 }
-        body.mobileV { min-width: initial }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--space-md);
     }
 
-    .template { visibility: hidden }
-    body { overflow-x: hidden; min-width: 0 !important }
-
-    /* Layout responsiveness */
-    .Preview_row__3Fkye.row { width: 100% !important }
-    .Preview_column__1KeVx.col { width: min(100%, 1050px) !important; margin: 0 auto !important }
-
-    /* Enforce font on components that had inline font-family */
-    .MobileHeader_titleText__1M62s,
-    .menu .menu1 a,
-    .ButtonPreview_textContainer__t8q7_,
-    .FieldContainerStyles_label__38Z4h,
-    .View_input__1iF1T,
-    .View_select__2DXGf,
-    .View_textArea__2s1mo { font-family: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial !important }
-
-    /* Gallery styles (Gallerij) */
-    .gallery { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center }
-    .gallery-cell { margin: 0; flex: 0 1 calc(33.333% - 16px); max-width: calc(33.333% - 16px) }
-    @media (max-width: 900px) { .gallery-cell { flex-basis: calc(50% - 16px); max-width: calc(50% - 16px) } }
-    @media (max-width: 600px) { .gallery-cell { flex-basis: 100%; max-width: 100% } }
-
-    .gallery .img-container { aspect-ratio: 1 / 1; width: 100% !important; height: auto !important; display: block !important; overflow: hidden }
-    .gallery .img-wrapper { width: 100% !important; height: 100% !important }
-    .gallery img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block }
-
-    /* Models grid: circular cards with consistent size */
-    #modellen .gallery { gap: 28px; justify-content: center }
-    #modellen .gallery-cell { flex: 0 1 clamp(220px, 30vw, 320px); max-width: clamp(220px, 30vw, 320px) }
-    #modellen .img-container { aspect-ratio: 1 / 1; border-radius: 9999px; overflow: hidden; width: 100% !important }
-    #modellen .img-wrapper { width: 100% !important; height: 100% !important; border-radius: 9999px !important }
-    #modellen img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block }
-    #modellen .gallery-caption { margin-top: 10px }
-    #modellen .gallery-caption p { text-align: center; font-weight: 700 }
-
-    /* Form styles */
-    .contactFormContainer { max-width: 600px; margin: 0 auto; }
-    .contact-form-field-container { margin-bottom: 20px; }
-    .contact-form-field-container label { display: block; margin-bottom: 5px; font-weight: bold; }
-    .contact-form-field-container input,
-    .contact-form-field-container textarea,
-    .contact-form-field-container select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
-    .contact-form-field-container textarea { min-height: 100px; }
-
-    /* Responsive media */
-    img { max-width: 100%; height: auto }
-    video { width: 100% !important; height: auto !important; display: block }
-    .MobileHeader_logoImage__BZwGs { max-height: 60px; width: auto }
-
-    /* Hide legacy mobile header/menu (no JS) to avoid duplicate nav */
-    #wsb-mobile-header, #mm, #mm-overlay { display: none !important }
-    /* Hide legacy desktop header block */
-    #Header { display: none !important }
-
-    /* Navigation Styles */
-    .nav-container { 
-        width: 100%; 
-        min-height: 102px; 
-        background-color: rgba(255,255,255,1); 
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        transition: all 0.3s ease-in-out;
-    }
-    .nav-container.nav--shrunken {
-        min-height: 70px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .nav-container.nav--hidden {
-        transform: translateY(-100%);
-        box-shadow: none;
+    .navbar__container {
+        padding: var(--space-sm) var(--space-md);
     }
 
-    .nav-inner { width: 1050px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 20px 0; transition: padding 0.3s ease-in-out; }
-    .nav-container.nav--shrunken .nav-inner {
-        padding: 10px 0;
+    .navbar__toggle {
+        display: flex;
     }
 
-    .nav-logo { flex-shrink: 0; }
-    .nav-logo img { height: 60px; width: auto; transition: height 0.3s ease-in-out; }
-    .nav-container.nav--shrunken .nav-logo img {
-        height: 50px;
-    }
-
-    .nav-menu { display: flex; gap: 40px; }
-    .nav-menu a { color: #4d6b81; font-weight: 500; padding: 10px 0; transition: color 0.3s ease; }
-    .nav-menu a:hover, .nav-menu a.active { color: #ffa24d; }
-
-    .nav-toggle { display: none; cursor: pointer; }
-    .nav-toggle span { display: block; width: 25px; height: 3px; background-color: #4d6b81; margin: 5px 0; transition: all 0.3s ease; }
-
-    /* Mobile Navigation */
-    @media (max-width: 900px) {
-        .nav-inner { width: 100%; padding: 15px 20px; }
-        .nav-container.nav--shrunken .nav-inner {
-            padding: 10px 20px;
-        }
-
-        .nav-toggle { display: block; }
-        
-        .nav-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            flex-direction: column;
-            gap: 0;
-            padding: 10px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        .nav-menu.nav-menu--active {
-            display: flex;
-        }
-        .nav-menu a {
-            padding: 15px 20px;
-            text-align: center;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .nav-menu a:last-child {
-            border-bottom: none;
-        }
-    }
-
-    /* Smooth anchor scrolling and offset */
-    html { scroll-behavior: smooth }
-    [id] { scroll-margin-top: 80px }
-
-    /* Layout fixes to mirror original spacing */
-    #Section7 .Background_backgroundComponent__3_1Ea { min-height: 60vh !important; } /* Modern, responsive height */
-    [data-id="531B6C99-C657-40F2-8538-FC816883338E"] { margin-top: 48px !important; }
-    #Section1 .Background_backgroundComponent__3_1Ea { min-height: auto !important; padding-bottom: 0 !important; }
-
-    /* Ensure consistent font family everywhere (including form) */
-    body, .textnormal, label, input, select, textarea, button { 
-        font-family: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', 'Helvetica Neue', Arial !important; 
-    }
-
-    /* Video container to enforce aspect ratio */
-    .video-container {
-        position: relative;
-        width: 100%;
-        max-width: 700px;
-        margin: 23px auto 0;
-        aspect-ratio: 9 / 16; /* Portrait aspect ratio for the video */
-        overflow: hidden;
-    }
-    .video-container video {
+    .navbar__menu {
         position: absolute;
-        top: 0;
+        top: 100%;
         left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensures poster covers the area */
+        right: 0;
+        background: var(--color-white);
+        border-top: 1px solid var(--color-gray-200);
+        box-shadow: var(--shadow-lg);
+        flex-direction: column;
+        padding: var(--space-md);
+        gap: var(--space-sm);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
     }
-    </style>
+
+    .navbar__menu--active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar__links {
+        flex-direction: column;
+        width: 100%;
+        gap: var(--space-sm);
+    }
+
+    .navbar__link {
+        width: 100%;
+        text-align: center;
+        padding: var(--space-md);
+    }
+
+    .navbar__cta {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: calc(var(--navbar-height) + var(--space-xl)) 0 var(--space-xl);
+    }
+
+    .section {
+        padding: var(--space-2xl) 0;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--space-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
 </head>
-<body class="bodyBackground" style="overflow-y:scroll;overflow-x:hidden">
-    <nav class="nav-container">
-        <div class="nav-inner">
-            <div class="nav-logo">
-                <a href="/">
-                    <img src="/media/logo.png" alt="Barcony" loading="lazy">
-                </a>
-            </div>
-            <div class="nav-menu">
-                <a href="/" class="active">Home</a>
-                <a href="/gallerij">Gallerij</a>
-                <a href="/#modellen">Modellen</a>
-                <a href="/#contact">Contact</a>
-            </div>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-    <!-- Mobile Header -->
-    <div data-mobile-pin="1" id="wsb-mobile-header" class="mm mm-mobile-preview">
-        <header id="MobileHeader_container" class="MobileHeader_container__1XW3y MobileHeader_withLogo__boWI9" style="background-color:rgba(255,255,255,1)">
-            <div class="MobileHeader_logo__VBlNX">
-                <a class="MobileHeader_logoAnchor__3VO33" href="#home">
-                    <img class="MobileHeader_logoImage__BZwGs" src="/media/logo.png" srcset="/media/logo.png 1x, /media/logo.png 2x">
-                </a>
-            </div>
-            <div class="MobileHeader_title__1avp4 mobile-title undefined">
-                <a class="MobileHeader_logoAnchor__3VO33" href="#home">
-                    <span class="MobileHeader_titleText__1M62s" style="color:rgba(77,107,129,1);font-family:Hind Guntur;font-weight:normal;font-style:normal">Barcony</span>
-                </a>
-            </div>
-            <div class="MobileHeader_dummyMenuIconContainer__3mfi4"></div>
-        </header>
-        <div id="mm" class="MobileHeaderMenu_mobileMenu__21p7v" style="background-color:rgba(255,255,255,1)">
-            <ul>
-                <li><a href="#home" class="MobileHeaderMenu_current__2Nelz" style="background-color:rgba(255,255,255,1);color:rgba(77,107,129,1);font-size:16px;line-height:3;font-family:Hind Guntur;font-weight:bold" title="Home">Home</a></li>
-                <li><a href="/gallerij" class="" style="background-color:rgba(255,255,255,1);color:rgba(77,107,129,1);font-size:16px;line-height:3;font-family:Hind Guntur" title="Gallerij">Gallerij</a></li>
-                <li><a href="#modellen" class="" style="background-color:rgba(255,255,255,1);color:rgba(77,107,129,1);font-size:16px;line-height:3;font-family:Hind Guntur" title="Barcony modellen">Barcony modellen</a></li>
-                <li><a href="#contact" class="" style="background-color:rgba(255,255,255,1);color:rgba(77,107,129,1);font-size:16px;line-height:3;font-family:Hind Guntur" title="Contact">Contact</a></li>
-            </ul>
-        </div>
-        <div id="mm-overlay" class="MobileHeaderMenu_mobileMenu_overlay__3WPnz"></div>
-        <div class="MobileHeader_menuIconContainer__lc-Zq off" id="MobileHeader_burgerMenuIcon" data-active-bgcolor="rgba(77,107,129,1)" data-inactive-bgcolor="rgba(77,107,129,1)">
-            <span style="background-color:rgba(77,107,129,1)"></span>
-            <span style="background-color:rgba(77,107,129,1)"></span>
-            <span style="background-color:rgba(77,107,129,1)"></span>
-        </div>
-    </div>
+<body>
+    <!-- Universal Header Component -->
+<nav class="navbar" id="navbar">
+    <div class="container navbar__container">
+        <a href="/" class="navbar__logo" aria-label="Barcony homepagina">
+            <img src="/media/logo.png" alt="Barcony Logo" width="120" height="47">
+        </a>
 
-    
-
-    <!-- Desktop Header -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:102px;width:100%">
-        <div data-id="C4B136DE-417D-456B-93AF-932322915542" data-kind="SECTION" style="width:100%;min-height:102px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Header" data-in-template="true" data-id="C4B136DE-417D-456B-93AF-932322915542" data-kind="Block" data-specific-kind="SECTION" data-pin="1" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);border-color:rgba(0,0,0,1);border-style:none;border-width:0px 0px 1px 0px;min-height:102px;padding-bottom:0" data-width="100" data-height="102">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:102px;width:1050px">
-                            <div class="Preview_column__1KeVx col " style="min-height:102px;width:280px;float:left">
-                                <div data-id="7CD23BAA-482A-483A-98DE-7C4B4E5B5978" data-kind="LOGO" style="width:280px;min-height:102px;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                    <div data-in-template="true" data-id="7CD23BAA-482A-483A-98DE-7C4B4E5B5978" data-kind="Component" data-specific-kind="LOGO" class=" Preview_component__SbiKo ">
-                                        <div class="Mobile_imageComponent__QXWk1" style="width:280px;height:102px;overflow:hidden" data-width="280" data-height="102">
-                                            <a href="/" target="_self" title="" alt="" style="display:block;margin-left:0px;width:261.19829424307px" data-stop-propagation="true">
-                                                <img loading="lazy" role="presentation" data-scalestrategy="logo" style="margin-top:0px;display:block" src="/media/logo.png" height="102" width="261.19829424307" alt="Barcony" data-width="280" data-height="102">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="clear:both"></div>
-                            </div>
-                            <div class="Preview_column__1KeVx col  isExpandable" style="min-height:102px;width:770px;float:left">
-                                <div data-id="2A53610C-3FFE-431B-8B74-034CB737FB21" data-kind="MENU" style="width:736px;min-height:42px;margin-top:30px;margin-left:34px" class="Preview_componentWrapper__2i4QI">
-                                    <div data-in-template="true" data-id="2A53610C-3FFE-431B-8B74-034CB737FB21" data-kind="Component" data-specific-kind="MENU" class="Preview_mobileHide__9T929 Preview_component__SbiKo ">
-                                        <div class="menu menuself menuhorizontal dropdown menuhorizontalcenter menuverticalmiddle White" style="width:736px;height:42px">
-                                            <ul class="menu1">
-                                                <li class=""><a class="selected level-0" href="#home"><span>Home</span></a><div class="divider"></div></li>
-                                                <li class=""><a class="level-0" href="/gallerij"><span>Gallerij</span></a><div class="divider"></div></li>
-                                                <li class=""><a class="level-0" href="#modellen"><span>Barcony modellen</span></a><div class="divider"></div></li>
-                                                <li class=""><a class="level-0" href="#contact"><span>Contact</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="clear:both"></div>
-                            </div>
-                            <div style="clear:both"></div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
+        <div class="navbar__menu" id="navbar-menu">
+            <div class="navbar__links">
+                <a href="/" class="navbar__link navbar__link--active">Home</a>
+                <a href="/gallerij" class="navbar__link">Gallerij</a>
+                <a href="#modellen" class="navbar__link">Modellen</a>
+                <a href="#contact" class="navbar__link">Contact</a>
             </div>
+            <a href="#contact" class="navbar__cta btn">Bestel Nu</a>
         </div>
+
+        <button class="navbar__toggle" id="navbar-toggle" aria-label="Menu openen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
+</nav>
+
+    <!-- Universal Header Component -->
+<nav class="navbar" id="navbar">
+    <div class="container navbar__container">
+        <a href="/" class="navbar__logo" aria-label="Barcony homepagina">
+            <img src="/media/logo.png" alt="Barcony Logo" width="120" height="47">
+        </a>
+
+        <div class="navbar__menu" id="navbar-menu">
+            <div class="navbar__links">
+                <a href="/" class="navbar__link navbar__link--active">Home</a>
+                <a href="/gallerij" class="navbar__link">Gallerij</a>
+                <a href="#modellen" class="navbar__link">Modellen</a>
+                <a href="#contact" class="navbar__link">Contact</a>
+            </div>
+            <a href="#contact" class="navbar__cta btn">Bestel Nu</a>
+        </div>
+
+        <button class="navbar__toggle" id="navbar-toggle" aria-label="Menu openen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+    <!-- Universal Header Component -->
+<nav class="navbar" id="navbar">
+    <div class="container navbar__container">
+        <a href="/" class="navbar__logo" aria-label="Barcony homepagina">
+            <img src="/media/logo.png" alt="Barcony Logo" width="120" height="47">
+        </a>
+
+        <div class="navbar__menu" id="navbar-menu">
+            <div class="navbar__links">
+                <a href="/" class="navbar__link navbar__link--active">Home</a>
+                <a href="/gallerij" class="navbar__link">Gallerij</a>
+                <a href="#modellen" class="navbar__link">Modellen</a>
+                <a href="#contact" class="navbar__link">Contact</a>
+            </div>
+            <a href="#contact" class="navbar__cta btn">Bestel Nu</a>
+        </div>
+
+        <button class="navbar__toggle" id="navbar-toggle" aria-label="Menu openen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Ga naar hoofdinhoud</a>
+
+    <!-- Universal Header Component will be injected here -->
 
     <!-- Hero Section -->
-    <div id="home" class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="width:100%">
-        <div data-id="858C021E-334B-47FA-9E8E-1DD7FD6E7CFD" data-kind="SECTION" style="width:100%;min-height:auto;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section7" data-in-template="false" data-id="858C021E-334B-47FA-9E8E-1DD7FD6E7CFD" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea" style="background-color:rgba(255,255,255,1);padding-bottom:0;background-image:url('/media/background.png');background-repeat:no-repeat;background-position:50% 50%;background-size:cover" data-width="100" data-height="520"></div>
+    <section class="hero" id="home">
+        <div class="hero__background"></div>
+        <div class="container hero__content">
+            <h1 class="hero__title">De inklapbare bartafel voor uw balkon</h1>
+            <p class="hero__subtitle">
+                Vier de zomer op uw eigen balkon met een Barcony! Onze unieke inklapbare bartafel combineert Zweeds vakmanschap met duurzaam Douglas hout.
+            </p>
+            <a href="#modellen" class="hero__cta">
+                Ontdek de modellen
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
+                </svg>
+            </a>
             </div>
-        </div>
-    </div>
-
+    </section>
     <!-- Main Content -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="width:100%">
-        <div data-id="F88FC3E8-C1F2-4193-B229-EA3546C4B455" data-kind="SECTION" style="width:100%;min-height:auto;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section8" data-in-template="false" data-id="F88FC3E8-C1F2-4193-B229-EA3546C4B455" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:auto;padding-bottom:32px" data-width="100" data-height="400">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:auto;width:1050px">
-                            <div data-id="531B6C99-C657-40F2-8538-FC816883338E" data-kind="TEXT" style="width:954px;min-height:auto;margin-top:24px;margin-left:48px" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="531B6C99-C657-40F2-8538-FC816883338E" data-kind="Component" data-specific-kind="TEXT" class=" Preview_component__SbiKo text-align-null">
-                                    <div data-mve-font-change="0" class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu">
-                                        <h2 class="textheading2 mobile-oversized" style="font-size: 50px; text-align: center;"><span class="textheading2 mobile-oversized" style="font-weight: bold; font-size: 50px; color: #ffa24d;">De inklapbare bartafel voor uw balkon</span></h2>
+    <main id="main">
+
+        <!-- Gallery Section -->
+        <section class="section section--light" id="gallerij">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <h2 class="section__title">Ontdek de Barcony in actie</h2>
+                    <p class="section__subtitle">
+                        Met een Barcony vier je de perfecte zomer gewoon op je eigen balkon! Met de opklapbare balkon bartafel creëer je met de Barcony je eigen ideale plek om van een drankje te genieten.
+                    </p>
+    </div>
+
+                <div class="gallery">
+                    <div class="gallery__item">
+                        <img src="/media/gallery-1.jpeg" alt="Barcony in gebruik op balkon" class="gallery__image" loading="lazy">
+                        <div class="gallery__overlay">
+                            <h3 class="gallery__title">Zomerse balkonmomenten</h3>
                                     </div>
                                 </div>
+                    <div class="gallery__item">
+                        <img src="/media/gallery-2.jpeg" alt="Barcony inklapbaar systeem" class="gallery__image" loading="lazy">
+                        <div class="gallery__overlay">
+                            <h3 class="gallery__title">Slim inklapsysteem</h3>
                             </div>
                         </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:19px;width:1050px">
-                            <div data-id="8B12DF6D-EF16-493B-BFA6-67C3AE0E4F99" data-kind="IMAGE" style="width:1050px;min-height:19px;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="8B12DF6D-EF16-493B-BFA6-67C3AE0E4F99" data-kind="Component" data-specific-kind="IMAGE" class=" Preview_component__SbiKo ">
-                                    <div class="Mobile_imageComponent__QXWk1" style="width:1050px;height:19px;overflow:hidden" data-width="1050" data-height="19">
-                                        <img loading="lazy" role="presentation" data-scalestrategy="fit" style="display:block;margin:0" src="/media/decorative-line.png" height="19" width="1050" data-width="1050" data-height="19">
+                    <div class="gallery__item">
+                        <img src="/media/gallery-3.jpeg" alt="Douglas hout afwerking" class="gallery__image" loading="lazy">
+                        <div class="gallery__overlay">
+                            <h3 class="gallery__title">Natuurlijk Douglas hout</h3>
                                     </div>
                                 </div>
+                    <div class="gallery__item">
+                        <img src="/media/gallery-4.jpeg" alt="Barcony compact model" class="gallery__image" loading="lazy">
+                        <div class="gallery__overlay">
+                            <h3 class="gallery__title">Compact & Praktisch</h3>
                             </div>
                         </div>
-                        <div style="clear:both"></div>
+                    <div class="gallery__item">
+                        <img src="/media/gallery-5.jpeg" alt="Barcony grote model" class="gallery__image" loading="lazy">
+                        <div class="gallery__overlay">
+                            <h3 class="gallery__title">Grande voor grote balkons</h3>
                     </div>
                 </div>
+                    <div class="gallery__item">
+                        <img src="/media/gallery-6.jpeg" alt="Barcony mini model" class="gallery__image" loading="lazy">
+                        <div class="gallery__overlay">
+                            <h3 class="gallery__title">Mini voor kleine ruimtes</h3>
             </div>
         </div>
     </div>
 
-
-    <!-- Call to Action Section -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:293px;width:100%">
-        <div data-id="4E0AC88C-E315-43A7-B5CE-7DFF26CA0EC0" data-kind="SECTION" style="width:100%;min-height:293px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section9" data-in-template="false" data-id="4E0AC88C-E315-43A7-B5CE-7DFF26CA0EC0" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:293px;padding-bottom:29px" data-width="100" data-height="293">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        
-                        <!-- Intro six-image gallery placed here under heading section -->
-                        <div class="Preview_row__3Fkye row" style="min-height:710px;width:1050px">
-                            <div data-id="intro-gallery" data-kind="GALLERY" style="width:1050px;min-height:695px;margin-top:15px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="intro-gallery" data-kind="Component" data-specific-kind="GALLERY" data-stretch="false" class=" Preview_component__SbiKo ">
-                                    <div class="gallery Gallery_gallery__2AhdO textnormal" data-captionenabled="false" data-mobile-column="2" data-columns="3" data-spacing="14" data-image-ratio="SQUARE" data-original-width="1050" data-compact-view="false">
-                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-1.jpeg" loading="lazy" alt="Barcony 1"></div></div></a></div>
-                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-2.jpeg" loading="lazy" alt="Barcony 2"></div></div></a></div>
-                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-3.jpeg" loading="lazy" alt="Barcony 3"></div></div></a></div>
-                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-4.jpeg" loading="lazy" alt="Barcony 4"></div></div></a></div>
-                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-5.jpeg" loading="lazy" alt="Barcony 5"></div></div></a></div>
-                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="text-align:center"><a><div class="img-container"><div class="Image_imageComponent__2bb7A img-wrapper"><img src="/media/gallery-6.jpeg" loading="lazy" alt="Barcony 6"></div></div></a></div>
+                <div class="text-center" style="margin-top: var(--space-2xl);">
+                    <a href="/gallerij" class="btn btn--secondary">
+                        Bekijk meer foto's
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Decorative line AFTER the six-image gallery -->
-                        <div class="Preview_row__3Fkye row" style="min-height:43px;width:1050px">
-                            <div data-id="LINE-AFTER-INTRO-GALLERY" data-kind="IMAGE" style="width:1050px;min-height:19px;margin-top:24px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="LINE-AFTER-INTRO-GALLERY" data-kind="Component" data-specific-kind="IMAGE" class=" Preview_component__SbiKo ">
-                                    <div class="Mobile_imageComponent__QXWk1" style="width:1050px;height:19px;overflow:hidden" data-width="1050" data-height="19">
-                                        <img loading="lazy" role="presentation" data-scalestrategy="fit" style="display:block;margin:0" src="/media/decorative-line.png" height="19" width="1050" data-width="1050" data-height="19">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:84px;width:1050px">
-                            <div data-id="AE5DE775-62BE-403E-9089-3986F9BD70BE" data-kind="TEXT" style="width:970px;min-height:64px;margin-top:20px;margin-left:40px" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="AE5DE775-62BE-403E-9089-3986F9BD70BE" data-kind="Component" data-specific-kind="TEXT" class=" Preview_component__SbiKo text-align-null">
-                                    <div data-mve-font-change="0" class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu">
-                                        <p style="text-align: center; font-size: 20px;" class=""><span style="font-size: 20px;" class="">Met een Barcony vier je de perfecte zomer gewoon op je eigen balkon! Met de opklapbare balkon bartafel creëer je met de Barcony je eigen ideale plek om van een drankje te genieten.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:84px;width:1050px">
-                            <div data-id="0F1603DD-9986-4A96-B972-51D4C5C24A4E" data-kind="BUTTON" style="width:192px;height:50px;margin-top:34px;margin-left:429px" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="0F1603DD-9986-4A96-B972-51D4C5C24A4E" data-kind="Component" data-specific-kind="BUTTON" class=" Preview_component__SbiKo align-center">
-                                    <div class="ButtonPreview_container__22hQi ButtonPreview_buttonTransition__CKIAx button1">
-                                        <div class="ButtonPreview_buttonComponent__17NP0">
-                                            <a href="/modellen-prijzen/" class="ButtonPreview_textContainer__t8q7_"><span>Modellen &amp; Prijzen</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:53px;width:1050px">
-                            <div data-id="353D4B7E-85FB-4C91-AF8B-7F3675137242" data-kind="IMAGE" style="width:1050px;min-height:19px;margin-top:34px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="353D4B7E-85FB-4C91-AF8B-7F3675137242" data-kind="Component" data-specific-kind="IMAGE" class=" Preview_component__SbiKo ">
-                                    <div class="Mobile_imageComponent__QXWk1" style="width:1050px;height:19px;overflow:hidden" data-width="1050" data-height="19">
-                                        <img loading="lazy" role="presentation" data-scalestrategy="fit" style="display:block;margin:0" src="/media/decorative-line.png" height="19" width="1050" data-width="1050" data-height="19">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
 
     <!-- Product Models Section -->
-    <div id="modellen" class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:896px;width:100%">
-        <div data-id="42CCF4B6-D747-4766-BED7-61093C53EFD6" data-kind="SECTION" style="width:100%;min-height:896px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section2" data-in-template="false" data-id="42CCF4B6-D747-4766-BED7-61093C53EFD6" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:896px;padding-bottom:30px" data-width="100" data-height="896">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:429px;width:1050px">
-                            <div data-id="13BC15A3-5F52-4077-A64D-89BCB8BA000C" data-kind="GALLERY" style="width:1050px;min-height:399px;margin-top:30px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="13BC15A3-5F52-4077-A64D-89BCB8BA000C" data-kind="Component" data-specific-kind="GALLERY" data-stretch="false" class=" Preview_component__SbiKo ">
-                                    <div class="gallery Gallery_gallery__2AhdO textnormal" data-captionenabled="true" data-mobile-column="2" data-columns="3" data-spacing="14" data-image-ratio="SQUARE" data-original-width="1050" data-compact-view="false">
-                                        <div data-index="0" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:0;margin-top:0;text-align:center">
-                                            <a>
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="border-width:1px 1px 1px 1px;border-top-left-radius:999px;border-top-right-radius:999px;border-bottom-right-radius:999px;border-bottom-left-radius:999px;width:100%;height:100%;display:flex">
-                                                        <img src="/media/gallery-2.jpeg" style="width:100%;height:100%;object-fit:cover" title="Grande" alt="Grande" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
+        <section class="section section--gray" id="modellen">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <h2 class="section__title">Onze modellen</h2>
+                    <p class="section__subtitle">
+                        Van compact tot groot - vind het perfecte model voor uw balkon. Alle modellen zijn gemaakt van duurzaam Douglas hout met PEFC-keurmerk.
+                    </p>
                                                     </div>
+
+                <div class="products">
+                    <div class="product-card animate-on-scroll">
+                        <img src="/media/p-1-10.jpg" alt="Barcony Op Maat" class="product-card__image">
+                        <h3 class="product-card__title">Op Maat</h3>
+                        <p class="product-card__description">Perfect afgestemd op uw balkon en wensen. Volledig naar uw specificaties gemaakt.</p>
+                        <div class="product-card__price">Vanaf €299</div>
+                        <a href="#contact" class="btn">Offerte aanvragen</a>
                                                 </div>
-                                                <div style="position:relative" class="gallery-caption">
-                                                    <div class="textnormal">
-                                                        <div class="Gallery_galleryCaptionContainer__1UMvN">
-                                                            <div>
-                                                                <div style="width:340.6px;background-image:none;padding-left:15px;padding-right:15px;padding-top:20px;padding-bottom:20px" class="Gallery_galleryCaption__2CuUb gallery-title-description-wrapper">
-                                                                    <p style="color:#111111;font-family:IBM Plex Sans;font-size:14px;font-weight:bold;text-decoration:none;font-style:normal;line-height:1.3;text-shadow:none" class="Gallery_galleryCaption__2CuUb"><span>Grande</span></p>
+
+                    <div class="product-card animate-on-scroll">
+                        <img src="/media/gallery-2.jpeg" alt="Barcony Grande" class="product-card__image">
+                        <h3 class="product-card__title">Grande</h3>
+                        <p class="product-card__description">Het ruimste model, perfect voor grote balkons. Ideaal voor gezellige avonden met vrienden.</p>
+                        <div class="product-card__price">€199</div>
+                        <a href="#contact" class="btn">Bestellen</a>
                                                                 </div>
+
+                    <div class="product-card animate-on-scroll">
+                        <img src="/media/gallery-3.jpeg" alt="Barcony Compact" class="product-card__image">
+                        <h3 class="product-card__title">Compact</h3>
+                        <p class="product-card__description">De gulden middenweg - ruimtebesparend maar toch ruim genoeg voor 4 personen.</p>
+                        <div class="product-card__price">€149</div>
+                        <a href="#contact" class="btn">Bestellen</a>
                                                             </div>
+
+                    <div class="product-card animate-on-scroll">
+                        <img src="/media/p-1-9.jpg" alt="Barcony Mini" class="product-card__image">
+                        <h3 class="product-card__title">Mini</h3>
+                        <p class="product-card__description">Perfect voor kleine balkons. Neemt minimale ruimte in maar biedt maximale functionaliteit.</p>
+                        <div class="product-card__price">€99</div>
+                        <a href="#contact" class="btn">Bestellen</a>
                                                         </div>
                                                     </div>
-                                                </div>
+
+                <div class="text-center" style="margin-top: var(--space-2xl);">
+                    <a href="/modellen-prijzen" class="btn btn--secondary">
+                        Alle modellen & prijzen bekijken
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
                                             </a>
                                         </div>
-                                        <div data-index="1" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:14px;margin-top:0;text-align:center">
-                                            <a>
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="border-width:1px 1px 1px 1px;border-top-left-radius:999px;border-top-right-radius:999px;border-bottom-right-radius:999px;border-bottom-left-radius:999px;width:100%;height:100%;display:flex">
-                                                        <img src="/media/gallery-3.jpeg" style="width:100%;height:100%;object-fit:cover" title="Compact" alt="Compact" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
                                                     </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section section--light">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <h2 class="section__title">Waarom kiezen voor Barcony?</h2>
+                    <p class="section__subtitle">
+                        Ontdek de unieke voordelen van onze handgemaakte balkon bartafels
+                    </p>
                                                 </div>
-                                                <div style="position:relative" class="gallery-caption">
-                                                    <div class="textnormal">
-                                                        <div class="Gallery_galleryCaptionContainer__1UMvN">
-                                                            <div>
-                                                                <div style="width:340.6px;background-image:none;padding-left:15px;padding-right:15px;padding-top:20px;padding-bottom:20px" class="Gallery_galleryCaption__2CuUb gallery-title-description-wrapper">
-                                                                    <p style="color:#111111;font-family:IBM Plex Sans;font-size:14px;font-weight:bold;text-decoration:none;font-style:normal;line-height:1.3;text-shadow:none" class="Gallery_galleryCaption__2CuUb"><span>Compact</span></p>
+
+                <div class="features">
+                    <div class="feature animate-on-scroll">
+                        <div class="feature__icon">✓</div>
+                        <h3 class="feature__title">Slim Design</h3>
+                        <p class="feature__description">
+                            Uniek inklapsysteem: in een handomdraai van bartafel naar balkontafel.
+                            Perfect voor balkons met beperkte ruimte.
+                        </p>
                                                                 </div>
+
+                    <div class="feature animate-on-scroll">
+                        <div class="feature__icon">●</div>
+                        <h3 class="feature__title">Duurzaam Douglas</h3>
+                        <p class="feature__description">
+                            PEFC-gecertificeerd hout uit duurzaam beheerde bossen.
+                            Behandeld met natuurlijke olie voor langdurige bescherming.
+                        </p>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div data-index="2" class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;margin-left:14px;margin-top:0;text-align:center">
-                                            <a>
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="border-width:1px 1px 1px 1px;border-top-left-radius:999px;border-top-right-radius:999px;border-bottom-right-radius:999px;border-bottom-left-radius:999px;width:100%;height:100%;display:flex">
-                                                        <img src="/media/p-1-9.jpg" style="width:100%;height:100%;object-fit:cover" title="Mini" alt="Mini" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
-                                                    </div>
-                                                </div>
-                                                <div style="position:relative" class="gallery-caption">
-                                                    <div class="textnormal">
-                                                        <div class="Gallery_galleryCaptionContainer__1UMvN">
-                                                            <div>
-                                                                <div style="width:340.6px;background-image:none;padding-left:15px;padding-right:15px;padding-top:20px;padding-bottom:20px" class="Gallery_galleryCaption__2CuUb gallery-title-description-wrapper">
-                                                                    <p style="color:#111111;font-family:IBM Plex Sans;font-size:14px;font-weight:bold;text-decoration:none;font-style:normal;line-height:1.3;text-shadow:none" class="Gallery_galleryCaption__2CuUb"><span>Mini</span></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:399px;width:1050px">
-                            <div data-id="4C55A77D-0479-4463-88B9-B6F9B96C1B33" data-kind="GALLERY" style="width:1050px;min-height:399px;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="4C55A77D-0479-4463-88B9-B6F9B96C1B33" data-kind="Component" data-specific-kind="GALLERY" data-stretch="false" class=" Preview_component__SbiKo ">
-                                    <div class="gallery Gallery_gallery__2AhdO textnormal" data-captionenabled="true" data-mobile-column="1" data-columns="1" data-spacing="14" data-image-ratio="SQUARE" data-original-width="1050" data-compact-view="false" style="justify-content:center">
-                                        <div class="Gallery_galleryCell__2ARa3 gallery-cell" style="width:340.6px;text-align:center">
-                                            <a>
-                                                <div class="img-container" style="height:340.6px;width:340.6px;display:flex">
-                                                    <div class="Image_imageComponent__2bb7A img-wrapper" style="border-width:1px 1px 1px 1px;border-top-left-radius:999px;border-top-right-radius:999px;border-bottom-right-radius:999px;border-bottom-left-radius:999px;width:100%;height:100%;display:flex">
-                                                        <img src="/media/p-1-10.jpg" style="width:100%;height:100%;object-fit:cover" title="Op Maat" alt="Op Maat" role="presentation" data-loading="lazy" draggable="false" loading="lazy">
-                                                    </div>
-                                                </div>
-                                                <div style="position:relative" class="gallery-caption">
-                                                    <div class="textnormal">
-                                                        <div class="Gallery_galleryCaptionContainer__1UMvN">
-                                                            <div>
-                                                                <div style="width:340.6px;background-image:none;padding-left:15px;padding-right:15px;padding-top:20px;padding-bottom:20px" class="Gallery_galleryCaption__2CuUb gallery-title-description-wrapper">
-                                                                    <p style="color:#111111;font-family:IBM Plex Sans;font-size:14px;font-weight:bold;text-decoration:none;font-style:normal;line-height:1.3;text-shadow:none" class="Gallery_galleryCaption__2CuUb"><span>Op Maat</span></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:38px;width:1050px">
-                            <div data-id="CDD5F89F-E87A-44BB-BFCA-061722242DF9" data-kind="IMAGE" style="width:1050px;min-height:19px;margin-top:19px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="CDD5F89F-E87A-44BB-BFCA-061722242DF9" data-kind="Component" data-specific-kind="IMAGE" class=" Preview_component__SbiKo ">
-                                    <div class="Mobile_imageComponent__QXWk1" style="width:1050px;height:19px;overflow:hidden" data-width="1050" data-height="19">
-                                        <img loading="lazy" role="presentation" data-scalestrategy="fit" style="display:block;margin:0" src="/media/decorative-line.png" height="19" width="1050" data-width="1050" data-height="19">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+                    <div class="feature animate-on-scroll">
+                        <div class="feature__icon">▲</div>
+                        <h3 class="feature__title">Zweeds Vakmanschap</h3>
+                        <p class="feature__description">
+                            Met liefde gemaakt in Zweden. Jarenlange ervaring in houtbewerking
+                            voor de hoogste kwaliteit.
+                        </p>
     </div>
 
-    <!-- Design Section -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:629px;width:100%">
-        <div data-id="BA445333-1CA6-469B-BB09-B1EB95F1E11F" data-kind="SECTION" style="width:100%;min-height:629px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section3" data-in-template="false" data-id="BA445333-1CA6-469B-BB09-B1EB95F1E11F" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:629px;padding-bottom:0" data-width="100" data-height="629">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:496px;width:1050px">
-                            <div data-id="F9D5A0A3-2A2F-43CA-BAFE-989AA7E65C51" data-kind="TEXT" style="width:1050px;min-height:480px;margin-top:16px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="F9D5A0A3-2A2F-43CA-BAFE-989AA7E65C51" data-kind="Component" data-specific-kind="TEXT" class=" Preview_component__SbiKo text-align-null">
-                                    <div data-mve-font-change="0" class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu">
-                                        <p style="font-size: 20px;" class=""><span style="font-size: 20px; font-weight: bold;" class="">Design</span><br></p>
-                                        <p style="font-size: 20px;" class=""><span style="font-size: 20px;" class=""><br></span></p>
-                                        <p style="font-size: 20px;" class=""><span style="font-size: 20px;" class="">Uniek aan de Barcony is de mogelijkheid om de balkonbar in een handomdraai te veranderen in een balkontafel door het uitklappen van het tafelblad.&nbsp;De Barcony is gemaakt van Douglas hout, een duurzame houtsoort afkomstig van de douglasspar. Deze balkonbar met tafel (inklapbaar) is perfect voor een balkon met minder ruimte.&nbsp;</span></p>
-                                        <p style="font-size: 20px;" class=""><span style="font-size: 20px;" class=""><br></span></p>
-                                        <p style="font-size: 20px;" class=""><span style="font-size: 20px; font-weight: bold;" class="">Duurzaamheid</span></p>
-                                        <p style="font-size: 20px;" class=""><span style="font-size: 20px; font-weight: bold;" class=""><br></span></p>
-                                        <p style="font-size: 20px;" class=""><span style="font-size: 20px;" class="">Het Douglas hout dat wij gebruiken heeft een PEFC-keurmerk: dat betekent dat hout- en papierproducten afkomstig zijn uit een duurzaam beheerd bos. Douglas hout heeft een lange levensduur. Voordat wij de Barcony bij u afleveren, wordt het hout in de olie gezet. Zo wordt de levensduur van het hout verlengd, behoudt het hout zijn warmrode kleur en is de balkontafel bovendien waterbestendig.</span></p>
-                                        <p style="font-size: 20px;" class=""><br></p>
-                                        <p style="font-size: 20px;" class=""><span style="font-size: 20px;" class="">Bij iedere verkoop van een Barcony doneren wij een bedrag aan TreesforAll, een organisatie die zich inzet om de wereldwijde ontbossing tegen te gaan.&nbsp;&nbsp;<a class="link1" href="https://treesforall.nl/en/plant-a-tree/" target="_blank" rel="noopener">(https://treesforall.nl/en/participate-plant-a-tree/)</a></span></p>
+                    <div class="feature animate-on-scroll">
+                        <div class="feature__icon">○</div>
+                        <h3 class="feature__title">Voor de Natuur</h3>
+                        <p class="feature__description">
+                            Bij elke aankoop doneren we aan Trees for All om ontbossing tegen te gaan.
+                            Samen maken we de wereld groener.
+                        </p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:133px;width:1050px">
-                            <div data-id="AEC81089-4ED8-4E40-8780-7C7C19DFFC05" data-kind="IMAGE" style="width:241px;min-height:108px;margin-top:25px;margin-left:404px" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="AEC81089-4ED8-4E40-8780-7C7C19DFFC05" data-kind="Component" data-specific-kind="IMAGE" class=" Preview_component__SbiKo ">
-                                    <div class="Mobile_imageComponent__QXWk1" style="width:241px;height:108px;overflow:hidden" data-width="241" data-height="108">
-                                        <img loading="lazy" role="presentation" data-scalestrategy="fit" style="display:block;margin:0" src="/media/sustainability-logo.png" height="108" width="241" data-width="241" data-height="108">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
 
     <!-- Video Section -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="width:100%">
-        <div data-id="8962D2A2-0304-41BD-9613-CF01648AEE46" data-kind="SECTION" style="width:100%;min-height:auto;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section4" data-in-template="false" data-id="8962D2A2-0304-41BD-9613-CF01648AEE46" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:auto;padding-bottom:22px" data-width="100">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:auto;width:1050px">
+        <section class="video-section">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <h2 class="section__title" style="color: var(--color-white);">Bekijk het in actie</h2>
+                    <p class="section__subtitle" style="color: var(--color-gray-300);">
+                        Ontdek hoe eenvoudig het inklapsysteem werkt in deze demonstratievideo
+                    </p>
+                                                    </div>
+
                             <div class="video-container">
-                                <video preload="metadata" controls playsinline src="/media/video.mp4" controlslist="nodownload"></video>
+                    <video
+                        preload="metadata"
+                        controls
+                        playsinline
+                        poster="/media/video-poster.jpg"
+                        aria-label="Demonstratievideo van het Barcony inklapsysteem"
+                    >
+                        <source src="/media/video.mp4" type="video/mp4">
+                        Uw browser ondersteunt deze video niet.
+                    </video>
                             </div>
                         </div>
-                        <div style="clear:both"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section section--light" id="contact">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <h2 class="section__title">Bestel uw Barcony</h2>
+                    <p class="section__subtitle">
+                        Wil je ook een mooie op maat gemaakte opklapbare balkonbar? Vul dan het onderstaande formulier in.
+                        We zullen zo snel mogelijk contact met u opnemen.
+                    </p>
                     </div>
+
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="firstName">Voornaam *</label>
+                        <input type="text" id="firstName" name="Voornaam" required aria-describedby="firstName-error">
+                        <span class="error-message" id="firstName-error"></span>
                 </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Achternaam *</label>
+                        <input type="text" id="lastName" name="Achternaam" required aria-describedby="lastName-error">
+                        <span class="error-message" id="lastName-error"></span>
             </div>
-        </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mailadres *</label>
+                        <input type="email" id="email" name="E-mailadres" required aria-describedby="email-error">
+                        <span class="error-message" id="email-error"></span>
     </div>
 
-    <!-- Order Section -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:314px;width:100%">
-        <div data-id="4E918361-E86F-4B5D-8E10-7818802FC2DE" data-kind="SECTION" style="width:100%;min-height:314px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section5" data-in-template="false" data-id="4E918361-E86F-4B5D-8E10-7818802FC2DE" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:314px;padding-bottom:30px" data-width="100" data-height="314">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:23px;width:1050px">
-                            <div data-id="ABA5758C-1FA1-44F8-ABD3-CCCC33834D7D" data-kind="BACKGROUND" style="width:1050px;min-height:1px;margin-top:22px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="ABA5758C-1FA1-44F8-ABD3-CCCC33834D7D" data-kind="Component" data-specific-kind="BACKGROUND" class="Preview_mobileHide__9T929 Preview_component__SbiKo ">
-                                    <div class="BackgroundPreview_backgroundComponent__3Dr5e BackgroundPreview_bgHeight__3dD2e" style="background-color:rgba(77,107,129,1);border-width:1px 1px 1px 1px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;min-height:1px;padding-bottom:0" data-width="1050" data-height="1"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:54px;width:1050px">
-                            <div data-id="541E5042-8723-4204-9ECF-E0BD8189755D" data-kind="TEXT" style="width:1050px;min-height:29px;margin-top:25px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="541E5042-8723-4204-9ECF-E0BD8189755D" data-kind="Component" data-specific-kind="TEXT" class=" Preview_component__SbiKo text-align-null">
-                                    <div data-mve-font-change="0" class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu">
-                                        <h3 class="textheading3 " style="font-size: 24px; text-align: center;"><span class="textheading3 " style="font-size: 24px; color: #4d6b81;">Check het unieke in- en uitklapsysteem van een Barcony in de video hierboven</span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:26px;width:1050px">
-                            <div data-id="0C3FEABB-512E-4FD3-A9E6-2C402A113AC6" data-kind="BACKGROUND" style="width:1050px;min-height:1px;margin-top:25px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="0C3FEABB-512E-4FD3-A9E6-2C402A113AC6" data-kind="Component" data-specific-kind="BACKGROUND" class="Preview_mobileHide__9T929 Preview_component__SbiKo ">
-                                    <div class="BackgroundPreview_backgroundComponent__3Dr5e BackgroundPreview_bgHeight__3dD2e" style="background-color:rgba(77,107,129,1);border-width:1px 1px 1px 1px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;min-height:1px;padding-bottom:0" data-width="1050" data-height="1"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:181px;width:1050px">
-                            <div data-id="D822222F-7D63-49D9-89CF-4753A21B12D7" data-kind="TEXT" style="width:1050px;min-height:130px;margin-top:51px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="D822222F-7D63-49D9-89CF-4753A21B12D7" data-kind="Component" data-specific-kind="TEXT" class=" Preview_component__SbiKo text-align-null">
-                                    <div data-mve-font-change="0" class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu">
-                                        <h1 class="textheading1 " style="font-size: 36px;"><span class="textheading1 " style="font-size: 36px; color: #fd7057; font-weight: bold;">Bestellen?</span></h1>
-                                        <p class="textheading1 " style="font-size: 24px;"><br></p>
-                                        <h1 class="textheading1 " style="font-size: 24px;"><span class="textheading1 " style="font-size: 24px; color: #4d6b81; font-weight: bold;">Wil je ook een mooie op maat gemaakte opklapbare balkonbar? Vul dan het onderstaande formulier in. We zullen z.s.m. contact met u op nemen.&nbsp;</span></h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <div class="form-group">
+                        <label for="city">Woonplaats *</label>
+                        <input type="text" id="city" name="Woonplaats" required aria-describedby="city-error">
+                        <span class="error-message" id="city-error"></span>
     </div>
 
-    <!-- Contact Form Section -->
-    <div id="contact" class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:885px;width:100%">
-        <div data-id="4284C651-8B26-4EB5-BC95-AC26CEF47715" data-kind="SECTION" style="width:100%;min-height:885px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section6" data-in-template="false" data-id="4284C651-8B26-4EB5-BC95-AC26CEF47715" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" data-bbox="{&quot;top&quot;:4382,&quot;left&quot;:-318,&quot;right&quot;:1382,&quot;bottom&quot;:5267}" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:885px;padding-bottom:90px" data-width="100" data-height="885">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:795px;width:1050px">
-                            <div data-id="C00ACE27-1C7E-4F90-B9A6-F48E95EB2F0A" data-kind="CONTACTFORM" style="width:1050px;min-height:795px;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="C00ACE27-1C7E-4F90-B9A6-F48E95EB2F0A" data-kind="Component" data-specific-kind="CONTACTFORM" class=" Preview_component__SbiKo align-center">
-                                    <div class="contactFormContainer">
-                                        <form action="/api/contact" method="POST" class="FieldContainerStyles_container__3ugjv oneWebCntForm" enctype="application/x-www-form-urlencoded">
-                                            <div class="contact-form-text-style-div" style="font-family:&quot;Cormorant&quot;;font-size:18px;color:#4d6b81">
-                                                <div class="FieldContainerStyles_container__3ugjv contact-form-field-container">
-                                                    <label data-label="Voornaam" class="FieldContainerStyles_label__38Z4h" style="line-height:22px">Voornaam *</label>
-                                                    <input type="text" class="View_input__1iF1T" name="Voornaam" autocomplete="on" value="" required>
+                    <div class="form-group">
+                        <label for="phone">Telefoonnummer</label>
+                        <input type="tel" id="phone" name="Telefoonnummer" aria-describedby="phone-error">
+                        <span class="error-message" id="phone-error"></span>
                                                 </div>
-                                                <span class="ContactFormPreview_errorMsg__296yj error">&nbsp;</span>
-                                                <div class="FieldContainerStyles_container__3ugjv contact-form-field-container">
-                                                    <label data-label="Achternaam" class="FieldContainerStyles_label__38Z4h" style="line-height:22px">Achternaam *</label>
-                                                    <input type="text" class="View_input__1iF1T" name="Achternaam" autocomplete="on" value="" required>
-                                                </div>
-                                                <span class="ContactFormPreview_errorMsg__296yj error">&nbsp;</span>
-                                                <div class="FieldContainerStyles_container__3ugjv contact-form-field-container">
-                                                    <label data-label="E-mailadres" class="FieldContainerStyles_label__38Z4h" style="line-height:22px">E-mailadres *</label>
-                                                    <input type="email" class="View_input__1iF1T" name="E-mailadres" autocomplete="on" value="" required>
-                                                </div>
-                                                <span class="ContactFormPreview_errorMsg__296yj error">&nbsp;</span>
-                                                <div class="FieldContainerStyles_container__3ugjv contact-form-field-container">
-                                                    <label data-label="Woonplaats" class="FieldContainerStyles_label__38Z4h" style="line-height:22px">Woonplaats *</label>
-                                                    <input type="text" class="View_input__1iF1T" name="Woonplaats" autocomplete="on" value="" required>
-                                                </div>
-                                                <span class="ContactFormPreview_errorMsg__296yj error">&nbsp;</span>
-                                                <div class="FieldContainerStyles_container__3ugjv contact-form-field-container">
-                                                    <label data-label="Telefoonnummer" class="FieldContainerStyles_label__38Z4h" style="line-height:22px">Telefoonnummer</label>
-                                                    <input type="tel" class="View_input__1iF1T" name="Telefoonnummer" autocomplete="on" value="">
-                                                </div>
-                                                <span class="ContactFormPreview_errorMsg__296yj error">&nbsp;</span>
-                                                <div class="FieldContainerStyles_container__3ugjv contact-form-field-container">
-                                                    <label data-label="Barcony model" class="FieldContainerStyles_label__38Z4h" style="line-height:22px">Barcony model</label>
-                                                    <select class="View_select__2DXGf" name="Dropdown">
-                                                        <option value=""> -- </option>
-                                                        <option value="- maak uw keuze -">- maak uw keuze -</option>
-                                                        <option value="Barony Grande">Barony Grande</option>
-                                                        <option value="Barony Compact">Barony Compact</option>
-                                                        <option value="Barcony Mini">Barcony Mini</option>
-                                                        <option value="Barconv op maat">Barcony op maat</option>
+
+                    <div class="form-group">
+                        <label for="model">Barcony model</label>
+                        <select id="model" name="Dropdown" aria-describedby="model-error">
+                            <option value="">-- maak uw keuze --</option>
+                            <option value="Barcony Grande">Barcony Grande (€199)</option>
+                            <option value="Barcony Compact">Barcony Compact (€149)</option>
+                            <option value="Barcony Mini">Barcony Mini (€99)</option>
+                            <option value="Barcony op maat">Barcony op maat (vanaf €299)</option>
                                                     </select>
+                        <span class="error-message" id="model-error"></span>
                                                 </div>
-                                                <span class="ContactFormPreview_errorMsg__296yj error">&nbsp;</span>
-                                                <div class="FieldContainerStyles_container__3ugjv contact-form-field-container">
-                                                    <label data-label="Bericht" class="FieldContainerStyles_label__38Z4h" style="line-height:22px">Bericht</label>
-                                                    <textarea class="View_input__1iF1T View_textArea__2s1mo" name="Bericht"></textarea>
+
+                    <div class="form-group">
+                        <label for="message">Bericht</label>
+                        <textarea id="message" name="Bericht" rows="4" placeholder="Vertel ons meer over uw balkon en wensen..."></textarea>
                                                 </div>
-                                                <span class="ContactFormPreview_errorMsg__296yj error">&nbsp;</span>
-                                                <div class="FieldContainerStyles_container__3ugjv contact-form-field-container">
-                                                    <label data-label="Ik ga akkoord met het privacybeleid en bevestig dat mijn persoonlijke gegevens in overeenstemming met de wet mogen worden gebruikt." class="FieldContainerStyles_label__38Z4h" style="line-height:22px">Ik ga akkoord met het privacybeleid en bevestig dat mijn persoonlijke gegevens in overeenstemming met de wet mogen worden gebruikt. *</label>
-                                                    <div>
-                                                        <div style="line-height:22px">
-                                                            <input class="View_multipleInput__MF3Tl" type="checkbox" name="privacy" id="privacy-agreement" value="agreed" required>
-                                                            <label class="View_multipleInputLabel__WJtCv" for="privacy-agreement">Ik ga akkoord</label>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" value="agreed" required>
+                        <label for="privacy">
+                            Ik ga akkoord met het privacybeleid en bevestig dat mijn persoonlijke gegevens in overeenstemming met de wet mogen worden gebruikt. *
+                        </label>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <span class="ContactFormPreview_errorMsg__296yj error">&nbsp;</span>
-                                                <div class="ContactFormPreview_captchaSubmitBtnCtn__33gO1">
-                                                    <div>
-                                                        <div class="SubmitButton_container__3wNjE submitButtonContainer">
-                                                            <input class="SubmitButton_submitButton__28tLg button2 contact-form-submit-btn submit-btn-disabled" type="submit" style="font-size:20px;line-height:24px;text-align:center" data-title="Verzenden" value="Verzenden">
-                                                        </div>
-                                                        <div class="SubmitButton_spacer__2Ad4A"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="contactFormResponseContainer" class="contactFormResponseStatus"></div>
+
+                    <button type="submit" class="btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                        Verzenden
+                    </button>
+
+                    <div id="form-response" class="form-response" style="display: none;"></div>
                                         </form>
-                                    </div>
-                                </div>
-                                <div class="Preview_float__1PmYU float" style="top:718px;left:20px;z-index:1035">
-                                    <div data-id="B69AB969-C625-46F4-9DFD-F51F32798346" data-kind="TEXT" style="width:306px;min-height:24px" class="Preview_componentWrapper__2i4QI">
-                                        <div data-in-template="false" data-id="B69AB969-C625-46F4-9DFD-F51F32798346" data-kind="Component" data-specific-kind="TEXT" data-bbox="{&quot;top&quot;:718,&quot;left&quot;:20,&quot;right&quot;:326,&quot;bottom&quot;:742}" data-parent="4284C651-8B26-4EB5-BC95-AC26CEF47715" class=" Preview_component__SbiKo text-align-null">
-                                            <div data-mve-font-change="0" class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu">
-                                                <h1 class="textheading1 " style="font-size: 20px;"><span class="textheading1 " style="color: #4d6b81; font-size: 20px;">* verplichte velden</span></h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="clear:both"></div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Footer -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:185px;width:100%">
-        <div data-id="17ED91C3-F237-41E4-8CCB-F5407DD1F084" data-kind="SECTION" style="width:100%;min-height:185px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section10" data-in-template="false" data-id="17ED91C3-F237-41E4-8CCB-F5407DD1F084" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(255,255,255,1);min-height:185px;padding-bottom:12px" data-width="100" data-height="185">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:76px;width:1050px">
-                            <div data-id="57DFB677-E2B7-423C-A7FA-33D61FA4CAA0" data-kind="SOCIAL_LINKS" style="width:84px;height:42px;margin-top:34px;margin-left:502px" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="57DFB677-E2B7-423C-A7FA-33D61FA4CAA0" data-kind="Component" data-specific-kind="SOCIAL_LINKS" class=" Preview_component__SbiKo ">
-                                    <div class="Social_container__2rWh4" style="font-size:32px">
-                                        <a href="https://facebook.com/barcony_bartafel/" target="_blank" style="width:32px;height:32px">
-                                            <svg viewBox="0 0 45 45" style="width:32px;height:32px"><g fill="none"><path fill="#1877f2" d="M44.506 22.23C44.506 9.951 34.543 0 22.253 0 9.963 0 0 9.952 0 22.23c0 11.094 8.138 20.29 18.776 21.958V28.655h-5.65V22.23h5.65v-4.897c0-5.571 3.322-8.649 8.405-8.649 2.435 0 4.981.435 4.981.435v5.47h-2.806c-2.764 0-3.626 1.714-3.626 3.472v4.17h6.172l-.987 6.425H25.73V44.19c10.638-1.668 18.776-10.864 18.776-21.96"></path><path fill="#ffffff" d="M30.915 28.655l.987-6.426H25.73v-4.17c0-1.757.862-3.47 3.626-3.47h2.806V9.117s-2.546-.435-4.98-.435c-5.084 0-8.406 3.078-8.406 8.649v4.897h-5.65v6.426h5.65V44.19a22.443 22.443 0 006.954 0V28.655h5.185"></path></g></svg>
-                                        </a>
-                                        <a href="https://instagram.com/barcony_bartafel/" target="_blank" style="width:32px;height:32px">
-                                            <svg viewBox="0 0 42 42" style="width:32px;height:32px"><defs><linearGradient id="a118" x1="18.55%" x2="76.26%" y1="95.39%" y2="3.24%"><stop offset="0%" stop-color="#e09b3d"></stop><stop offset="18.95%" stop-color="#df983d"></stop><stop offset="51.42%" stop-color="#c74c4d"></stop><stop offset="67.53%" stop-color="#c21975"></stop><stop offset="100%" stop-color="#7024c4"></stop></linearGradient><linearGradient id="b118" x1="20.07%" x2="82.07%" y1="100%" y2="-15.97%"><stop offset="0%" stop-color="#e09b3d"></stop><stop offset="26.5%" stop-color="#c74c4d"></stop><stop offset="42.82%" stop-color="#c21975"></stop><stop offset="100%" stop-color="#9d39a9"></stop></linearGradient><linearGradient id="c118" x1="50%" x2="50%" y1="658.14%" y2="-140.03%"><stop offset="0%" stop-color="#e09b3d"></stop><stop offset="30%" stop-color="#c74c4d"></stop><stop offset="60%" stop-color="#c21975"></stop><stop offset="100%" stop-color="#7024c4"></stop></linearGradient></defs><g fill="none"><path fill="url(#a118)" d="M30 0c6.627 0 12 5.373 12 12v18c0 6.627-5.373 12-12 12H12C5.373 42 0 36.627 0 30V12C0 5.373 5.373 0 12 0h18zm-1 4H13a9 9 0 00-9 9v16a9 9 0 009 9h16a9 9 0 009-9V13a9 9 0 00-9-9z"></path><path fill="url(#b118)" d="M11 .5C16.799.5 21.5 5.201 21.5 11S16.799 21.5 11 21.5.5 16.799.5 11 5.201.5 11 .5zM11 4a7 7 0 100 14 7 7 0 000-14z" transform="translate(10 10)"></path><circle cx="31.5" cy="9.5" r="2.5" fill="url(#c118)"></circle></g></svg>
-                                        </a>
+                <div class="text-center" style="margin-top: var(--space-xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-gray-200);">
+                    <p style="color: var(--color-gray-600);">
+                        * verplichte velden<br>
+                        <strong>Contact informatie:</strong><br>
+                        Email: <a href="mailto:barconyamsterdam@gmail.com">barconyamsterdam@gmail.com</a><br>
+                        Telefoon: <a href="tel:+31657377873">+31 6 57 37 78 73</a>
+                    </p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="Preview_row__3Fkye row" style="min-height:97px;width:1050px">
-                            <div data-id="607C841E-AF5C-4070-A7DA-FAA768ADC494" data-kind="OPENING_HOURS_KIND" style="width:214px;min-height:80px;margin-top:17px;margin-left:437px" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="607C841E-AF5C-4070-A7DA-FAA768ADC494" data-kind="Component" data-specific-kind="OPENING_HOURS_KIND" class=" Preview_component__SbiKo ">
-                                    <div class="styles_container__3XoUD">
-                                        <dl class="textnormal styles_openingHours__Fpvyb styles_grouped__2Kz-E" style="text-decoration:none">
-                                            <div class="styles_item__1VM8P">
-                                                <dt style="font-weight:bold;text-align:center">Maandag - Zondag</dt>
-                                                <div class="styles_filler__3xPCt"></div>
-                                                <dd style="font-weight:normal;text-align:center">09:00 - 17:00</dd>
-                                            </div>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Bottom Footer -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:232px;width:100%">
-        <div data-id="1E605581-AD36-41F7-BF22-14A9690B4310" data-kind="SECTION" style="width:100%;min-height:232px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Section11" data-in-template="false" data-id="1E605581-AD36-41F7-BF22-14A9690B4310" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(194,219,232,1);min-height:232px;padding-bottom:87px" data-width="100" data-height="232">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:145px;width:1050px">
-                            <div data-id="8E702DE8-3C0C-439F-8B96-ADB2A314CB8D" data-kind="TEXT" style="width:300px;min-height:29px;margin-top:116px;margin-left:0" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="false" data-id="8E702DE8-3C0C-439F-8B96-ADB2A314CB8D" data-kind="Component" data-specific-kind="TEXT" class=" Preview_component__SbiKo text-align-null">
-                                    <div data-mve-font-change="0" class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu">
-                                        <h1 class="textheading1 " style="font-size: 24px;"><span class="textheading1 " style="font-size: 24px;"><a class="link1" style="color: #fd7057;" href="/algemene-voorwaarden">Algemene voorwaarden</a></span></h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
 
-    <!-- Final Footer -->
-    <div class="Preview_row__3Fkye row Preview_noSideMargin__2I-_n" style="min-height:101px;width:100%">
-        <div data-id="C52C27EE-D72F-441E-A99C-FCD57105221D" data-kind="SECTION" style="width:100%;min-height:101px;left:auto;margin-top:0;margin-left:0" class="Preview_componentWrapper__2i4QI">
-            <div id="Footer" data-in-template="true" data-id="C52C27EE-D72F-441E-A99C-FCD57105221D" data-kind="Block" data-specific-kind="SECTION" data-pin="0" data-stretch="true" class=" Preview_block__16Zmu ">
-                <div class="StripPreview_backgroundComponent__3YmQM Background_backgroundComponent__3_1Ea hasChildren" style="background-color:rgba(71,107,132,1);min-height:101px;padding-bottom:36px" data-width="100" data-height="101">
-                    <div class="Preview_column__1KeVx col " style="min-height:100%;width:1050px;margin:0 auto">
-                        <div class="Preview_row__3Fkye row" style="min-height:65px;width:1050px">
-                            <div data-id="12F90325-D78E-4976-BFE4-4A2081EE6B60" data-kind="TEXT" style="width:118px;min-height:29px;margin-top:36px;margin-left:466px" class="Preview_componentWrapper__2i4QI">
-                                <div data-in-template="true" data-id="12F90325-D78E-4976-BFE4-4A2081EE6B60" data-kind="Component" data-specific-kind="TEXT" class=" Preview_component__SbiKo text-align-null">
-                                    <div data-mve-font-change="0" class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu">
-                                        <h1 class="textheading1 " style="font-size: 24px; text-align: center;"><span class="textheading1 " style="font-size: 24px;"><a class="link3" href="/">HOME</a></span></h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Universal Footer Component will be injected here -->
 
-</body>
-</html>
-
+    <!-- JavaScript -->
 <script>
-  // Navigation scroll behavior
-  const nav = document.querySelector('.nav-container');
+        // Modern JavaScript for enhanced functionality
+
+        // Mobile Navigation Toggle
+        const navbarToggle = document.getElementById('navbar-toggle');
+        const navbarMenu = document.getElementById('navbar-menu');
+        const navbar = document.getElementById('navbar');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarToggle.classList.toggle('navbar__toggle--active');
+            navbarMenu.classList.toggle('navbar__menu--active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target)) {
+                navbarToggle.classList.remove('navbar__toggle--active');
+                navbarMenu.classList.remove('navbar__menu--active');
+            }
+        });
+
+        // Navbar scroll behavior
   let lastScrollY = window.scrollY;
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      nav.classList.add('nav--shrunken');
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > 100) {
+                navbar.classList.add('navbar--scrolled');
     } else {
-      nav.classList.remove('nav--shrunken');
+                navbar.classList.remove('navbar--scrolled');
     }
 
-    if (window.scrollY > lastScrollY && window.scrollY > 200) {
-      nav.classList.add('nav--hidden');
+            // Hide navbar when scrolling down, show when scrolling up
+            if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                navbar.style.transform = 'translateY(-100%)';
     } else {
-      nav.classList.remove('nav--hidden');
-    }
-    
-    lastScrollY = window.scrollY;
-  });
+                navbar.style.transform = 'translateY(0)';
+            }
 
-  // Mobile menu toggle
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+            lastScrollY = currentScrollY;
+        });
 
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('nav-menu--active');
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Close mobile menu if open
+                    navbarToggle.classList.remove('navbar__toggle--active');
+                    navbarMenu.classList.remove('navbar__menu--active');
+                }
+            });
+        });
+
+        // Animation on scroll observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact form handling
+        const contactForm = document.getElementById('contact-form');
+        const formResponse = document.getElementById('form-response');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Basic validation
+            const requiredFields = contactForm.querySelectorAll('[required]');
+            let isValid = true;
+
+            requiredFields.forEach(field => {
+                const errorElement = document.getElementById(`${field.id}-error`);
+                if (!field.value.trim()) {
+                    field.classList.add('error');
+                    errorElement.textContent = 'Dit veld is verplicht';
+                    errorElement.style.display = 'block';
+                    isValid = false;
+                } else {
+                    field.classList.remove('error');
+                    errorElement.style.display = 'none';
+                }
+            });
+
+            // Email validation
+            const emailField = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailField.value && !emailRegex.test(emailField.value)) {
+                emailField.classList.add('error');
+                emailError.textContent = 'Voer een geldig e-mailadres in';
+                emailError.style.display = 'block';
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
+            // Show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<div style="width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.3); border-top: 2px solid white; border-radius: 50%; animation: spin 1s linear infinite;"></div> Verzenden...';
+            submitBtn.disabled = true;
+
+            try {
+                // Simulate form submission (replace with actual endpoint)
+                await new Promise(resolve => setTimeout(resolve, 2000));
+
+                // Success response
+                formResponse.style.display = 'block';
+                formResponse.style.background = '#10b981';
+                formResponse.style.color = 'white';
+                formResponse.style.padding = '1rem';
+                formResponse.style.borderRadius = '0.5rem';
+                formResponse.style.marginTop = '1rem';
+                formResponse.textContent = 'Bedankt voor uw bericht! We nemen binnen 24 uur contact met u op.';
+
+                contactForm.reset();
+
+                // Scroll to response
+                formResponse.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            } catch (error) {
+                // Error response
+                formResponse.style.display = 'block';
+                formResponse.style.background = '#ef4444';
+                formResponse.style.color = 'white';
+                formResponse.style.padding = '1rem';
+                formResponse.style.borderRadius = '0.5rem';
+                formResponse.style.marginTop = '1rem';
+                formResponse.textContent = 'Er is iets misgegaan. Probeer het opnieuw of neem direct contact met ons op.';
+            } finally {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+
+        // Real-time validation
+        contactForm.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('blur', () => {
+                const errorElement = document.getElementById(`${field.id}-error`);
+
+                if (field.hasAttribute('required') && !field.value.trim()) {
+                    field.classList.add('error');
+                    errorElement.textContent = 'Dit veld is verplicht';
+                    errorElement.style.display = 'block';
+                } else if (field.type === 'email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+                    field.classList.add('error');
+                    errorElement.textContent = 'Voer een geldig e-mailadres in';
+                    errorElement.style.display = 'block';
+                } else {
+                    field.classList.remove('error');
+                    errorElement.style.display = 'none';
+                }
+            });
+
+            field.addEventListener('input', () => {
+                if (field.classList.contains('error')) {
+                    const errorElement = document.getElementById(`${field.id}-error`);
+                    field.classList.remove('error');
+                    errorElement.style.display = 'none';
+                }
+            });
+        });
+
+        // Add CSS for loading spinner
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            .error {
+                border-color: #ef4444 !important;
+                box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+            }
+            .error-message {
+                display: none;
+                color: #ef4444;
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+            }
+            .form-response {
+                animation: slideInUp 0.3s ease-out;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Set active nav link based on current page
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.navbar__link');
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('navbar__link--active');
+            } else {
+                link.classList.remove('navbar__link--active');
+            }
   });
 </script>
+    <!-- Universal Footer Component -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__section">
+                <h3>Barcony</h3>
+                <p>
+                    De inklapbare bartafel voor uw balkon. Met liefde gemaakt in Zweden van duurzaam Douglas hout.
+                    Perfect voor zomerse avonden!
+                </p>
+                <div class="footer__social">
+                    <a href="https://facebook.com/barcony_bartafel/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/barcony_bartafel/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__section">
+                <h3>Modellen</h3>
+                <p><a href="#modellen">Barcony Grande</a></p>
+                <p><a href="#modellen">Barcony Compact</a></p>
+                <p><a href="#modellen">Barcony Mini</a></p>
+                <p><a href="#modellen">Op Maat</a></p>
+            </div>
+
+            <div class="footer__section">
+                <h3>Contact</h3>
+                <p><a href="mailto:barconyamsterdam@gmail.com">barconyamsterdam@gmail.com</a></p>
+                <p><a href="tel:+31657377873">+31 6 57 37 78 73</a></p>
+                <p>Maandag - Zondag</p>
+                <p>09:00 - 17:00</p>
+            </div>
+
+            <div class="footer__section">
+                <h3>Informatie</h3>
+                <p><a href="/algemene-voorwaarden">Algemene voorwaarden</a></p>
+                <p><a href="https://treesforall.nl/en/plant-a-tree/" target="_blank" rel="noopener">Trees for All</a></p>
+                <p>PEFC-gecertificeerd hout</p>
+                <p>Gratis bezorging vanaf €175</p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; 2024 Barcony. Alle rechten voorbehouden. | Geproduceerd in Zweden met ❤️</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Universal Footer Component -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__section">
+                <h3>Barcony</h3>
+                <p>
+                    De inklapbare bartafel voor uw balkon. Met liefde gemaakt in Zweden van duurzaam Douglas hout.
+                    Perfect voor zomerse avonden!
+                </p>
+                <div class="footer__social">
+                    <a href="https://facebook.com/barcony_bartafel/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/barcony_bartafel/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__section">
+                <h3>Modellen</h3>
+                <p><a href="#modellen">Barcony Grande</a></p>
+                <p><a href="#modellen">Barcony Compact</a></p>
+                <p><a href="#modellen">Barcony Mini</a></p>
+                <p><a href="#modellen">Op Maat</a></p>
+            </div>
+
+            <div class="footer__section">
+                <h3>Contact</h3>
+                <p><a href="mailto:barconyamsterdam@gmail.com">barconyamsterdam@gmail.com</a></p>
+                <p><a href="tel:+31657377873">+31 6 57 37 78 73</a></p>
+                <p>Maandag - Zondag</p>
+                <p>09:00 - 17:00</p>
+            </div>
+
+            <div class="footer__section">
+                <h3>Informatie</h3>
+                <p><a href="/algemene-voorwaarden">Algemene voorwaarden</a></p>
+                <p><a href="https://treesforall.nl/en/plant-a-tree/" target="_blank" rel="noopener">Trees for All</a></p>
+                <p>PEFC-gecertificeerd hout</p>
+                <p>Gratis bezorging vanaf €175</p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; 2024 Barcony. Alle rechten voorbehouden. | Geproduceerd in Zweden met ❤️</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Universal Footer Component -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__section">
+                <h3>Barcony</h3>
+                <p>
+                    De inklapbare bartafel voor uw balkon. Met liefde gemaakt in Zweden van duurzaam Douglas hout.
+                    Perfect voor zomerse avonden!
+                </p>
+                <div class="footer__social">
+                    <a href="https://facebook.com/barcony_bartafel/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/barcony_bartafel/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__section">
+                <h3>Modellen</h3>
+                <p><a href="#modellen">Barcony Grande</a></p>
+                <p><a href="#modellen">Barcony Compact</a></p>
+                <p><a href="#modellen">Barcony Mini</a></p>
+                <p><a href="#modellen">Op Maat</a></p>
+            </div>
+
+            <div class="footer__section">
+                <h3>Contact</h3>
+                <p><a href="mailto:barconyamsterdam@gmail.com">barconyamsterdam@gmail.com</a></p>
+                <p><a href="tel:+31657377873">+31 6 57 37 78 73</a></p>
+                <p>Maandag - Zondag</p>
+                <p>09:00 - 17:00</p>
+            </div>
+
+            <div class="footer__section">
+                <h3>Informatie</h3>
+                <p><a href="/algemene-voorwaarden">Algemene voorwaarden</a></p>
+                <p><a href="https://treesforall.nl/en/plant-a-tree/" target="_blank" rel="noopener">Trees for All</a></p>
+                <p>PEFC-gecertificeerd hout</p>
+                <p>Gratis bezorging vanaf €175</p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; 2024 Barcony. Alle rechten voorbehouden. | Geproduceerd in Zweden met ❤️</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
