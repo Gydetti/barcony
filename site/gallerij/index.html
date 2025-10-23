@@ -584,6 +584,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Set active navigation link based on current URL
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar__link');
+
+    navLinks.forEach(link => {
+        // Remove existing active class
+        link.classList.remove('navbar__link--active');
+
+        // Check if this link matches current path
+        const href = link.getAttribute('href');
+
+        if (currentPath === '/' && href === '/') {
+            link.classList.add('navbar__link--active');
+        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
+            if (href === '/gallerij') {
+                link.classList.add('navbar__link--active');
+            }
+        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
+            if (href === '/modellen-prijzen') {
+                link.classList.add('navbar__link--active');
+            }
+        }
+
+        // Also handle hash links for homepage sections
+        if (currentPath === '/' && href.startsWith('#')) {
+            const hash = window.location.hash;
+            if (href === hash) {
+                link.classList.add('navbar__link--active');
+            }
+        }
+    });
+});
+</script>
 <style>
 /* Barcony Brand Variables - Natural Wood Theme */
 :root {
@@ -2367,6 +2403,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
 
+    
+
     <!-- Skip to main content for accessibility -->
     <a href="#main" class="skip-link">Ga naar hoofdinhoud</a>
 
@@ -2480,6 +2518,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <img id="lightbox-image" src="" alt="" class="lightbox__image">
         </div>
     </div>
+
+    
 
     
 
