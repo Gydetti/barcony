@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     z-index: 9999;
-    padding: var(--space-md);
+    padding: 0.75rem;
     pointer-events: none;
     transform: translateZ(0);
     will-change: transform;
@@ -17,7 +17,7 @@
 
 @media (min-width: 640px) {
     .cookie-banner {
-        padding: var(--space-lg);
+        padding: 1rem;
     }
 }
 
@@ -46,7 +46,7 @@
 .cookie-banner__card {
     position: relative;
     overflow: hidden;
-    border-radius: var(--border-radius-xl);
+    border-radius: var(--border-radius-lg);
     border: 0;
     /* Glassmorphism: semi-transparant met sterke blur */
     background: rgba(254, 252, 249, 0.95);
@@ -77,19 +77,19 @@
 .cookie-banner__main {
     position: relative;
     z-index: 1;
-    padding: var(--space-xl);
+    padding: 1rem;
 }
 
 @media (min-width: 640px) {
     .cookie-banner__main {
-        padding: var(--space-xl) var(--space-2xl);
+        padding: 1.25rem 1.5rem;
     }
 }
 
 .cookie-banner__content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: var(--space-lg);
+    gap: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -97,7 +97,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        gap: var(--space-xl);
+        gap: 1.5rem;
     }
 }
 
@@ -117,8 +117,8 @@
 }
 
 .cookie-banner__icon {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
     display: flex;
@@ -129,7 +129,7 @@
 }
 
 .cookie-banner__title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: var(--color-primary);
     margin: 0;
@@ -142,7 +142,7 @@
 }
 
 .cookie-banner__title .emoji {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 1;
     display: inline-block;
     vertical-align: middle;
@@ -152,11 +152,11 @@
 
 @media (min-width: 640px) {
     .cookie-banner__title {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
     
     .cookie-banner__title .emoji {
-        font-size: 2rem;
+        font-size: 1.75rem;
         margin-left: 0.5rem;
     }
 }
@@ -221,10 +221,10 @@
     display: inline-flex;
     align-items: center;
     gap: var(--space-xs);
-    padding: var(--space-md) var(--space-lg);
-    border-radius: var(--border-radius-lg);
+    padding: 0.625rem 1rem;
+    border-radius: var(--border-radius-md);
     font-weight: 500;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     border: none;
     cursor: pointer;
     transition: all var(--transition-fast);
