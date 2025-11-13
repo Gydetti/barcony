@@ -498,9 +498,33 @@
     }
 
     /**
+     * Initialize navbar offset dynamically using ResizeObserver
+     * Updates CSS variable --navbar-height based on actual rendered height
+     */
+    function initNavbarOffset() {
+        const navbar = document.getElementById('navbar');
+        if (!navbar) return;
+        
+        const setHeight = () => {
+            document.documentElement.style.setProperty('--navbar-height', navbar.offsetHeight + 'px');
+        };
+        
+        // Set initial height
+        setHeight();
+        
+        // Watch for height changes (e.g., when scrolling shrinks the navbar)
+        const ro = new ResizeObserver(setHeight);
+        ro.observe(navbar);
+        
+        // Also update on window resize
+        window.addEventListener('resize', setHeight, { passive: true });
+    }
+
+    /**
      * Initialize all functionality when DOM is ready
      */
     function init() {
+        initNavbarOffset();
         initNavigation();
         initScrollAnimations();
         initNavbarScroll();

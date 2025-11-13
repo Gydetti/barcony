@@ -88,6 +88,9 @@
     <link rel="preload" href="/media/background.png" as="image">
     <link rel="preload" href="/js/main.js" as="script">
     
+    <!-- Cookie Banner Styles -->
+    <link rel="stylesheet" href="/components/cookie-banner.css">
+    
     <!-- Consent & Tracking Scripts (load early for Consent Mode V2) -->
 <script>
         // Set GA4 ID here or via environment variable
@@ -219,6 +222,10 @@ body {
     background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-white) 100%);
     overflow-x: hidden;
     min-height: 100vh;
+}
+
+main {
+    padding-top: var(--navbar-height);
 }
 
 img, picture, video, canvas, svg {
@@ -670,7 +677,6 @@ h6 {
     min-height: 35vh;
     display: flex;
     align-items: center;
-    margin-top: var(--navbar-height);
 }
 
 .hero::before {
@@ -1742,7 +1748,6 @@ h6 {
     .hero {
         padding: var(--space-lg) 0 var(--space-md);
         min-height: 45vh;
-        margin-top: var(--navbar-height);
     }
 
     .hero__content {
@@ -1792,7 +1797,6 @@ h6 {
     .hero {
         padding: var(--space-md) 0 var(--space-sm);
         min-height: 40vh;
-        margin-top: var(--navbar-height);
     }
 
     .hero__content {
