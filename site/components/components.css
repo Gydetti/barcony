@@ -138,21 +138,22 @@ h6 {
     align-items: center;
     justify-content: center;
     gap: var(--space-xs);
-    padding: var(--space-md) var(--space-xl);
+    padding: 0.625rem 1rem;
     background: var(--color-primary-gradient);
     color: var(--color-white);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.875rem;
     text-decoration: none;
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--border-radius-md);
     border: none;
     cursor: pointer;
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    min-width: 140px;
+    min-width: 110px;
     text-align: center;
+    line-height: 1.2;
 }
 
 .btn::before {
@@ -217,15 +218,15 @@ h6 {
 }
 
 .btn--large {
-    padding: var(--space-lg) var(--space-2xl);
-    font-size: 1.125rem;
-    min-width: 180px;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9375rem;
+    min-width: 130px;
 }
 
 .btn--small {
-    padding: var(--space-sm) var(--space-md);
-    font-size: 0.875rem;
-    min-width: 100px;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+    min-width: 90px;
 }
 
 /* Natural Navigation Components */
@@ -509,17 +510,18 @@ h6 {
 .hero__cta {
     display: inline-flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: 0.375rem;
     color: var(--color-primary);
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
     transition: all var(--transition-normal);
-    padding: var(--space-md) var(--space-2xl);
-    border-radius: var(--border-radius-lg);
-    border: 2px solid var(--color-white);
+    padding: 0.625rem 1rem;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-white);
     background: var(--color-white);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    line-height: 1.2;
 }
 
 .hero__cta:hover {
