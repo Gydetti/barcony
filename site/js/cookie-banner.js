@@ -31,46 +31,50 @@
                 <div class="cookie-banner__container">
                     <div class="cookie-banner__card">
                         <div id="cookie-banner-main" class="cookie-banner__main">
-                            <div class="cookie-banner__header">
-                                <div class="cookie-banner__icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                    </svg>
+                            <div class="cookie-banner__content-wrapper">
+                                <div class="cookie-banner__content">
+                                    <div class="cookie-banner__header">
+                                        <div class="cookie-banner__icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="cookie-banner__title">
+                                                ${config.cookieSettingsTitle.split(' 🍪')[0]}
+                                                <span class="emoji">🍪</span>
+                                            </h3>
+                                            <span class="cookie-banner__badge">GDPR Compliant</span>
+                                        </div>
+                                    </div>
+                                    <p class="cookie-banner__description">${config.cookieDescription}</p>
+                                    <div class="cookie-banner__info">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <line x1="12" y1="16" x2="12" y2="12"/>
+                                            <line x1="12" y1="8" x2="12.01" y2="8"/>
+                                        </svg>
+                                        <span>${config.essentialTitle} zijn altijd ingeschakeld voor website functionaliteit.</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 class="cookie-banner__title">
-                                        ${config.cookieSettingsTitle.split(' 🍪')[0]}
-                                        <span class="emoji">🍪</span>
-                                    </h3>
-                                    <span class="cookie-banner__badge">GDPR Compliant</span>
+                                <div class="cookie-banner__actions">
+                                    <button id="cookie-accept-all" class="cookie-banner__btn cookie-banner__btn--primary">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 6 9 17 4 12"/>
+                                        </svg>
+                                        ${config.acceptAllText}
+                                    </button>
+                                    <button id="cookie-reject-all" class="cookie-banner__btn cookie-banner__btn--secondary">
+                                        ${config.rejectAllText}
+                                    </button>
+                                    <button id="cookie-customize" class="cookie-banner__btn cookie-banner__btn--ghost">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="3"/>
+                                            <path d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24"/>
+                                        </svg>
+                                        ${config.customizeText}
+                                    </button>
                                 </div>
-                            </div>
-                            <p class="cookie-banner__description">${config.cookieDescription}</p>
-                            <div class="cookie-banner__info">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <line x1="12" y1="16" x2="12" y2="12"/>
-                                    <line x1="12" y1="8" x2="12.01" y2="8"/>
-                                </svg>
-                                <span>${config.essentialTitle} zijn altijd ingeschakeld voor website functionaliteit.</span>
-                            </div>
-                            <div class="cookie-banner__actions">
-                                <button id="cookie-accept-all" class="cookie-banner__btn cookie-banner__btn--primary">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20 6 9 17 4 12"/>
-                                    </svg>
-                                    ${config.acceptAllText}
-                                </button>
-                                <button id="cookie-reject-all" class="cookie-banner__btn cookie-banner__btn--secondary">
-                                    ${config.rejectAllText}
-                                </button>
-                                <button id="cookie-customize" class="cookie-banner__btn cookie-banner__btn--ghost">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="3"/>
-                                        <path d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24"/>
-                                    </svg>
-                                    ${config.customizeText}
-                                </button>
                             </div>
                         </div>
                         <div id="cookie-banner-preferences" class="cookie-banner__preferences" style="display: none;">
