@@ -7,7 +7,7 @@
     'use strict';
 
     const config = {
-        cookieSettingsTitle: 'Cookies zijn beter met hout 🪵',
+        cookieSettingsTitle: 'Cookies op de bar 🍪',
         cookiePreferencesTitle: 'Pas je cookie voorkeuren aan',
         cookieDescription: 'We gebruiken cookies om je ervaring te verbeteren, gepersonaliseerde content te tonen en ons verkeer te analyseren. Door op "Alles accepteren" te klikken, geef je toestemming voor deze digitale lekkernijen.',
         acceptAllText: 'Ja, volledige ervaring',
@@ -38,7 +38,10 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="cookie-banner__title">${config.cookieSettingsTitle}</h3>
+                                    <h3 class="cookie-banner__title">
+                                        ${config.cookieSettingsTitle.split(' 🍪')[0]}
+                                        <span class="emoji">🍪</span>
+                                    </h3>
                                     <span class="cookie-banner__badge">GDPR Compliant</span>
                                 </div>
                             </div>
@@ -172,6 +175,7 @@
                                 </button>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
