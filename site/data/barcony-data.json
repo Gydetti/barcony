@@ -1,0 +1,71 @@
+{
+  "organization": {
+    "name": "Barcony",
+    "url": "https://barcony.nl",
+    "description": "De inklapbare bartafel voor uw balkon. Duurzaam Douglas hout, Zweeds vakmanschap. Perfect voor zomeravonden!",
+    "founded": "2024",
+    "country": "NL",
+    "language": "nl-NL",
+    "logo": "https://barcony.nl/media/logo.png"
+  },
+  "contact": {
+    "email": "barconyamsterdam@gmail.com",
+    "phone": "+31-6-57377873",
+    "hours": "Maandag - Zondag, 09:00 - 17:00"
+  },
+  "products": [
+    {
+      "name": "Barcony Grande",
+      "price": 199,
+      "currency": "EUR",
+      "description": "Grote inklapbare bartafel voor grote balkons",
+      "features": ["Inklapbaar", "Douglas hout", "Zweeds vakmanschap"]
+    },
+    {
+      "name": "Barcony Compact",
+      "price": 149,
+      "currency": "EUR",
+      "description": "Compacte inklapbare bartafel voor stedelijke balkons",
+      "features": ["Inklapbaar", "Douglas hout", "Zweeds vakmanschap"]
+    },
+    {
+      "name": "Barcony Mini",
+      "price": 99,
+      "currency": "EUR",
+      "description": "Mini inklapbare bartafel voor kleine ruimtes",
+      "features": ["Inklapbaar", "Douglas hout", "Zweeds vakmanschap"]
+    },
+    {
+      "name": "Barcony op maat",
+      "price": 299,
+      "currency": "EUR",
+      "priceNote": "vanaf",
+      "description": "Op maat gemaakte inklapbare bartafel",
+      "features": ["Inklapbaar", "Douglas hout", "Zweeds vakmanschap", "Op maat"]
+    }
+  ],
+  "features": [
+    "Inklapbaar systeem",
+    "Duurzaam Douglas hout",
+    "Zweeds vakmanschap",
+    "PEFC-gecertificeerd",
+    "Gratis bezorging vanaf €175"
+  ],
+  "sustainability": {
+    "certification": "PEFC-gecertificeerd hout",
+    "partnership": "Trees for All",
+    "material": "Douglas hout",
+    "origin": "Zweden"
+  },
+  "social": {
+    "facebook": "https://facebook.com/barcony_bartafel/",
+    "instagram": "https://instagram.com/barcony_bartafel/"
+  },
+  "pages": {
+    "home": "https://barcony.nl/",
+    "gallery": "https://barcony.nl/gallerij",
+    "products": "https://barcony.nl/modellen-prijzen"
+  },
+  "lastUpdated": "2024-12-19"
+}
+

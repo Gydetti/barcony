@@ -22,12 +22,13 @@ class BarconyBuild {
         const footer = this.loadComponent('footer.html');
         const variables = this.loadCSS('variables.css');
         const components = this.loadCSS('components.css');
+        const cookieBannerCSS = this.loadCSS('cookie-banner.css');
 
         // Process all HTML files
         const pages = ['index.html', 'gallerij/index.html', 'modellen-prijzen/index.html'];
 
         for (const page of pages) {
-            await this.processPage(page, { header, footer, variables, components });
+            await this.processPage(page, { header, footer, variables, components, cookieBannerCSS });
         }
 
         console.log('✅ Build completed successfully!');
@@ -48,7 +49,7 @@ class BarconyBuild {
         let content = fs.readFileSync(fullPath, 'utf8');
 
         // Replace CSS variables and components
-        content = this.replaceCSS(content, components.variables, components.components);
+        content = this.replaceCSS(content, components.variables, components.components, components.cookieBannerCSS);
         content = this.replaceComponents(content, components.header, components.footer);
 
         // Update active navigation based on page
@@ -58,7 +59,7 @@ class BarconyBuild {
         console.log(`  📄 Processed ${pagePath}`);
     }
 
-    replaceCSS(content, variables, components) {
+    replaceCSS(content, variables, components, cookieBannerCSS = '') {
         // Remove existing style blocks (including multi-line ones)
         content = content.replace(/<style>[\s\S]*?<\/style>/g, '');
 
@@ -68,10 +69,29 @@ class BarconyBuild {
         content = content.replace(/\.hero__subtitle\s*\{[^}]*\}/g, '');
         content = content.replace(/\.hero__cta\s*\{[^}]*\}/g, '');
 
-        // Add universal CSS and JavaScript
-        const css = `<style>\n${variables}\n${components}\n</style>`;
-        const js = this.getActiveNavScript();
-        return content.replace('</head>', `${css}\n${js}\n</head>`);
+        // Remove all duplicate navigation scripts (prevent future duplicates)
+        const duplicateScriptPattern = /<script>\s*document\.addEventListener\('DOMContentLoaded', function\(\) \{\s*\/\/ Set active navigation link[\s\S]*?\}\);\s*<\/script>\s*/gi;
+        content = content.replace(duplicateScriptPattern, '');
+
+        // Remove large inline script blocks (Enhanced JavaScript)
+        content = content.replace(/<!-- Enhanced JavaScript for Modern Interactions -->\s*<script>[\s\S]*?<\/script>\s*/gi, '');
+
+        // Ensure main.js is included (add if missing)
+        if (!content.includes('src="/js/main.js"')) {
+            content = content.replace(/<\/body>/, '    <script src="/js/main.js" defer></script>\n</body>');
+        }
+
+        // Ensure preload hint for main.js exists
+        if (!content.includes('preload href="/js/main.js"')) {
+            content = content.replace(
+                /(<link rel="preload" href="\/media\/logo\.png" as="image">)/,
+                '$1\n    <link rel="preload" href="/js/main.js" as="script">'
+            );
+        }
+
+        // Add universal CSS (no JavaScript injection - main.js handles it)
+        const css = `<style>\n${variables}\n${components}\n${cookieBannerCSS}\n</style>`;
+        return content.replace('</head>', `${css}\n</head>`);
     }
 
     replaceComponents(content, header, footer) {
@@ -115,43 +135,6 @@ class BarconyBuild {
         return content;
     }
 
-    getActiveNavScript() {
-        return `<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>`;
-    }
 }
 
 // Run build if called directly

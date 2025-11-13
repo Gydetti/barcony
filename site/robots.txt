@@ -5,7 +5,8 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 Disallow: /*.json$
-Disallow: /*.xml$?*
+
+# Note: sitemap.xml is explicitly allowed via Sitemap directive below
 
 # Allow access to CSS and JS files for better SEO
 Allow: /media/

@@ -29,6 +29,55 @@
     <link rel="apple-touch-icon" href="/media/favicon.png">
     <link rel="canonical" href="https://barcony.nl/">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Barcony",
+        "url": "https://barcony.nl",
+        "logo": "https://barcony.nl/media/logo.png",
+        "description": "De inklapbare bartafel voor uw balkon. Duurzaam Douglas hout, Zweeds vakmanschap.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+31-6-57377873",
+            "contactType": "customer service",
+            "email": "barconyamsterdam@gmail.com",
+            "availableLanguage": ["Dutch", "English"]
+        },
+        "sameAs": [
+            "https://facebook.com/barcony_bartafel/",
+            "https://instagram.com/barcony_bartafel/"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "NL"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Barcony",
+        "description": "De inklapbare bartafel voor uw balkon. Duurzaam Douglas hout, Zweeds vakmanschap.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Barcony"
+        },
+        "category": "Furniture",
+        "material": "Douglas hout",
+        "countryOfOrigin": "SE",
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "EUR",
+            "lowPrice": "99",
+            "highPrice": "299",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,591 +86,16 @@
     <!-- Performance hints -->
     <link rel="preload" href="/media/logo.png" as="image">
     <link rel="preload" href="/media/background.png" as="image">
+    <link rel="preload" href="/js/main.js" as="script">
     
-
-    
-
-
-
-
-
-
-
+    <!-- Consent & Tracking Scripts (load early for Consent Mode V2) -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
+        // Set GA4 ID here or via environment variable
+        window.BARCONY_GA4_ID = ''; // Set your GA4 ID: 'G-XXXXXXXXXX'
 </script>
+    <script src="/js/consent-storage.js" defer></script>
+    <script src="/js/consent-manager.js" defer></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
 <style>
 /* Barcony Brand Variables - Natural Wood Theme */
 :root {
@@ -2303,48 +1777,13 @@ h6 {
 /* Active Navigation Detection - JavaScript will be added via build script */
 
 </style>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Set active navigation link based on current URL
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar__link');
-
-    navLinks.forEach(link => {
-        // Remove existing active class
-        link.classList.remove('navbar__link--active');
-
-        // Check if this link matches current path
-        const href = link.getAttribute('href');
-
-        if (currentPath === '/' && href === '/') {
-            link.classList.add('navbar__link--active');
-        } else if (currentPath === '/gallerij' || currentPath === '/gallerij/') {
-            if (href === '/gallerij') {
-                link.classList.add('navbar__link--active');
-            }
-        } else if (currentPath === '/modellen-prijzen' || currentPath === '/modellen-prijzen/') {
-            if (href === '/modellen-prijzen') {
-                link.classList.add('navbar__link--active');
-            }
-        }
-
-        // Also handle hash links for homepage sections
-        if (currentPath === '/' && href.startsWith('#')) {
-            const hash = window.location.hash;
-            if (href === hash) {
-                link.classList.add('navbar__link--active');
-            }
-        }
-    });
-});
-</script>
 </head>
 <body>
     <!-- Universal Header Component -->
 <nav class="navbar" id="navbar">
     <div class="container navbar__container">
         <a href="/" class="navbar__logo" aria-label="Barcony homepagina">
-            <img src="/media/logo.png" alt="Barcony Logo" width="120" height="47">
+            <img src="/media/logo.png" alt="Barcony Logo" width="120" height="47" fetchpriority="high">
         </a>
 
         <div class="navbar__menu" id="navbar-menu">
@@ -2364,50 +1803,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </button>
     </div>
 </nav>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     <!-- Skip to main content for accessibility -->
     <a href="#main" class="skip-link">Ga naar hoofdinhoud</a>
@@ -2445,42 +1840,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="gallery">
                     <div class="gallery__item animate-on-scroll">
-                        <img src="/media/gallery-1.jpeg" alt="Barcony in gebruik op balkon" class="gallery__image" loading="lazy">
+                        <img src="/media/gallery-1.jpeg" alt="Barcony in gebruik op balkon" class="gallery__image" loading="lazy" width="600" height="400">
                         <div class="gallery__overlay">
                             <h3 class="gallery__title">Zomerse balkonmomenten</h3>
                             <p class="gallery__subtitle">Creëer je eigen stukje paradijs</p>
                                     </div>
                                 </div>
                     <div class="gallery__item animate-on-scroll stagger-animation" style="--stagger-index: 1;">
-                        <img src="/media/gallery-2.jpeg" alt="Barcony inklapbaar systeem" class="gallery__image" loading="lazy">
+                        <img src="/media/gallery-2.jpeg" alt="Barcony inklapbaar systeem" class="gallery__image" loading="lazy" width="600" height="400">
                         <div class="gallery__overlay">
                             <h3 class="gallery__title">Slim inklapsysteem</h3>
                             <p class="gallery__subtitle">Van tafel naar bar in seconden</p>
                             </div>
                         </div>
                     <div class="gallery__item animate-on-scroll stagger-animation" style="--stagger-index: 2;">
-                        <img src="/media/gallery-3.jpeg" alt="Douglas hout afwerking" class="gallery__image" loading="lazy">
+                        <img src="/media/gallery-3.jpeg" alt="Douglas hout afwerking" class="gallery__image" loading="lazy" width="600" height="400">
                         <div class="gallery__overlay">
                             <h3 class="gallery__title">Natuurlijk Douglas hout</h3>
                             <p class="gallery__subtitle">Duurzaam en prachtig verouderd</p>
                                     </div>
                                 </div>
                     <div class="gallery__item animate-on-scroll stagger-animation" style="--stagger-index: 3;">
-                        <img src="/media/gallery-4.jpeg" alt="Barcony compact model" class="gallery__image" loading="lazy">
+                        <img src="/media/gallery-4.jpeg" alt="Barcony compact model" class="gallery__image" loading="lazy" width="600" height="400">
                         <div class="gallery__overlay">
                             <h3 class="gallery__title">Compact & Praktisch</h3>
                             <p class="gallery__subtitle">Perfect voor stedelijke balkons</p>
                             </div>
                         </div>
                     <div class="gallery__item animate-on-scroll stagger-animation" style="--stagger-index: 4;">
-                        <img src="/media/gallery-5.jpeg" alt="Barcony grote model" class="gallery__image" loading="lazy">
+                        <img src="/media/gallery-5.jpeg" alt="Barcony grote model" class="gallery__image" loading="lazy" width="600" height="400">
                         <div class="gallery__overlay">
                             <h3 class="gallery__title">Grande voor grote balkons</h3>
                             <p class="gallery__subtitle">Gezelligheid voor iedereen</p>
                     </div>
                 </div>
                     <div class="gallery__item animate-on-scroll stagger-animation" style="--stagger-index: 5;">
-                        <img src="/media/gallery-6.jpeg" alt="Barcony mini model" class="gallery__image" loading="lazy">
+                        <img src="/media/gallery-6.jpeg" alt="Barcony mini model" class="gallery__image" loading="lazy" width="600" height="400">
                         <div class="gallery__overlay">
                             <h3 class="gallery__title">Mini voor kleine ruimtes</h3>
                             <p class="gallery__subtitle">Maximaal genieten, minimaal ruimte</p>
@@ -2754,51 +2149,55 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
 
                     <form class="contact-form animate-on-scroll stagger-animation" style="--stagger-index: 1;" id="contact-form" novalidate>
+                    <!-- Honeypot field for spam protection -->
+                    <input type="text" name="honeypot" id="honeypot" style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;" tabindex="-1" aria-hidden="true">
+                    
                     <div class="form-group">
                         <label for="firstName">Voornaam *</label>
-                        <input type="text" id="firstName" name="Voornaam" required aria-describedby="firstName-error">
-                        <span class="error-message" id="firstName-error"></span>
+                        <input type="text" id="firstName" name="firstName" required aria-describedby="firstName-error">
+                        <span class="error-message" id="firstName-error" style="display: none;"></span>
                 </div>
 
                     <div class="form-group">
                         <label for="lastName">Achternaam *</label>
-                        <input type="text" id="lastName" name="Achternaam" required aria-describedby="lastName-error">
-                        <span class="error-message" id="lastName-error"></span>
+                        <input type="text" id="lastName" name="lastName" required aria-describedby="lastName-error">
+                        <span class="error-message" id="lastName-error" style="display: none;"></span>
             </div>
 
                     <div class="form-group">
                         <label for="email">E-mailadres *</label>
-                        <input type="email" id="email" name="E-mailadres" required aria-describedby="email-error">
-                        <span class="error-message" id="email-error"></span>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error">
+                        <span class="error-message" id="email-error" style="display: none;"></span>
     </div>
 
                     <div class="form-group">
                         <label for="city">Woonplaats *</label>
-                        <input type="text" id="city" name="Woonplaats" required aria-describedby="city-error">
-                        <span class="error-message" id="city-error"></span>
+                        <input type="text" id="city" name="city" required aria-describedby="city-error">
+                        <span class="error-message" id="city-error" style="display: none;"></span>
     </div>
 
                     <div class="form-group">
                         <label for="phone">Telefoonnummer</label>
-                        <input type="tel" id="phone" name="Telefoonnummer" aria-describedby="phone-error">
-                        <span class="error-message" id="phone-error"></span>
+                        <input type="tel" id="phone" name="phone" aria-describedby="phone-error">
+                        <span class="error-message" id="phone-error" style="display: none;"></span>
                                                 </div>
 
                     <div class="form-group">
                         <label for="model">Barcony model</label>
-                        <select id="model" name="Dropdown" aria-describedby="model-error">
+                        <select id="model" name="model" aria-describedby="model-error">
                             <option value="">-- maak uw keuze --</option>
                             <option value="Barcony Grande">Barcony Grande (€199)</option>
                             <option value="Barcony Compact">Barcony Compact (€149)</option>
                             <option value="Barcony Mini">Barcony Mini (€99)</option>
                             <option value="Barcony op maat">Barcony op maat (vanaf €299)</option>
                                                     </select>
-                        <span class="error-message" id="model-error"></span>
+                        <span class="error-message" id="model-error" style="display: none;"></span>
                                                 </div>
 
                     <div class="form-group">
-                        <label for="message">Bericht</label>
-                        <textarea id="message" name="Bericht" rows="4" placeholder="Vertel ons meer over uw balkon en wensen..."></textarea>
+                        <label for="message">Bericht *</label>
+                        <textarea id="message" name="message" rows="4" required aria-describedby="message-error" placeholder="Vertel ons meer over uw balkon en wensen..."></textarea>
+                        <span class="error-message" id="message-error" style="display: none;"></span>
                                                 </div>
 
                     <div class="form-group checkbox-group">
@@ -2806,6 +2205,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <label for="privacy">
                             Ik ga akkoord met het privacybeleid en bevestig dat mijn persoonlijke gegevens in overeenstemming met de wet mogen worden gebruikt. *
                         </label>
+                        <span class="error-message" id="privacy-error" style="display: none;"></span>
                                                         </div>
 
                     <button type="submit" class="btn">
@@ -2830,172 +2230,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </section>
 
     </main>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <!-- Enhanced JavaScript for Modern Interactions -->
-    <script>
-        // Enhanced Scroll Animations
-        document.addEventListener('DOMContentLoaded', function() {
-            // Intersection Observer for scroll animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all elements with animation classes
-            document.querySelectorAll('.animate-on-scroll, .animate-on-scroll-left, .animate-on-scroll-right, .animate-scale-in, .animate-fade-in').forEach(el => {
-                observer.observe(el);
-            });
-
-            // Enhanced Navbar Scroll Effect
-            const navbar = document.getElementById('navbar');
-            let lastScrollTop = 0;
-
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (scrollTop > 100) {
-                    navbar.classList.add('navbar--scrolled');
-                } else {
-                    navbar.classList.remove('navbar--scrolled');
-                }
-
-                lastScrollTop = scrollTop;
-            });
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const offsetTop = target.offsetTop - 100;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // Enhanced form interactions
-            const form = document.getElementById('contact-form');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-
-                    // Add loading state
-                    const submitBtn = form.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.innerHTML;
-                    submitBtn.innerHTML = '<span style="display: flex; align-items: center; gap: 8px;">⏳ Bezig...</span>';
-                    submitBtn.disabled = true;
-
-                    // Simulate form submission (replace with actual form handling)
-                    setTimeout(() => {
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-
-                        // Show success message
-                        const response = document.getElementById('form-response');
-                        if (response) {
-                            response.textContent = 'Bedankt voor je bericht! We nemen binnen 24 uur contact met je op.';
-                            response.className = 'form-response success';
-                            response.style.display = 'block';
-                        }
-
-                        form.reset();
-                    }, 2000);
-                });
-            }
-
-            // Enhanced mobile menu toggle
-            const mobileToggle = document.getElementById('navbar-toggle');
-            const mobileMenu = document.getElementById('navbar-menu');
-
-            if (mobileToggle && mobileMenu) {
-                mobileToggle.addEventListener('click', () => {
-                    mobileToggle.classList.toggle('navbar__toggle--active');
-                    mobileMenu.classList.toggle('navbar__menu--active');
-                    document.body.classList.toggle('menu-open');
-                });
-
-                // Close mobile menu when clicking outside
-                document.addEventListener('click', (e) => {
-                    if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-                        mobileToggle.classList.remove('navbar__toggle--active');
-                        mobileMenu.classList.remove('navbar__menu--active');
-                        document.body.classList.remove('menu-open');
-                    }
-                });
-            }
-
-            // Add loading animations to images
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            images.forEach(img => {
-                img.addEventListener('load', function() {
-                    this.style.opacity = '1';
-                    this.style.filter = 'none';
-                });
-
-                // Initial state
-                img.style.opacity = '0';
-                img.style.filter = 'blur(5px)';
-                img.style.transition = 'opacity 0.3s ease, filter 0.3s ease';
-            });
-        });
-    </script>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
     
 
     <!-- Universal Footer Component -->
@@ -3053,5 +2287,11 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 </footer>
 
+    <!-- Main JavaScript -->
+    <script src="/js/main.js" defer></script>
+    
+    <!-- Cookie Banner & Tracking -->
+    <script src="/js/cookie-banner.js" defer></script>
+    <script src="/js/tracking.js" defer></script>
 </body>
 </html>

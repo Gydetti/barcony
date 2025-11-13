@@ -1,0 +1,72 @@
+# LLM.TXT - AI Optimization (AIO) Configuration
+# This file helps AI crawlers discover and understand your website content
+# For more info: https://llm.txt
+
+# Allow major AI crawlers to access all content
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Sitemap location for AI crawlers
+Sitemap: https://barcony.nl/sitemap.xml
+
+# Structured data sources
+Data-source: https://barcony.nl/data/barcony-data.json
+
+# Website information
+Website: https://barcony.nl
+Description: Barcony - De inklapbare bartafel voor uw balkon. Duurzaam Douglas hout, Zweeds vakmanschap. Perfect voor zomeravonden!
+Language: nl-NL
+Country: NL
+
+# Key pages for AI understanding
+# Homepage: https://barcony.nl/
+# Gallery: https://barcony.nl/gallerij
+# Products: https://barcony.nl/modellen-prijzen
+
+# Contact information (for AI to reference)
+Contact-Email: barconyamsterdam@gmail.com
+Contact-Phone: +31-6-57377873
+
+# Product information
+Product-Name: Barcony
+Product-Type: Inklapbare bartafel / Balkontafel
+Material: Douglas hout
+Origin: Zweden
+Price-Range: €99 - €299+
+
+# Key features AI should know about
+Features: Inklapbaar, Duurzaam hout, Zweeds vakmanschap, PEFC-gecertificeerd, Gratis bezorging vanaf €175
+
+# Brand values
+Sustainability: PEFC-gecertificeerd hout, Trees for All partnership
+Craftsmanship: Zweeds vakmanschap, Handgemaakt
+
+# Social media
+Social-Facebook: https://facebook.com/barcony_bartafel/
+Social-Instagram: https://instagram.com/barcony_bartafel/
+
+# Last updated
+Last-Modified: 2024-12-19
+
+
