@@ -29,7 +29,7 @@
         return `
             <div id="cookie-banner" class="cookie-banner" style="display: none;">
                 <div class="cookie-banner__container">
-                    <div class="cookie-banner__card">
+                    <div class="cookie-banner__card" role="dialog" aria-labelledby="cookie-banner-title" aria-modal="true">
                         <div id="cookie-banner-main" class="cookie-banner__main">
                             <div class="cookie-banner__content-wrapper">
                                 <div class="cookie-banner__content">
@@ -40,7 +40,7 @@
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 class="cookie-banner__title">
+                                            <h3 id="cookie-banner-title" class="cookie-banner__title">
                                                 ${config.cookieSettingsTitle.split(' 🍪')[0]}
                                                 <span class="emoji">🍪</span>
                                             </h3>

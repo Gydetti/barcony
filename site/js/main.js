@@ -58,28 +58,74 @@
     }
 
     /**
-     * Initialize navbar scroll effect
+     * Initialize navbar scroll effect with hide/show and shrink behavior
+     * Inspired by Virtual Counsel best practices
      */
     function initNavbarScroll() {
         const navbar = document.getElementById('navbar');
+        const mobileMenu = document.getElementById('navbar-menu');
         if (!navbar) return;
 
+        let lastScrollTop = 0;
         let ticking = false;
+        let scrollTimeout = null;
+        const scrollThreshold = 50;
+        const hideThreshold = 100;
+
+        function updateNavbar() {
+            // Don't hide navbar if mobile menu is open
+            const isMobileMenuOpen = mobileMenu && mobileMenu.classList.contains('navbar__menu--active');
+            
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollDelta = scrollTop - lastScrollTop;
+
+            // Add scrolled class for styling changes
+            if (scrollTop > scrollThreshold) {
+                navbar.classList.add('navbar--scrolled');
+            } else {
+                navbar.classList.remove('navbar--scrolled');
+            }
+
+            // Hide/show navbar based on scroll direction
+            // Only hide if scrolled past threshold and scrolling down
+            if (!isMobileMenuOpen) {
+                if (scrollTop > hideThreshold) {
+                    if (scrollDelta > 5) {
+                        // Scrolling down - hide navbar
+                        navbar.classList.add('navbar--hidden');
+                    } else if (scrollDelta < -5) {
+                        // Scrolling up - show navbar
+                        navbar.classList.remove('navbar--hidden');
+                    }
+                } else {
+                    // Always show navbar near top
+                    navbar.classList.remove('navbar--hidden');
+                }
+            } else {
+                // Always show navbar when mobile menu is open
+                navbar.classList.remove('navbar--hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            ticking = false;
+        }
 
         window.addEventListener('scroll', () => {
             if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    if (scrollTop > 100) {
-                        navbar.classList.add('navbar--scrolled');
-                    } else {
-                        navbar.classList.remove('navbar--scrolled');
-                    }
-                    ticking = false;
-                });
+                window.requestAnimationFrame(updateNavbar);
                 ticking = true;
             }
-        });
+
+            // Clear any existing timeout
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+
+            // Debounce to prevent excessive updates
+            scrollTimeout = setTimeout(() => {
+                window.requestAnimationFrame(updateNavbar);
+            }, 10);
+        }, { passive: true });
     }
 
     /**
@@ -105,36 +151,55 @@
     }
 
     /**
-     * Initialize mobile menu toggle
+     * Initialize mobile menu toggle with improved UX
      */
     function initMobileMenu() {
         const mobileToggle = document.getElementById('navbar-toggle');
         const mobileMenu = document.getElementById('navbar-menu');
         if (!mobileToggle || !mobileMenu) return;
 
+        function closeMenu() {
+            mobileToggle.classList.remove('navbar__toggle--active');
+            mobileMenu.classList.remove('navbar__menu--active');
+            document.body.classList.remove('menu-open');
+            document.body.style.overflow = '';
+        }
+
+        function openMenu() {
+            mobileToggle.classList.add('navbar__toggle--active');
+            mobileMenu.classList.add('navbar__menu--active');
+            document.body.classList.add('menu-open');
+            document.body.style.overflow = 'hidden';
+        }
+
         mobileToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            mobileToggle.classList.toggle('navbar__toggle--active');
-            mobileMenu.classList.toggle('navbar__menu--active');
-            document.body.classList.toggle('menu-open');
+            if (mobileMenu.classList.contains('navbar__menu--active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         });
 
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileToggle.classList.remove('navbar__toggle--active');
-                mobileMenu.classList.remove('navbar__menu--active');
-                document.body.classList.remove('menu-open');
+                closeMenu();
             }
         });
 
         // Close mobile menu when clicking a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                mobileToggle.classList.remove('navbar__toggle--active');
-                mobileMenu.classList.remove('navbar__menu--active');
-                document.body.classList.remove('menu-open');
+                closeMenu();
             });
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('navbar__menu--active')) {
+                closeMenu();
+            }
         });
     }
 
@@ -453,4 +518,5 @@
         init();
     }
 })();
+
 
