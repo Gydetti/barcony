@@ -115,22 +115,6 @@ h6 {
     border: 0;
 }
 
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: var(--color-primary);
-    color: var(--color-white);
-    padding: 8px;
-    text-decoration: none;
-    border-radius: var(--border-radius-sm);
-    z-index: 1001;
-    transition: top var(--transition-fast);
-}
-
-.skip-link:focus {
-    top: 6px;
-}
 
 /* Natural Button Components */
 .btn {
@@ -239,14 +223,43 @@ h6 {
     backdrop-filter: var(--backdrop-blur);
     border-bottom: 1px solid rgba(139, 90, 60, 0.15);
     z-index: 1000;
-    transition: all var(--transition-normal);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                background-color 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
     box-shadow: 0 1px 0 rgba(139, 90, 60, 0.08);
+    will-change: transform;
+    transform: translateY(0);
+}
+
+/* Hide navbar when scrolling down - flicker-free using transform */
+.navbar--hidden {
+    transform: translateY(-100%);
 }
 
 .navbar--scrolled {
     background: rgba(254, 252, 249, 0.98);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-bottom-color: rgba(139, 90, 60, 0.2);
+}
+
+/* Shrink navbar on scroll */
+.navbar--scrolled .navbar__container {
+    padding: var(--space-sm) var(--space-lg);
+}
+
+.navbar--scrolled .navbar__logo img {
+    height: 40px;
+}
+
+.navbar--scrolled .navbar__link {
+    font-size: 0.9375rem;
+    padding: calc(var(--space-xs) * 0.75) var(--space-sm);
+}
+
+.navbar--scrolled .navbar__cta {
+    padding: calc(var(--space-xs) * 0.75) var(--space-md);
+    font-size: 0.875rem;
 }
 
 .navbar__container {
@@ -256,6 +269,7 @@ h6 {
     padding: var(--space-md) var(--space-lg);
     max-width: var(--container-max-width);
     margin: 0 auto;
+    transition: padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar__logo {
@@ -277,6 +291,7 @@ h6 {
     height: 50px;
     width: auto;
     margin-right: var(--space-xs);
+    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar__menu {
@@ -296,8 +311,9 @@ h6 {
     color: var(--color-gray-700);
     padding: var(--space-xs) var(--space-sm);
     border-radius: var(--border-radius-md);
-    transition: all var(--transition-fast);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    font-size: 1rem;
 }
 
 .navbar__link:hover {
@@ -328,7 +344,7 @@ h6 {
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--border-radius-sm);
     font-weight: 500;
-    transition: all var(--transition-fast);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid var(--color-accent);
     box-shadow: var(--shadow-sm);
     font-size: 0.9rem;

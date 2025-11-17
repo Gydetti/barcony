@@ -59,7 +59,7 @@
 
     /**
      * Initialize navbar scroll effect with hide/show and shrink behavior
-     * Inspired by Virtual Counsel best practices
+     * Industry best practices: transform-based hiding for flicker-free animations
      */
     function initNavbarScroll() {
         const navbar = document.getElementById('navbar');
@@ -68,9 +68,9 @@
 
         let lastScrollTop = 0;
         let ticking = false;
-        let scrollTimeout = null;
         const scrollThreshold = 50;
         const hideThreshold = 100;
+        const scrollDeltaThreshold = 5; // Minimum scroll delta to trigger hide/show
 
         function updateNavbar() {
             // Don't hide navbar if mobile menu is open
@@ -79,7 +79,7 @@
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const scrollDelta = scrollTop - lastScrollTop;
 
-            // Add scrolled class for styling changes
+            // Add scrolled class for styling changes (shrink effect)
             if (scrollTop > scrollThreshold) {
                 navbar.classList.add('navbar--scrolled');
             } else {
@@ -90,13 +90,14 @@
             // Only hide if scrolled past threshold and scrolling down
             if (!isMobileMenuOpen) {
                 if (scrollTop > hideThreshold) {
-                    if (scrollDelta > 5) {
+                    if (scrollDelta > scrollDeltaThreshold) {
                         // Scrolling down - hide navbar
                         navbar.classList.add('navbar--hidden');
-                    } else if (scrollDelta < -5) {
+                    } else if (scrollDelta < -scrollDeltaThreshold) {
                         // Scrolling up - show navbar
                         navbar.classList.remove('navbar--hidden');
                     }
+                    // If scrollDelta is small (between -5 and 5), maintain current state
                 } else {
                     // Always show navbar near top
                     navbar.classList.remove('navbar--hidden');
@@ -115,16 +116,6 @@
                 window.requestAnimationFrame(updateNavbar);
                 ticking = true;
             }
-
-            // Clear any existing timeout
-            if (scrollTimeout) {
-                clearTimeout(scrollTimeout);
-            }
-
-            // Debounce to prevent excessive updates
-            scrollTimeout = setTimeout(() => {
-                window.requestAnimationFrame(updateNavbar);
-            }, 10);
         }, { passive: true });
     }
 
